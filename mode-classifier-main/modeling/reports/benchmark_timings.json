@@ -1,0 +1,17 @@
+{
+  "cache_times": {
+    "clip": 54.5,
+    "qwen": 90.2,
+    "minilm": 46.9
+  },
+  "head_train_times": {
+    "tfidf+logreg": 4.8,
+    "tfidf+mlp": 25.7,
+    "clip+logreg": 9.8,
+    "clip+mlp": 19.4,
+    "qwen+logreg": 10.0,
+    "qwen+mlp": 19.9,
+    "minilm+logreg": 9.7,
+    "minilm+mlp": 30.4
+  }
+}

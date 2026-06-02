@@ -1,0 +1,27 @@
+{
+  "input": "data_generation\\data\\raw\\deepseek_generated_10000.csv",
+  "seed": 20260518,
+  "splits": {
+    "train": {
+      "rows": 8000,
+      "labels": {
+        "chat": 4000,
+        "motion_query": 4000
+      }
+    },
+    "val": {
+      "rows": 1000,
+      "labels": {
+        "chat": 500,
+        "motion_query": 500
+      }
+    },
+    "test": {
+      "rows": 1000,
+      "labels": {
+        "motion_query": 500,
+        "chat": 500
+      }
+    }
+  }
+}

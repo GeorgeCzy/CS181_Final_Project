@@ -1,0 +1,1001 @@
+id,utterance,label
+ds10k-07031,Hand me the window. (variant 482),motion_query
+ds10k-05855,How can I learn linear algebra? (variant 1432),chat
+ds10k-08588,Explain stress management for a beginner.,chat
+ds10k-09853,Look at the blue cup. (variant 726),motion_query
+ds10k-08874,What are the benefits of world history?,chat
+ds10k-04865,Perform a bow for me. (variant 1458),motion_query
+ds10k-00648,Turn toward the fire extinguisher. (variant 868),motion_query
+ds10k-06148,Can you show me the charging dock in the hallway.,motion_query
+ds10k-09515,move the toolbox to the lab.,motion_query
+ds10k-00202,Tell me about thermodynamics. (variant 2281),chat
+ds10k-02529,Help me understand meditation .,chat
+ds10k-04619,Could you show me the red block in the conference room.,motion_query
+ds10k-05547,What should I know about operating systems in one paragraph?,chat
+ds10k-07142,Bow like a performer.,motion_query
+ds10k-09877,Show me how to do a yoga pose.,motion_query
+ds10k-09786,Explain human anatomy .,chat
+ds10k-01063,Can you move the first aid kit to the lab.,motion_query
+ds10k-03810,Hold this pose for five seconds.,motion_query
+ds10k-09151,Can you teach me a new language?,chat
+ds10k-08027,What causes insomnia? (variant 910),chat
+ds10k-00036,Can you explain probability in simple terms? (variant 347),chat
+ds10k-04221,How does critical thinking work? (variant 2048),chat
+ds10k-08057,What is sleep hygiene?,chat
+ds10k-00428,Can you solve this math problem?,chat
+ds10k-05007,Move forward two meters.,motion_query
+ds10k-02705,Perform a kneel for me.,motion_query
+ds10k-00140,Help me understand stress management in detail. (variant 183),chat
+ds10k-08624,Please move the shelf to the classroom.,motion_query
+ds10k-00166,Catch the ball I throw.,motion_query
+ds10k-04986,Explain microeconomics briefly.,chat
+ds10k-08619,Turn toward the laptop. (variant 1660),motion_query
+ds10k-01440,Turn toward the shelf. (variant 796),motion_query
+ds10k-09228,Lie down on the mat.,motion_query
+ds10k-09927,Turn toward the charging dock.,motion_query
+ds10k-02722,Help me understand blockchain . (variant 1701),chat
+ds10k-00535,Give me advice about personal finance. (variant 1134),chat
+ds10k-01266,Turn toward the first aid kit. (variant 112),motion_query
+ds10k-07321,Describe the main ideas behind human anatomy. (variant 203),chat
+ds10k-05507,Explain stress management with examples. (variant 733),chat
+ds10k-05891,Turn to face the charging dock. (variant 365),motion_query
+ds10k-00034,Give me advice about supply chains. (variant 1456),chat
+ds10k-02240,Please show me the power switch in the kitchen.,motion_query
+ds10k-05219,Can you explain human anatomy in simple terms? (variant 1888),chat
+ds10k-05651,Explain computer vision for a beginner.,chat
+ds10k-03017,Tell me about personal finance. (variant 947),chat
+ds10k-09567,Walk to the doorway. (variant 908),motion_query
+ds10k-03443,Can you explain stress management in simple terms? (variant 1980),chat
+ds10k-05805,Lower your both hands slowly. (variant 1823),motion_query
+ds10k-03977,Please show me the red block in the charging station.,motion_query
+ds10k-09832,Walk to the workbench. (variant 1016),motion_query
+ds10k-00397,What is linear algebra?,chat
+ds10k-09737,Can you suggest a good movie to watch?,chat
+ds10k-02484,Summarize the history of astrophysics.,chat
+ds10k-02510,Could you move the window to the workbench.,motion_query
+ds10k-07255,Stay where you are. (variant 560),motion_query
+ds10k-03329,Please show me the chair in the kitchen.,motion_query
+ds10k-01452,show me the red block in the doorway.,motion_query
+ds10k-06161,Point to the power switch. (variant 1332),motion_query
+ds10k-09599,Show me how to open a jar. (variant 340),motion_query
+ds10k-01171,Why is database design important? (variant 440),chat
+ds10k-02593,Act out happiness. (variant 1863),motion_query
+ds10k-09024,What is renewable energy?,chat
+ds10k-01358,Explain organic chemistry with examples.,chat
+ds10k-07978,Wave your left hand.,motion_query
+ds10k-08977,Demonstrate how to stack the boxes. (variant 1923),motion_query
+ds10k-01173,Place the drawer near the door. (variant 373),motion_query
+ds10k-02418,Freeze! Don't move.,motion_query
+ds10k-03791,Describe the main ideas behind digital privacy. (variant 1836),chat
+ds10k-09313,What causes insomnia? (variant 1094),chat
+ds10k-06643,Raise your left hand. (variant 1752),motion_query
+ds10k-04666,Put your hand over your heart.,motion_query
+ds10k-06725,Help me understand Python programming for a beginner.,chat
+ds10k-08822,Who invented the airplane? (variant 975),chat
+ds10k-05540,What causes procrastination? (variant 1117),chat
+ds10k-06496,What are the signs of a good investment?,chat
+ds10k-03513,Demonstrate how to stack the boxes.,motion_query
+ds10k-06125,Could you show me the shelf in the charging station.,motion_query
+ds10k-07497,What are common mistakes in urban planning? (variant 1603),chat
+ds10k-08232,Explain personal finance for a beginner. (variant 1791),chat
+ds10k-02494,I need help with calculus for my homework. (variant 2180),chat
+ds10k-09255,Please show me the charging dock in the workbench.,motion_query
+ds10k-06791,Help me understand calculus in detail.,chat
+ds10k-06260,Compare reinforcement learning and Python for beginners. (variant 845),chat
+ds10k-02149,Demonstrate a yoga pose.,motion_query
+ds10k-09046,show me the book in the doorway.,motion_query
+ds10k-07680,Can you help me practice my English?,chat
+ds10k-07280,Could you show me the window in the classroom.,motion_query
+ds10k-07838,How do I fix network latency?,chat
+ds10k-06601,Place the red block near the door. (variant 1309),motion_query
+ds10k-06038,Put the drawer on the table.,motion_query
+ds10k-07734,Describe the main ideas behind human anatomy. (variant 1928),chat
+ds10k-08117,Lower your wrist slowly. (variant 131),motion_query
+ds10k-03138,How does database design work?,chat
+ds10k-02595,Can you explain nutrition in simple terms? (variant 1428),chat
+ds10k-08488,Grab the toolbox with your right hand.,motion_query
+ds10k-05746,Who invented the airplane? (variant 1573),chat
+ds10k-04054,Could you move the power switch to the kitchen.,motion_query
+ds10k-08503,Hand me the door. (variant 986),motion_query
+ds10k-05021,Who invented the airplane? (variant 469),chat
+ds10k-01085,Pick up the whiteboard. (variant 1235),motion_query
+ds10k-05554,Can you explain how a car engine works?,chat
+ds10k-06787,Could you move the exit sign to the lobby.,motion_query
+ds10k-05185,Pick up the red block.,motion_query
+ds10k-00695,Recommend resources for stress management.,chat
+ds10k-02326,Could you show me the fire extinguisher in the charging station.,motion_query
+ds10k-03842,Wave your hand at me.,motion_query
+ds10k-08196,Make a gesture that means help. (variant 1612),motion_query
+ds10k-02847,What are the steps to bake a cake?,chat
+ds10k-05474,Step closer and read this sign.,motion_query
+ds10k-04139,Tell me about compilers. (variant 4),chat
+ds10k-04169,Carry this bag to the car.,motion_query
+ds10k-05570,Can you move the chair to the classroom.,motion_query
+ds10k-09951,Please show me the shelf in the conference room.,motion_query
+ds10k-06019,Please move the fire extinguisher to the charging station.,motion_query
+ds10k-04629,Where can I find information about world history? (variant 540),chat
+ds10k-01711,Please show me the blue cup in the workbench.,motion_query
+ds10k-06586,Give me advice about natural language processing.,chat
+ds10k-06053,How do I build a website?,chat
+ds10k-06407,Describe the main ideas behind meditation. (variant 226),chat
+ds10k-01805,"Close the window, please.",motion_query
+ds10k-02197,Nod to confirm you understand. (variant 781),motion_query
+ds10k-09665,Could you move the power switch to the lobby.,motion_query
+ds10k-00778,move the power switch to the hallway.,motion_query
+ds10k-05495,Answer by raising your arm if you agree.,motion_query
+ds10k-04535,Who invented the bicycle? (variant 630),chat
+ds10k-06624,Could you show me the laptop in the charging station.,motion_query
+ds10k-05628,How do I reset my password?,chat
+ds10k-03735,Explain database design with examples.,chat
+ds10k-09682,Summarize the history of microeconomics. (variant 679),chat
+ds10k-06465,What tasks can you automate?,chat
+ds10k-05165,Please show me the power switch in the charging station.,motion_query
+ds10k-07984,move the trash bin to the parking area.,motion_query
+ds10k-00550,How do you work?,chat
+ds10k-01603,Compare SQL and logistic regression for beginners.,chat
+ds10k-08983,What is the difference between k-means and Adam?,chat
+ds10k-05504,Follow me to the hallway. (variant 367),motion_query
+ds10k-00884,Could you show me the trash bin in the workbench.,motion_query
+ds10k-07365,Can you help me debug this code?,chat
+ds10k-03312,Help me understand photosynthesis step by step. (variant 1862),chat
+ds10k-02928,What causes budgeting mistakes? (variant 1669),chat
+ds10k-02831,Follow me to the charging station. (variant 1591),motion_query
+ds10k-00589,Tell me a story about a distant galaxy.,chat
+ds10k-08746,Demonstrate how to scan the QR code. (variant 1635),motion_query
+ds10k-04928,Give me advice about nutrition. (variant 812),chat
+ds10k-06331,Turn left at the door.,motion_query
+ds10k-05690,Move to the kitchen. (variant 153),motion_query
+ds10k-04891,Summarize the history of project management. (variant 265),chat
+ds10k-09031,Can you tell me a bedtime story?,chat
+ds10k-09305,show me the drawer in the doorway.,motion_query
+ds10k-00915,How does the stock market work?,chat
+ds10k-05942,What causes insomnia? (variant 703),chat
+ds10k-09545,How do I set up a meeting in Outlook?,chat
+ds10k-00987,I need help with compilers for my homework. (variant 915),chat
+ds10k-08128,Give me advice about supply chains. (variant 1042),chat
+ds10k-07718,Show me your dance moves.,motion_query
+ds10k-00751,Show me how to press the button. (variant 1168),motion_query
+ds10k-07272,Show me how you dance.,motion_query
+ds10k-02572,Compare decision trees and FTP for beginners.,chat
+ds10k-08802,Show me a thumbs up.,motion_query
+ds10k-08327,Back away from the toolbox. (variant 1173),motion_query
+ds10k-02094,Point to the largest object in the room.,motion_query
+ds10k-00387,Why is time management important? (variant 348),chat
+ds10k-06894,move the marker to the lab.,motion_query
+ds10k-00807,Rotate toward the audience. (variant 535),motion_query
+ds10k-09304,Could you move the shelf to the conference room.,motion_query
+ds10k-06728,Recommend resources for natural language processing.,chat
+ds10k-08534,Please show me the book in the doorway.,motion_query
+ds10k-00365,Do you support voice commands in Spanish?,chat
+ds10k-04280,point to the blue cup. (variant 357),motion_query
+ds10k-09701,When was the bicycle discovered?,chat
+ds10k-02871,Can you show me the elevator button in the workbench.,motion_query
+ds10k-05078,Give me advice about nutrition. (variant 2261),chat
+ds10k-09592,I need help with organic chemistry for my homework.,chat
+ds10k-03555,Summarize the history of cryptography. (variant 1967),chat
+ds10k-05969,Crouch down to the ground.,motion_query
+ds10k-04256,Please move the blue cup to the classroom.,motion_query
+ds10k-09406,Make a gesture that means thank you. (variant 1756),motion_query
+ds10k-01451,How can I learn operating systems? (variant 1547),chat
+ds10k-06644,Pick up the trash bin. (variant 659),motion_query
+ds10k-09588,Pick up that toy from the floor.,motion_query
+ds10k-06618,move the shelf to the lab.,motion_query
+ds10k-03995,"Use only words, don't move.",chat
+ds10k-00306,Who invented the transistor? (variant 1619),chat
+ds10k-06333,Take this book and put it on the shelf.,motion_query
+ds10k-04869,Point me to the exit.,motion_query
+ds10k-04079,move the elevator button to the charging station.,motion_query
+ds10k-04577,Tell me about time management. (variant 188),chat
+ds10k-05518,How does human anatomy work?,chat
+ds10k-02347,What is thermodynamics?,chat
+ds10k-08581,Do you have any favorite songs?,chat
+ds10k-07395,Can you help me plan my day?,chat
+ds10k-05610,When was the bicycle discovered? (variant 1712),chat
+ds10k-00700,Where can I find information about evolution? (variant 885),chat
+ds10k-00255,Lower your both hands slowly. (variant 1895),motion_query
+ds10k-02036,How can I learn probability? (variant 1087),chat
+ds10k-07305,Follow me to the hallway. (variant 187),motion_query
+ds10k-06792,Could you show me the trash bin in the charging station.,motion_query
+ds10k-03343,show me the chair in the workbench.,motion_query
+ds10k-08388,Explain machine learning in detail.,chat
+ds10k-02432,Stay where you are. (variant 1100),motion_query
+ds10k-04497,What is your processing speed?,chat
+ds10k-01368,Can you show me the first aid kit in the lobby.,motion_query
+ds10k-00318,Place the blue cup near the door. (variant 1129),motion_query
+ds10k-02648,Help me understand machine learning step by step.,chat
+ds10k-08186,Show me how to stack the boxes. (variant 1420),motion_query
+ds10k-06712,Can you move the drawer to the classroom.,motion_query
+ds10k-05057,Can you show me the door in the conference room.,motion_query
+ds10k-05694,Could you show me the book in the hallway.,motion_query
+ds10k-07942,Could you move the plant to the lab.,motion_query
+ds10k-07343,Slowly walk backwards.,motion_query
+ds10k-02600,Act like you're sleeping.,motion_query
+ds10k-09329,Could you show me the exit sign in the workbench.,motion_query
+ds10k-03888,What is your favorite color?,chat
+ds10k-08451,How does database design work? (variant 1565),chat
+ds10k-05527,Hand me the elevator button. (variant 1814),motion_query
+ds10k-01088,Describe the main ideas behind computer vision.,chat
+ds10k-03879,When was CRISPR discovered? (variant 1896),chat
+ds10k-01184,Pick up the chair.,motion_query
+ds10k-01619,What should I know about resume writing in detail? (variant 1217),chat
+ds10k-08904,Compare reinforcement learning and SVM for beginners.,chat
+ds10k-01524,What is the meaning of life?,chat
+ds10k-05841,How does time management work?,chat
+ds10k-01497,How can I learn organic chemistry? (variant 2007),chat
+ds10k-04691,What are your energy requirements?,chat
+ds10k-08914,How can I learn blockchain?,chat
+ds10k-01675,What should I know about climate change in one paragraph? (variant 619),chat
+ds10k-03075,Tell me about linguistics. (variant 510),chat
+ds10k-01589,Wave your right arm. (variant 1838),motion_query
+ds10k-05364,Demonstrate how to stack the boxes. (variant 1815),motion_query
+ds10k-03718,Bring me the red block. (variant 46),motion_query
+ds10k-04650,Explain meditation .,chat
+ds10k-09342,What is the difference between TCP and Python? (variant 1825),chat
+ds10k-00296,Help me understand calculus with examples. (variant 2161),chat
+ds10k-03388,Summarize the history of climate change. (variant 495),chat
+ds10k-07372,What are the benefits of linear algebra? (variant 1776),chat
+ds10k-04770,How does digital privacy work? (variant 1818),chat
+ds10k-06513,What should I know about climate change with examples?,chat
+ds10k-05324,What is astrophysics?,chat
+ds10k-06979,Could you move the red block to the lobby.,motion_query
+ds10k-00242,What should I know about project management ?,chat
+ds10k-02405,Hand me that book on the shelf.,motion_query
+ds10k-09946,What are the benefits of digital privacy? (variant 2190),chat
+ds10k-01797,Help me understand digital privacy with examples.,chat
+ds10k-03216,Look at the clock on the wall.,motion_query
+ds10k-03859,Why is stress management important?,chat
+ds10k-00706,What are common mistakes in compilers? (variant 338),chat
+ds10k-04227,What are the benefits of resume writing?,chat
+ds10k-04471,Come closer so I can show you something.,motion_query
+ds10k-02534,Please move the power switch to the lab.,motion_query
+ds10k-01150,Could you show me the door in the parking area.,motion_query
+ds10k-09069,Hold still while I clean your sensors.,motion_query
+ds10k-09873,What is the difference between decision trees and HTTP? (variant 1342),chat
+ds10k-07724,Explain robotics ethics step by step.,chat
+ds10k-03224,Help me understand operating systems step by step.,chat
+ds10k-05616,Point to the marker. (variant 828),motion_query
+ds10k-00285,How do I meditate properly?,chat
+ds10k-00479,Can you move the blue cup to the lab. (variant 1798),motion_query
+ds10k-03037,Pick up the door.,motion_query
+ds10k-00122,Compare UDP and SVM for beginners. (variant 362),chat
+ds10k-01510,What should I know about calculus in detail?,chat
+ds10k-09390,Compare reinforcement learning and FTP for beginners. (variant 1489),chat
+ds10k-08767,Help me understand photosynthesis .,chat
+ds10k-08282,Keep your gaze fixed on the target.,motion_query
+ds10k-01492,Could you move the power switch to the conference room.,motion_query
+ds10k-09967,What should I know about renewable energy ? (variant 1769),chat
+ds10k-03172,Show me how to open a jar. (variant 412),motion_query
+ds10k-02007,Please move the charging dock to the lobby.,motion_query
+ds10k-09718,When was GPS discovered? (variant 2103),chat
+ds10k-06659,Please show me the shelf in the workbench.,motion_query
+ds10k-06391,How can I learn linguistics? (variant 1386),chat
+ds10k-08238,Lower your left hand slowly. (variant 635),motion_query
+ds10k-03959,What should I know about world history with examples? (variant 872),chat
+ds10k-05096,Compare decision trees and imitation learning for beginners. (variant 661),chat
+ds10k-06854,What is human anatomy? (variant 1081),chat
+ds10k-03332,What should I know about project management briefly?,chat
+ds10k-03857,Why is digital privacy important? (variant 1958),chat
+ds10k-04134,Make a gesture that means hello. (variant 172),motion_query
+ds10k-03830,When was the camera discovered? (variant 2218),chat
+ds10k-01511,What's your favorite song?,chat
+ds10k-02578,Could you move the elevator button to the workbench.,motion_query
+ds10k-01772,Recommend resources for epidemiology.,chat
+ds10k-09995,Can you wave at me? (variant 1299),motion_query
+ds10k-07752,Could you move the shelf to the kitchen.,motion_query
+ds10k-07479,Help me understand compilers for a beginner.,chat
+ds10k-07596,Demonstrate how to stack the boxes. (variant 1167),motion_query
+ds10k-07444,show me the book in the kitchen.,motion_query
+ds10k-04607,What should I know about sleep hygiene with examples? (variant 849),chat
+ds10k-07206,Explain time management .,chat
+ds10k-03281,Look at the door. (variant 1878),motion_query
+ds10k-08631,Describe the main ideas behind astrophysics. (variant 778),chat
+ds10k-04432,I need help with critical thinking for my homework.,chat
+ds10k-05386,Follow me to the lobby.,motion_query
+ds10k-01274,What causes overfitting? (variant 2313),chat
+ds10k-03370,Walk to the parking area. (variant 1736),motion_query
+ds10k-09016,Tell me about digital privacy. (variant 1085),chat
+ds10k-02858,Walk to the hallway. (variant 1412),motion_query
+ds10k-00748,Explain blockchain without technical terms.,chat
+ds10k-01281,Step aside to let people pass.,motion_query
+ds10k-08950,Recommend resources for critical thinking. (variant 222),chat
+ds10k-01810,Roll over to the corner.,motion_query
+ds10k-02112,Recommend resources for climate change. (variant 1096),chat
+ds10k-04834,Help me understand linear algebra for a beginner.,chat
+ds10k-05902,What should I know about time management in one paragraph?,chat
+ds10k-05350,Dance a little jig.,motion_query
+ds10k-05599,Act out happiness. (variant 1647),motion_query
+ds10k-01833,What should I know about climate change in one paragraph?,chat
+ds10k-06603,Explain meditation in one paragraph.,chat
+ds10k-06562,Give me advice about resume writing. (variant 1916),chat
+ds10k-09309,Tell me about your capabilities in detail.,chat
+ds10k-08099,I need help with cryptography for my homework. (variant 2111),chat
+ds10k-07184,What is digital privacy? (variant 851),chat
+ds10k-03646,Lead me to the kitchen.,motion_query
+ds10k-03207,Please point to the drawer. (variant 1581),motion_query
+ds10k-09118,Help me understand natural language processing in detail.,chat
+ds10k-02948,Could you move the shelf to the doorway. (variant 34),motion_query
+ds10k-06621,I want to learn more about robotics.,chat
+ds10k-06704,Hand me the window.,motion_query
+ds10k-06706,What is the difference between gradient descent and Python?,chat
+ds10k-08148,Lift your arm to shoulder height.,motion_query
+ds10k-00803,I need advice on how to deal with stress.,chat
+ds10k-06637,Can you point to the drawer. (variant 753),motion_query
+ds10k-06430,Compare k-means and momentum for beginners. (variant 2248),chat
+ds10k-02292,Open the drawer.,motion_query
+ds10k-03473,Rotate toward the audience. (variant 1795),motion_query
+ds10k-04609,Can you learn from your mistakes?,chat
+ds10k-03953,move the toolbox to the parking area.,motion_query
+ds10k-03880,Could you move the shelf to the workbench.,motion_query
+ds10k-01947,Explain epidemiology for a beginner.,chat
+ds10k-02218,Lead me to the hallway. (variant 1434),motion_query
+ds10k-05882,What should I know about cryptography step by step? (variant 1010),chat
+ds10k-01794,Please show me the trash bin in the workbench.,motion_query
+ds10k-08651,Turn to face the window.,motion_query
+ds10k-03220,Help me understand project management for a beginner. (variant 2069),chat
+ds10k-01631,Could you show me the whiteboard in the parking area.,motion_query
+ds10k-04082,When was the printing press discovered?,chat
+ds10k-04313,What is photosynthesis? (variant 1173),chat
+ds10k-05659,Tell me about critical thinking. (variant 2028),chat
+ds10k-02225,Move to the charging station. (variant 1809),motion_query
+ds10k-09801,Compare k-means and SVM for beginners. (variant 1857),chat
+ds10k-01108,Nod to confirm you understand. (variant 1465),motion_query
+ds10k-03446,Hand me the trash bin.,motion_query
+ds10k-07398,Why is supply chains important? (variant 1406),chat
+ds10k-02634,What is the best way to learn a new language?,chat
+ds10k-04200,Can you explain meditation in simple terms? (variant 761),chat
+ds10k-03036,Summarize the history of project management.,chat
+ds10k-00398,How does nutrition work? (variant 1404),chat
+ds10k-01155,Lead me to the classroom. (variant 1758),motion_query
+ds10k-07578,Can you explain the plot of Inception?,chat
+ds10k-09558,Rotate toward the audience. (variant 1327),motion_query
+ds10k-04518,What should I know about machine learning with examples?,chat
+ds10k-02443,Summarize the history of public speaking. (variant 2082),chat
+ds10k-03488,Turn to face the fire extinguisher. (variant 113),motion_query
+ds10k-04127,Can you move the red block to the charging station.,motion_query
+ds10k-00113,Please show me the exit sign in the lobby.,motion_query
+ds10k-07364,Walk over to the table.,motion_query
+ds10k-07342,Lower your head slowly.,motion_query
+ds10k-07427,What are common mistakes in microeconomics?,chat
+ds10k-03629,Reach into the drawer and get a spoon.,motion_query
+ds10k-02656,Put the fire extinguisher on the table. (variant 444),motion_query
+ds10k-07766,Help me understand computer vision briefly. (variant 1724),chat
+ds10k-00315,What should I know about computer vision in detail?,chat
+ds10k-00647,Pick up the power switch.,motion_query
+ds10k-08410,Shake your head if you disagree. (variant 1178),motion_query
+ds10k-03230,Make a gesture that means come here. (variant 1000),motion_query
+ds10k-01624,Could you show me the whiteboard in the kitchen.,motion_query
+ds10k-06663,Please point to the marker.,motion_query
+ds10k-06605,Grab the drawer with your right hand. (variant 1616),motion_query
+ds10k-08471,What causes eye strain? (variant 2267),chat
+ds10k-09451,Back away from the blue cup. (variant 1857),motion_query
+ds10k-07617,Demonstrate how to press the button. (variant 195),motion_query
+ds10k-08158,Explain how vaccines work.,chat
+ds10k-03568,Place the door near the door. (variant 1849),motion_query
+ds10k-04363,Are there any good restaurants nearby?,chat
+ds10k-03493,Stay where you are. (variant 200),motion_query
+ds10k-08648,Help me understand Python programming in one paragraph. (variant 666),chat
+ds10k-01388,show me the red block in the classroom.,motion_query
+ds10k-01605,Why is my phone battery draining fast?,chat
+ds10k-06009,Follow me to the charging station. (variant 259),motion_query
+ds10k-02329,How can I learn game theory? (variant 673),chat
+ds10k-02120,Step closer to the shelf. (variant 1462),motion_query
+ds10k-02976,Turn left at the hallway.,motion_query
+ds10k-06311,Glance to your left.,motion_query
+ds10k-02905,Can you wave at me? (variant 1191),motion_query
+ds10k-01993,How does digital privacy work? (variant 1174),chat
+ds10k-04439,How does nutrition work? (variant 599),chat
+ds10k-08811,Turn toward the laptop.,motion_query
+ds10k-07689,Please move the exit sign to the charging station.,motion_query
+ds10k-07879,Step closer to the shelf. (variant 742),motion_query
+ds10k-07577,Tell me about urban planning. (variant 395),chat
+ds10k-03544,Nod if you agree.,motion_query
+ds10k-02715,show me the elevator button in the conference room.,motion_query
+ds10k-02323,What ingredients do I need for pancakes?,chat
+ds10k-06934,move the laptop to the conference room. (variant 502),motion_query
+ds10k-07022,I need advice on buying a car.,chat
+ds10k-06478,Compare reinforcement learning and SVM for beginners. (variant 1397),chat
+ds10k-05354,Could you show me the fire extinguisher in the classroom.,motion_query
+ds10k-09320,move the fire extinguisher to the hallway.,motion_query
+ds10k-01185,Please show me the door in the kitchen.,motion_query
+ds10k-02736,Place the remote next to the TV.,motion_query
+ds10k-00326,What are common mistakes in project management? (variant 2063),chat
+ds10k-02999,What should I know about astrophysics in one paragraph?,chat
+ds10k-04543,Walk to the hallway. (variant 1772),motion_query
+ds10k-02359,Summarize the history of world history. (variant 104),chat
+ds10k-03274,How do I fix budgeting mistakes? (variant 1969),chat
+ds10k-09943,Copy my hand gesture.,motion_query
+ds10k-01071,What should I know about classical music in detail? (variant 918),chat
+ds10k-04542,How do I improve my public speaking?,chat
+ds10k-09932,Explain critical thinking with examples.,chat
+ds10k-03747,Demonstrate how to perform a squat.,motion_query
+ds10k-01500,Can you suggest a good workout routine?,chat
+ds10k-05688,Help me understand resume writing step by step.,chat
+ds10k-01292,move the door to the doorway.,motion_query
+ds10k-02624,How does blockchain work?,chat
+ds10k-09379,How can I learn database design? (variant 213),chat
+ds10k-04899,What is the difference between random forests and HTTP? (variant 284),chat
+ds10k-06740,Put the red block on the table.,motion_query
+ds10k-04699,How does natural language processing work? (variant 461),chat
+ds10k-02037,Act out curiosity. (variant 279),motion_query
+ds10k-01787,Can you draw a circle in the air?,motion_query
+ds10k-04870,Explain linear algebra briefly. (variant 1009),chat
+ds10k-08253,Slide the book to the right.,motion_query
+ds10k-00283,Bring me the power switch.,motion_query
+ds10k-04835,Can you meditate with me?,chat
+ds10k-01768,I need help with astrophysics for my homework. (variant 1030),chat
+ds10k-08923,Explain evolution . (variant 365),chat
+ds10k-00622,I need help with natural language processing for my homework.,chat
+ds10k-03326,Can you describe the weather outside?,chat
+ds10k-03964,What is the most popular sport in the world?,chat
+ds10k-08115,Can you move the chair to the lab.,motion_query
+ds10k-05381,What should I know about resume writing with examples?,chat
+ds10k-07465,Can you recommend a good book on artificial intelligence?,chat
+ds10k-02533,Could you point to the fire extinguisher.,motion_query
+ds10k-09266,Bring me the drawer.,motion_query
+ds10k-06622,Could you move the whiteboard to the lobby.,motion_query
+ds10k-00822,Help me understand robotics ethics in detail.,chat
+ds10k-07371,What should I know about renewable energy in detail?,chat
+ds10k-08529,Where can I find information about project management? (variant 1920),chat
+ds10k-09358,I'm feeling sad today; can you cheer me up?,chat
+ds10k-04596,How does computer vision work?,chat
+ds10k-09618,Can you show me the window in the parking area.,motion_query
+ds10k-08783,What is Python programming? (variant 552),chat
+ds10k-00964,When was the transistor discovered? (variant 2241),chat
+ds10k-09096,Explain robotics ethics for a beginner. (variant 158),chat
+ds10k-06034,show me the red block in the parking area.,motion_query
+ds10k-00804,Why is supply chains important? (variant 1889),chat
+ds10k-05804,Nod to confirm you understand. (variant 349),motion_query
+ds10k-04475,Grab the blue cup with your right hand. (variant 212),motion_query
+ds10k-06948,Can you recommend a book for learning Python?,chat
+ds10k-01736,Why is vaccines important?,chat
+ds10k-01219,Can you give me a step-by-step guide to knitting?,chat
+ds10k-03071,Back away from the book.,motion_query
+ds10k-01532,Do you have any tips for staying motivated?,chat
+ds10k-00762,Hold this box steady.,motion_query
+ds10k-04751,Lead me to the conference room. (variant 786),motion_query
+ds10k-08438,Help me understand database design with examples. (variant 436),chat
+ds10k-00055,Demonstrate how to stack the boxes. (variant 807),motion_query
+ds10k-06770,Step closer to the toolbox. (variant 1858),motion_query
+ds10k-07290,How can I learn game theory? (variant 351),chat
+ds10k-06924,"I'm bored, give me something interesting to think about.",chat
+ds10k-09414,Pick up the trash bin. (variant 299),motion_query
+ds10k-05115,Who invented the refrigerator? (variant 2263),chat
+ds10k-02294,move the door to the hallway.,motion_query
+ds10k-02491,How can I learn astrophysics? (variant 535),chat
+ds10k-07278,move the charging dock to the workbench.,motion_query
+ds10k-06128,Please show me the red block in the kitchen.,motion_query
+ds10k-08279,point to the laptop. (variant 1761),motion_query
+ds10k-06480,Could you show me the plant in the hallway. (variant 863),motion_query
+ds10k-04489,Make a gesture that means wait. (variant 1576),motion_query
+ds10k-01622,Could you point to the trash bin.,motion_query
+ds10k-01876,Hold your hand out palm up.,motion_query
+ds10k-02940,Can you understand all languages?,chat
+ds10k-00802,Do you support voice commands?,chat
+ds10k-03180,Can you wave at me? (variant 471),motion_query
+ds10k-06763,What is the difference between AI and ML?,chat
+ds10k-03495,Give me advice about game theory. (variant 99),chat
+ds10k-07494,Grab the chair with your right hand.,motion_query
+ds10k-05257,How does human anatomy work? (variant 392),chat
+ds10k-07308,How are you doing today?,chat
+ds10k-02029,What's the fastest animal on Earth?,chat
+ds10k-06093,When was the airplane discovered? (variant 56),chat
+ds10k-04260,How do I get better at public speaking?,chat
+ds10k-05858,Can you move the exit sign to the charging station.,motion_query
+ds10k-06766,Could you move the fire extinguisher to the hallway.,motion_query
+ds10k-01743,What should I know about critical thinking in detail?,chat
+ds10k-03084,Move the vase to the shelf.,motion_query
+ds10k-02147,What are common mistakes in cryptography? (variant 522),chat
+ds10k-08100,Tell me about operating systems. (variant 1315),chat
+ds10k-02162,Lead me to the doorway.,motion_query
+ds10k-03983,Can you do a short wave? (variant 1349),motion_query
+ds10k-03379,Perform a stretch for me. (variant 18),motion_query
+ds10k-02539,Act out tiredness. (variant 495),motion_query
+ds10k-08143,Could you show me the laptop in the doorway.,motion_query
+ds10k-04493,Could you move the whiteboard to the parking area.,motion_query
+ds10k-06840,Move to the other side of the room.,motion_query
+ds10k-04679,Could you show me the drawer in the hallway.,motion_query
+ds10k-04893,move the first aid kit to the lobby.,motion_query
+ds10k-07687,What is the difference between SQL and SVM? (variant 1963),chat
+ds10k-07026,What are the benefits of probability?,chat
+ds10k-04532,Could you show me the whiteboard in the conference room.,motion_query
+ds10k-08173,Bow like you are greeting someone.,motion_query
+ds10k-06681,Can you move the laptop to the lab.,motion_query
+ds10k-00997,Wave your arm. (variant 1550),motion_query
+ds10k-05776,Explain machine learning step by step.,chat
+ds10k-02671,show me the exit sign in the kitchen.,motion_query
+ds10k-03515,Help me understand compilers with examples.,chat
+ds10k-01126,Guide me through the kitchen. (variant 1145),motion_query
+ds10k-02886,What are common mistakes in calculus? (variant 2086),chat
+ds10k-03507,Where can I find information about natural language processing? (variant 2150),chat
+ds10k-07458,Act out confusion. (variant 99),motion_query
+ds10k-01724,Compare reinforcement learning and HTTP for beginners.,chat
+ds10k-06253,What is epidemiology? (variant 1863),chat
+ds10k-01227,Please show me the first aid kit in the classroom.,motion_query
+ds10k-01676,Where can I find information about world history? (variant 172),chat
+ds10k-05829,Point to yourself and then to me.,motion_query
+ds10k-07325,Demonstrate how to press the button. (variant 1563),motion_query
+ds10k-06552,Can you do a short stretch? (variant 1889),motion_query
+ds10k-05244,show me the book in the workbench.,motion_query
+ds10k-05046,Describe the main ideas behind classical music. (variant 1560),chat
+ds10k-03096,Lower your hand slowly. (variant 1391),motion_query
+ds10k-09739,Can you point to the whiteboard. (variant 537),motion_query
+ds10k-02272,What is database design? (variant 1357),chat
+ds10k-05353,Follow me to the charging station.,motion_query
+ds10k-04369,Could you move the drawer to the conference room. (variant 1906),motion_query
+ds10k-08766,I'm planning a trip to Japan. Any tips?,chat
+ds10k-08427,Gesture to indicate direction.,motion_query
+ds10k-01807,When was the microscope discovered? (variant 1068),chat
+ds10k-03145,Could you move the plant to the lobby.,motion_query
+ds10k-01208,What time is my appointment tomorrow?,chat
+ds10k-02278,Can you point to the first aid kit.,motion_query
+ds10k-03349,Raise your arm. (variant 312),motion_query
+ds10k-02950,Respond with a wave if you understand.,motion_query
+ds10k-06628,What should I know about resume writing briefly? (variant 1424),chat
+ds10k-08263,Where can I find information about supply chains? (variant 356),chat
+ds10k-02362,Show me where the exit is using a gesture.,motion_query
+ds10k-02408,Who invented the telephone? (variant 791),chat
+ds10k-02003,Can you explain machine learning in simple terms? (variant 1244),chat
+ds10k-05885,show me the plant in the doorway.,motion_query
+ds10k-06999,Who invented the refrigerator? (variant 745),chat
+ds10k-04713,What should I know about natural language processing briefly? (variant 1171),chat
+ds10k-04398,Explain computer vision briefly. (variant 1193),chat
+ds10k-04917,"Lower your arm, it's too high.",motion_query
+ds10k-02724,Describe the main ideas behind cryptography. (variant 1169),chat
+ds10k-07313,Move to the lobby. (variant 1449),motion_query
+ds10k-04567,Bring me a glass of water.,motion_query
+ds10k-08466,Please move the shelf to the conference room.,motion_query
+ds10k-01416,Tell me about blockchain.,chat
+ds10k-05843,Can you show me the exit sign in the conference room.,motion_query
+ds10k-06289,Hold still while I take a photo.,motion_query
+ds10k-00253,"Please answer with text, not actions.",chat
+ds10k-07159,Can you show me the chair in the lobby.,motion_query
+ds10k-04043,What should I know about classical music in detail? (variant 2275),chat
+ds10k-05416,Make a peace sign with your fingers.,motion_query
+ds10k-04982,Explain personal finance in one paragraph.,chat
+ds10k-01431,Describe the main ideas behind photosynthesis.,chat
+ds10k-07945,Could you show me the first aid kit in the charging station.,motion_query
+ds10k-02464,Explain world history briefly.,chat
+ds10k-08635,Answer by raising your hand.,motion_query
+ds10k-05250,What should I know about personal finance in detail?,chat
+ds10k-03759,point to the book. (variant 393),motion_query
+ds10k-03341,Recommend resources for evolution. (variant 797),chat
+ds10k-06727,Guide me through the classroom. (variant 1397),motion_query
+ds10k-08734,Shake your head if you disagree. (variant 1970),motion_query
+ds10k-02586,What should I know about cryptography ?,chat
+ds10k-09778,move the plant to the conference room.,motion_query
+ds10k-05558,Can you show me the whiteboard in the lobby.,motion_query
+ds10k-02412,Pick up the first aid kit.,motion_query
+ds10k-04045,Please show me the plant in the lab.,motion_query
+ds10k-03282,Explain blockchain .,chat
+ds10k-05278,Please point at the trash bin.,motion_query
+ds10k-07312,Help me understand cryptography briefly.,chat
+ds10k-04107,What should I know about project management in detail?,chat
+ds10k-00957,Back away from the shelf.,motion_query
+ds10k-03668,I need help with compilers for my homework.,chat
+ds10k-02838,Give me advice about organic chemistry. (variant 1065),chat
+ds10k-00295,Sign the word 'thank you' in sign language.,motion_query
+ds10k-01217,What's your favorite book?,chat
+ds10k-01422,Summarize the history of climate change.,chat
+ds10k-02895,Hand me the first aid kit. (variant 446),motion_query
+ds10k-06738,Follow me to the workbench. (variant 1087),motion_query
+ds10k-08910,Could you move the shelf to the hallway.,motion_query
+ds10k-06691,Tell me about the history of robots.,chat
+ds10k-09101,What is the difference between random forests and R?,chat
+ds10k-09874,Could you show me the toolbox in the parking area.,motion_query
+ds10k-05702,Blink twice if you understand.,motion_query
+ds10k-03288,How does organic chemistry work? (variant 2163),chat
+ds10k-04534,Could you move the door to the kitchen. (variant 322),motion_query
+ds10k-04287,What are the benefits of epidemiology? (variant 1339),chat
+ds10k-04312,Could you move the power switch to the classroom.,motion_query
+ds10k-08468,Wave your head. (variant 110),motion_query
+ds10k-09083,Place the shelf near the door.,motion_query
+ds10k-06026,Bring me the charging dock.,motion_query
+ds10k-04680,Stop moving immediately!,motion_query
+ds10k-09445,What are the benefits of resume writing? (variant 97),chat
+ds10k-07112,Can you explain linear algebra in simple terms? (variant 301),chat
+ds10k-07467,How does project management work?,chat
+ds10k-06748,What is the difference between gradient descent and logistic regression? (variant 330),chat
+ds10k-09699,move the laptop to the charging station.,motion_query
+ds10k-00933,show me the door in the classroom.,motion_query
+ds10k-04767,Please move the drawer to the lab.,motion_query
+ds10k-03771,Recommend resources for meditation. (variant 1165),chat
+ds10k-05674,Compare TCP and Python for beginners. (variant 1880),chat
+ds10k-03710,Turn toward the whiteboard. (variant 544),motion_query
+ds10k-04843,Help me understand thermodynamics in one paragraph. (variant 137),chat
+ds10k-01882,Help me understand vaccines . (variant 1885),chat
+ds10k-04725,What is the best way to clean a stained shirt?,chat
+ds10k-09008,Could you show me the laptop in the lobby.,motion_query
+ds10k-07845,Can you explain compilers in simple terms? (variant 968),chat
+ds10k-01287,Help me understand thermodynamics briefly.,chat
+ds10k-00099,Make a gesture that means help. (variant 1216),motion_query
+ds10k-02779,Could you show me the elevator button in the conference room.,motion_query
+ds10k-03074,Grab the drawer with your right hand. (variant 1652),motion_query
+ds10k-02154,Recommend resources for blockchain. (variant 1004),chat
+ds10k-09851,Please show me the marker in the workbench.,motion_query
+ds10k-00297,Pick up the elevator button. (variant 803),motion_query
+ds10k-08823,Grab the handle and pull the drawer open.,motion_query
+ds10k-00392,Look at the toolbox. (variant 1050),motion_query
+ds10k-04898,move the toolbox to the workbench.,motion_query
+ds10k-06585,Fetch the remote control from the table.,motion_query
+ds10k-03882,How do I improve my memory?,chat
+ds10k-01004,Act out the scene where you are surprised.,motion_query
+ds10k-02766,Explain time management with examples.,chat
+ds10k-09106,Give me advice about human anatomy. (variant 1847),chat
+ds10k-00167,Explain renewable energy in detail.,chat
+ds10k-07672,How do I fix back pain? (variant 1601),chat
+ds10k-09553,What are common mistakes in linear algebra? (variant 269),chat
+ds10k-07370,Lead me to the workbench.,motion_query
+ds10k-08761,Push the button on the machine.,motion_query
+ds10k-03988,What should I know about critical thinking step by step?,chat
+ds10k-06298,Recommend resources for game theory. (variant 935),chat
+ds10k-07446,Give me advice about natural language processing. (variant 1709),chat
+ds10k-08574,How do I cook pasta?,chat
+ds10k-00035,I need help with resume writing for my homework. (variant 202),chat
+ds10k-00483,Are you connected to the internet?,chat
+ds10k-03818,Could you move the window to the lobby.,motion_query
+ds10k-07351,Why is compilers important?,chat
+ds10k-00097,Summarize the history of critical thinking. (variant 1714),chat
+ds10k-05019,Recommend resources for organic chemistry.,chat
+ds10k-05436,move the power switch to the lab.,motion_query
+ds10k-09939,Turn toward the fire extinguisher. (variant 904),motion_query
+ds10k-05107,Bring me the marker. (variant 586),motion_query
+ds10k-09901,Can you show me the power switch in the lab.,motion_query
+ds10k-02622,Bring me the window. (variant 442),motion_query
+ds10k-01264,How can I learn meditation? (variant 1685),chat
+ds10k-04217,Help me understand sleep hygiene briefly.,chat
+ds10k-02187,Please show me the toolbox in the conference room.,motion_query
+ds10k-04973,move the elevator button to the lab.,motion_query
+ds10k-07069,Can you do a short wave? (variant 1961),motion_query
+ds10k-00431,Describe the main ideas behind sleep hygiene. (variant 1675),chat
+ds10k-08884,What are common mistakes in world history?,chat
+ds10k-08729,Can you explain human anatomy in simple terms? (variant 1037),chat
+ds10k-09429,Who invented the refrigerator? (variant 216),chat
+ds10k-05056,Please point to the whiteboard. (variant 825),motion_query
+ds10k-05339,Please show me the red block in the lab.,motion_query
+ds10k-00354,Could you move the power switch to the conference room. (variant 142),motion_query
+ds10k-03533,Walk to the conference room. (variant 1196),motion_query
+ds10k-02287,Grab the fire extinguisher with your right hand. (variant 356),motion_query
+ds10k-00692,What should I know about database design in detail? (variant 1401),chat
+ds10k-07570,Recommend resources for blockchain. (variant 843),chat
+ds10k-05119,Point to the tallest building in the skyline.,motion_query
+ds10k-02762,Turn to face the plant. (variant 1157),motion_query
+ds10k-08222,Who invented the refrigerator? (variant 1182),chat
+ds10k-07052,Explain world history with examples.,chat
+ds10k-02664,Raise your hand to greet.,motion_query
+ds10k-01769,Help me understand public speaking with examples.,chat
+ds10k-01747,point to the red block. (variant 33),motion_query
+ds10k-05430,"I have a headache, what should I take?",chat
+ds10k-06812,Compare TCP and FTP for beginners. (variant 615),chat
+ds10k-04269,move the shelf to the doorway.,motion_query
+ds10k-02576,When was the microscope discovered?,chat
+ds10k-06180,Compare reinforcement learning and logistic regression for beginners. (variant 500),chat
+ds10k-02873,Help me understand thermodynamics in one paragraph.,chat
+ds10k-02251,What are the benefits of renewable energy? (variant 879),chat
+ds10k-02794,Perform a clap for me. (variant 54),motion_query
+ds10k-00146,Walk to the charging station. (variant 1052),motion_query
+ds10k-09241,move the exit sign to the hallway.,motion_query
+ds10k-08000,What is microeconomics?,chat
+ds10k-00015,Walk to the doorway. (variant 980),motion_query
+ds10k-02769,Can you move the chair to the lobby.,motion_query
+ds10k-09887,Could you show me the window in the workbench.,motion_query
+ds10k-08203,show me the trash bin in the lab.,motion_query
+ds10k-03764,What are the benefits of meditation? (variant 189),chat
+ds10k-00384,What is renewable energy? (variant 1794),chat
+ds10k-08056,Show me how you would greet someone.,motion_query
+ds10k-05587,Walk to the kitchen. (variant 1520),motion_query
+ds10k-09260,What are the benefits of natural language processing? (variant 1155),chat
+ds10k-03766,Describe the main ideas behind linear algebra.,chat
+ds10k-03466,Walk to the lab. (variant 872),motion_query
+ds10k-02183,Please show me the exit sign in the doorway.,motion_query
+ds10k-05528,Please move the drawer to the workbench.,motion_query
+ds10k-02381,Lead me to the parking area.,motion_query
+ds10k-01762,Place the drawer near the door. (variant 1525),motion_query
+ds10k-04111,Compare k-means and momentum for beginners.,chat
+ds10k-01999,Please point to the fire extinguisher.,motion_query
+ds10k-05845,Perform a simple yoga pose.,motion_query
+ds10k-06992,Help me understand compilers .,chat
+ds10k-06295,Please point at the toolbox. (variant 973),motion_query
+ds10k-09847,What should I know about operating systems step by step?,chat
+ds10k-05783,Could you move the elevator button to the charging station.,motion_query
+ds10k-08620,Can you move the chair to the parking area.,motion_query
+ds10k-06106,How do I fix a leaking faucet?,chat
+ds10k-04977,Please point at the window. (variant 1369),motion_query
+ds10k-02778,Pull the drawer out.,motion_query
+ds10k-03566,Point to the book. (variant 648),motion_query
+ds10k-08122,Grab the door with your right hand. (variant 1436),motion_query
+ds10k-08141,Please point to the door. (variant 177),motion_query
+ds10k-07163,Which song is currently popular?,chat
+ds10k-08367,How was your day?,chat
+ds10k-05984,Can you wave at me? (variant 1731),motion_query
+ds10k-09464,How can I learn organic chemistry? (variant 1409),chat
+ds10k-01054,Move to the lab. (variant 1485),motion_query
+ds10k-02167,Hold this book up.,motion_query
+ds10k-08949,Hand me the elevator button.,motion_query
+ds10k-08986,Fetch the remote control.,motion_query
+ds10k-01144,Compare supervised learning and unsupervised learning for beginners.,chat
+ds10k-04289,Compare k-means and imitation learning for beginners.,chat
+ds10k-02932,Could you move the plant to the hallway.,motion_query
+ds10k-07782,What are the benefits of natural language processing? (variant 1523),chat
+ds10k-00456,What is the difference between reinforcement learning and HTTP?,chat
+ds10k-06247,Could you move the power switch to the hallway.,motion_query
+ds10k-06577,Can you do a short spin?,motion_query
+ds10k-09210,Help me understand classical music in one paragraph.,chat
+ds10k-02401,Help me understand classical music step by step.,chat
+ds10k-00834,What should I know about database design ?,chat
+ds10k-06862,show me the power switch in the kitchen.,motion_query
+ds10k-05299,Place the drawer near the door.,motion_query
+ds10k-09651,What causes budgeting mistakes? (variant 1324),chat
+ds10k-01782,Please point to the red block. (variant 1077),motion_query
+ds10k-01316,Summarize the history of cryptography. (variant 886),chat
+ds10k-09487,What is the difference between NoSQL and R?,chat
+ds10k-08669,What are the benefits of critical thinking? (variant 948),chat
+ds10k-09187,How do I make a perfect omelette?,chat
+ds10k-02542,Can you move the first aid kit to the charging station.,motion_query
+ds10k-07874,show me the elevator button in the kitchen.,motion_query
+ds10k-09204,What should I know about operating systems for a beginner?,chat
+ds10k-03303,What is game theory?,chat
+ds10k-05929,Show me how to sort the tools. (variant 232),motion_query
+ds10k-01061,Spin around once.,motion_query
+ds10k-02493,Can you move the drawer to the lobby.,motion_query
+ds10k-09376,Can you explain vaccines in simple terms? (variant 1060),chat
+ds10k-09470,Explain the concept of time dilation.,chat
+ds10k-00465,Explain database design in detail.,chat
+ds10k-00836,Who invented the telephone? (variant 239),chat
+ds10k-05753,Where can I find information about computer vision? (variant 2012),chat
+ds10k-02604,What is stress management? (variant 598),chat
+ds10k-02582,Nod to confirm you understand. (variant 565),motion_query
+ds10k-07637,Take three steps to the left.,motion_query
+ds10k-09950,What causes decision fatigue? (variant 887),chat
+ds10k-06731,What movie should I watch tonight?,chat
+ds10k-00898,Can you suggest a dinner recipe?,chat
+ds10k-06223,What is the difference between reinforcement learning and unsupervised learning? (variant 606),chat
+ds10k-02064,Stop waving your arm.,motion_query
+ds10k-04831,Help me understand public speaking in detail. (variant 1954),chat
+ds10k-03250,Summarize the history of probability. (variant 725),chat
+ds10k-03762,Nod to confirm you understand. (variant 1717),motion_query
+ds10k-09694,Turn to face the book. (variant 833),motion_query
+ds10k-09021,Nod to confirm you understand. (variant 925),motion_query
+ds10k-01764,Could you show me the trash bin in the lab.,motion_query
+ds10k-07777,Tell me the steps to change a car tire.,chat
+ds10k-04092,Describe the main ideas behind organic chemistry. (variant 1652),chat
+ds10k-05856,Why is linear algebra important? (variant 739),chat
+ds10k-08717,What should I know about meditation with examples?,chat
+ds10k-00086,What is the difference between reinforcement learning and momentum? (variant 997),chat
+ds10k-06550,Turn toward the laptop. (variant 436),motion_query
+ds10k-02203,Act out excitement.,motion_query
+ds10k-05136,Recommend resources for robotics ethics. (variant 2246),chat
+ds10k-08664,Step closer to the plant. (variant 1066),motion_query
+ds10k-01039,Push the button on the right.,motion_query
+ds10k-06530,Turn to face the plant.,motion_query
+ds10k-00672,Place the window near the door. (variant 1093),motion_query
+ds10k-01858,Can you learn new skills?,chat
+ds10k-06739,Explain personal finance in detail. (variant 89),chat
+ds10k-07868,Where can I find information about database design? (variant 1805),chat
+ds10k-08019,Explain personal finance step by step.,chat
+ds10k-00683,I need help with machine learning for my homework. (variant 1191),chat
+ds10k-07857,Go to the corner and wait.,motion_query
+ds10k-07633,Press the button on the remote.,motion_query
+ds10k-04460,Bring the remote control from the sofa.,motion_query
+ds10k-03527,Can you point to the marker.,motion_query
+ds10k-02135,Answer by bowing.,motion_query
+ds10k-02016,Shake your head if you disagree. (variant 1610),motion_query
+ds10k-04357,Step closer to the exit sign. (variant 58),motion_query
+ds10k-07190,What should I know about critical thinking with examples?,chat
+ds10k-08745,Hand me the first aid kit. (variant 338),motion_query
+ds10k-07349,Could you show me the elevator button in the classroom.,motion_query
+ds10k-06360,Help me understand calculus in one paragraph.,chat
+ds10k-04346,What is the difference between random forests and imitation learning? (variant 1756),chat
+ds10k-08067,What are your available sensors?,chat
+ds10k-02896,Tell me about time management.,chat
+ds10k-03720,Compare k-means and SVM for beginners. (variant 1788),chat
+ds10k-04545,Wave your head. (variant 290),motion_query
+ds10k-04756,Make a gesture that means wait. (variant 604),motion_query
+ds10k-02787,Can you help me plan my weekly schedule?,chat
+ds10k-04943,Why is classical music important?,chat
+ds10k-06082,Can you show me the drawer in the classroom.,motion_query
+ds10k-06017,Who invented the telephone? (variant 1481),chat
+ds10k-03569,What is the difference between TCP and UDP?,chat
+ds10k-09675,Where can I find information about probability?,chat
+ds10k-01838,Could you show me the plant in the conference room.,motion_query
+ds10k-01573,How do I set up a new email account?,chat
+ds10k-02942,Can you explain climate change in simple terms? (variant 1129),chat
+ds10k-07816,Bow like you're greeting someone.,motion_query
+ds10k-04081,I need a plan to organize my day.,chat
+ds10k-05485,Tell me about world history. (variant 533),chat
+ds10k-01964,Recommend resources for personal finance.,chat
+ds10k-02663,Stop moving and hold your position. (variant 1639),motion_query
+ds10k-09987,Why is organic chemistry important?,chat
+ds10k-05191,Wave your right arm. (variant 434),motion_query
+ds10k-04215,Can you show me the first aid kit in the doorway.,motion_query
+ds10k-01377,What are the benefits of sleep hygiene? (variant 442),chat
+ds10k-07604,Can you give me directions to the museum?,chat
+ds10k-08885,Look at the fire extinguisher. (variant 1626),motion_query
+ds10k-10000,Put the charging dock on the table. (variant 1956),motion_query
+ds10k-02996,Can you move the shelf to the conference room. (variant 574),motion_query
+ds10k-01268,Explain thermodynamics in one paragraph. (variant 825),chat
+ds10k-06091,Explain supply chains briefly.,chat
+ds10k-08898,What is human anatomy?,chat
+ds10k-02939,Please move the window to the hallway.,motion_query
+ds10k-02058,Stop moving and hold your position. (variant 703),motion_query
+ds10k-07154,Could you move the red block to the parking area.,motion_query
+ds10k-05062,When was the airplane discovered? (variant 2126),chat
+ds10k-05632,Stop moving and stay still.,motion_query
+ds10k-00263,How do I fix eye strain? (variant 1164),chat
+ds10k-02331,I need help with stress management for my homework.,chat
+ds10k-09790,show me the blue cup in the lab.,motion_query
+ds10k-02997,Step closer to the drawer. (variant 1894),motion_query
+ds10k-06952,Please show me the plant in the doorway.,motion_query
+ds10k-00234,Shake your head if you disagree. (variant 530),motion_query
+ds10k-09022,Give me advice about stress management. (variant 743),chat
+ds10k-06756,Please show me the trash bin in the kitchen. (variant 107),motion_query
+ds10k-09818,Explain astrophysics in detail.,chat
+ds10k-02013,When was the transistor discovered? (variant 263),chat
+ds10k-01252,Can you wave at me? (variant 1551),motion_query
+ds10k-07985,Where can I find information about Python programming? (variant 1322),chat
+ds10k-05274,Make a gesture that means stop. (variant 640),motion_query
+ds10k-08560,Step closer to the door.,motion_query
+ds10k-07636,Describe the painting 'Starry Night'.,chat
+ds10k-07882,Bring me the trash bin. (variant 1126),motion_query
+ds10k-04868,Can you show me the door in the lab.,motion_query
+ds10k-03567,Point at the red car outside.,motion_query
+ds10k-06315,Demonstrate how to fold a towel. (variant 267),motion_query
+ds10k-02945,Turn toward the book. (variant 40),motion_query
+ds10k-00183,Bring me the chair.,motion_query
+ds10k-05689,How can I learn resume writing?,chat
+ds10k-00207,Step closer to the book. (variant 238),motion_query
+ds10k-06962,Hand me the red block.,motion_query
+ds10k-08265,Summarize the history of critical thinking. (variant 2312),chat
+ds10k-09353,Give me advice about probability. (variant 2146),chat
+ds10k-04646,Can you do a short bow? (variant 737),motion_query
+ds10k-04895,move the exit sign to the workbench.,motion_query
+ds10k-06614,Give me advice about vaccines. (variant 1732),chat
+ds10k-09660,Crouch down to my level.,motion_query
+ds10k-06519,What are common mistakes in digital privacy? (variant 1511),chat
+ds10k-07944,"I'm having a tough day, can you say something encouraging?",chat
+ds10k-05971,Act as if you are surprised.,motion_query
+ds10k-08360,What is 2 plus 2?,chat
+ds10k-04815,Put your hand on your head.,motion_query
+ds10k-00020,Rotate toward the audience. (variant 1615),motion_query
+ds10k-07151,Step closer to the book. (variant 1210),motion_query
+ds10k-05510,Help me understand microeconomics in one paragraph.,chat
+ds10k-08769,Make a gesture that means no.,motion_query
+ds10k-04482,Demonstrate how to press the button. (variant 1059),motion_query
+ds10k-07195,Help me understand critical thinking with examples.,chat
+ds10k-02678,Please move the power switch to the classroom.,motion_query
+ds10k-03734,Back away from the chair. (variant 1281),motion_query
+ds10k-09482,Summarize the history of vaccines. (variant 242),chat
+ds10k-02761,How do I stay motivated?,chat
+ds10k-03763,How do I improve my time management?,chat
+ds10k-05206,What are the benefits of renewable energy? (variant 1753),chat
+ds10k-09985,Can you move the red block to the classroom.,motion_query
+ds10k-01046,How can I learn climate change?,chat
+ds10k-07976,Raise your right arm. (variant 1392),motion_query
+ds10k-01874,Help me understand climate change step by step.,chat
+ds10k-01703,Can you move the book to the parking area.,motion_query
+ds10k-06263,Shake your head if you disagree. (variant 134),motion_query
+ds10k-02261,What should I know about compilers for a beginner? (variant 964),chat
+ds10k-03034,How do I fix a clogged sink?,chat
+ds10k-06891,Lower your hand slowly. (variant 887),motion_query
+ds10k-01954,What is the difference between NoSQL and SVM? (variant 2101),chat
+ds10k-06185,Nod twice if you can hear me.,motion_query
+ds10k-09634,Can you show me the red block in the charging station.,motion_query
+ds10k-08104,Could you show me the trash bin in the parking area. (variant 1079),motion_query
+ds10k-00415,Please move the marker to the hallway.,motion_query
+ds10k-06754,Throw the ball at the target.,motion_query
+ds10k-01392,Where can I find information about game theory? (variant 1138),chat
+ds10k-03012,Turn in a circle.,motion_query
+ds10k-05561,Make a gesture that means wait. (variant 64),motion_query
+ds10k-02884,Give me advice about supply chains. (variant 1111),chat
+ds10k-00720,Compare NoSQL and Adam for beginners.,chat
+ds10k-04324,Can you describe the plot of Hamlet?,chat
+ds10k-08608,Can you translate this sentence to Spanish?,chat
+ds10k-00280,Move to the hallway. (variant 981),motion_query
+ds10k-02498,Tilt your head to show confusion.,motion_query
+ds10k-02574,How do I get to the nearest hospital?,chat
+ds10k-04422,Demonstrate how to scan the QR code.,motion_query
+ds10k-05163,Describe the main ideas behind linguistics. (variant 1307),chat
+ds10k-00990,Can you solve this math problem for me?,chat
+ds10k-04541,What is the difference between random forests and unsupervised learning? (variant 744),chat
+ds10k-05045,Raise your hand. (variant 1608),motion_query
+ds10k-00879,Compare SQL and logistic regression for beginners. (variant 477),chat
+ds10k-04536,Show me how to open a jar. (variant 1384),motion_query
+ds10k-00799,What should I know about photosynthesis with examples?,chat
+ds10k-05662,Lower your hand slowly. (variant 167),motion_query
+ds10k-04785,I need advice on dealing with a difficult coworker.,chat
+ds10k-02973,What are the benefits of time management? (variant 695),chat
+ds10k-03120,Get down from the table.,motion_query
+ds10k-03524,Who invented the camera? (variant 814),chat
+ds10k-01117,Shake your head if you disagree. (variant 890),motion_query
+ds10k-04737,Where can I find information about machine learning? (variant 517),chat
+ds10k-02907,Could you show me the toolbox in the charging station.,motion_query
+ds10k-03623,Place the toolbox near the door.,motion_query
+ds10k-01957,Describe the main ideas behind meditation. (variant 916),chat
+ds10k-07143,Help me understand thermodynamics for a beginner.,chat
+ds10k-08082,When was the refrigerator discovered? (variant 930),chat
+ds10k-05976,Perform a spin for me. (variant 810),motion_query
+ds10k-07128,Help me understand meditation with examples. (variant 275),chat
+ds10k-06927,Explain machine learning in one paragraph.,chat
+ds10k-02409,Put the power switch on the table.,motion_query
+ds10k-02233,show me the marker in the doorway.,motion_query
+ds10k-09273,Who invented the airplane? (variant 1918),chat
+ds10k-02159,Guide me through the lobby. (variant 1469),motion_query
+ds10k-06194,Tell me about linguistics. (variant 165),chat
+ds10k-02862,Please point to the trash bin.,motion_query
+ds10k-05294,Look at the door. (variant 582),motion_query
+ds10k-02692,When was the refrigerator discovered? (variant 976),chat
+ds10k-03208,What are some good study techniques?,chat
+ds10k-05869,Help me understand supply chains .,chat
+ds10k-06778,Explain urban planning briefly.,chat
+ds10k-00320,Lower your voice and step closer.,motion_query
+ds10k-04574,Describe the main ideas behind thermodynamics.,chat
+ds10k-02828,Where can I find information about Python programming? (variant 1943),chat
+ds10k-06549,I need help with compilers for my homework. (variant 1145),chat
+ds10k-06029,What are the benefits of calculus? (variant 856),chat
+ds10k-04301,Why is linguistics important? (variant 509),chat
+ds10k-01421,Walk to the hallway.,motion_query
+ds10k-00269,Grab the trash bin with your right hand. (variant 1004),motion_query
+ds10k-04329,Give me a high-five!,motion_query
+ds10k-06386,Explain public speaking briefly.,chat
+ds10k-09888,Act out a lion roar.,motion_query
+ds10k-06385,Can you tell me a joke?,chat
+ds10k-09925,show me the trash bin in the parking area. (variant 1007),motion_query
+ds10k-07076,Can you explain natural language processing in simple terms? (variant 1612),chat
+ds10k-08041,How can I learn digital privacy? (variant 2099),chat
+ds10k-04614,What should I know about calculus ?,chat
+ds10k-07436,Help me understand database design in one paragraph.,chat
+ds10k-01661,How do I fix decision fatigue?,chat
+ds10k-06716,Summarize the history of critical thinking. (variant 334),chat
+ds10k-01639,What is nutrition?,chat
+ds10k-07396,Why does the moon appear larger near the horizon?,chat
+ds10k-05188,Could you move the trash bin to the hallway.,motion_query
+ds10k-04507,Please point at the chair. (variant 1729),motion_query
+ds10k-09420,move the elevator button to the workbench. (variant 1078),motion_query
+ds10k-07522,Could you show me the marker in the doorway.,motion_query
+ds10k-02376,How do I fold a paper airplane?,chat
+ds10k-07758,Describe the main ideas behind linear algebra. (variant 2135),chat
+ds10k-08258,What should I know about Python programming in detail? (variant 1493),chat
+ds10k-04594,How do I fix a slow computer?,chat
+ds10k-04796,What is the difference between UDP and imitation learning?,chat
+ds10k-05620,What's the schedule for today?,chat
+ds10k-01600,Please show me the shelf in the parking area.,motion_query
+ds10k-03307,How do I fix procrastination? (variant 566),chat
+ds10k-05933,How do I fix memory leaks? (variant 221),chat
+ds10k-07337,Act out curiosity. (variant 1575),motion_query
+ds10k-03962,Tell me about astrophysics. (variant 2212),chat
+ds10k-07923,Slide the book across the table.,motion_query
+ds10k-01706,Who invented the printing press? (variant 1389),chat
+ds10k-03310,Back away from the red block.,motion_query
+ds10k-04097,Help me understand sleep hygiene for a beginner.,chat
+ds10k-00118,Can you show me the exit sign in the lab.,motion_query
+ds10k-08940,How do I plant a seed?,chat
+ds10k-03794,What should I know about sleep hygiene briefly?,chat
+ds10k-09449,Make a gesture that means yes. (variant 1684),motion_query
+ds10k-02744,Extend your hand for a handshake.,motion_query
+ds10k-02353,How can I learn sleep hygiene? (variant 581),chat
+ds10k-06783,What is project management? (variant 345),chat
+ds10k-06813,Please show me the chair in the doorway.,motion_query
+ds10k-00896,Raise both hands in the air.,motion_query
+ds10k-00173,Shake your head if you disagree. (variant 1790),motion_query
+ds10k-09831,Wave your arm. (variant 1874),motion_query
+ds10k-03997,Explain astrophysics .,chat
+ds10k-02041,Give me advice about supply chains. (variant 168),chat
+ds10k-08674,Could you move the first aid kit to the charging station.,motion_query
+ds10k-02854,show me the book in the classroom.,motion_query
+ds10k-04638,Walk to the classroom. (variant 548),motion_query
+ds10k-09075,Stay where you are. (variant 668),motion_query
+ds10k-07476,Shake your head if you disagree. (variant 1394),motion_query
+ds10k-05410,Point to the elevator button. (variant 432),motion_query
+ds10k-01165,How does resume writing work? (variant 1772),chat
+ds10k-02758,What is your manufacturing date?,chat
+ds10k-05661,What is computer vision? (variant 966),chat
+ds10k-09822,Who invented the transistor? (variant 101),chat
+ds10k-05173,move the red block to the lab.,motion_query
+ds10k-02713,Rotate toward the audience. (variant 607),motion_query
+ds10k-04892,Please show me the window in the workbench.,motion_query
+ds10k-01547,move the first aid kit to the workbench.,motion_query
+ds10k-05532,Perform a dance for me. (variant 306),motion_query
+ds10k-02609,I need help with epidemiology for my homework. (variant 1950),chat
+ds10k-03325,Explain linguistics in one paragraph. (variant 1331),chat
+ds10k-04166,Explain compilers in detail.,chat
+ds10k-04462,When was GPS discovered? (variant 2287),chat
+ds10k-09468,Tell me about classical music. (variant 1338),chat
