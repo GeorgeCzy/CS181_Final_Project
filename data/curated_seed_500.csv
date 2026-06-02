@@ -1,0 +1,501 @@
+id,utterance,label
+seed-0001,Can you draft a schedule for my exercise goals?,chat
+seed-0002,Show me a happy pose.,motion_query
+seed-0003,Can you invent a silly nickname for my backpack?,chat
+seed-0004,Act surprised.,motion_query
+seed-0005,Can we chat for a minute?,chat
+seed-0006,What is a polite reminder message for my teammate?,chat
+seed-0007,Point to the nearest chair.,motion_query
+seed-0008,What is 18 percent of 250?,chat
+seed-0009,What assumptions are you making?,chat
+seed-0010,How do I avoid forgetting my keys?,chat
+seed-0011,Can you tell me if the door looks open?,chat
+seed-0012,How do I start meditating?,chat
+seed-0013,Do you hear any unusual noise?,chat
+seed-0014,What are the pros and cons of adopting a pet?,chat
+seed-0015,What name did I ask you to call me?,chat
+seed-0016,Turn toward the sound.,motion_query
+seed-0017,Hand out these worksheets.,motion_query
+seed-0018,Make eye contact with the guest.,motion_query
+seed-0019,Present the award with a bow.,motion_query
+seed-0020,Please answer yes with a head nod.,motion_query
+seed-0021,Straighten the chairs.,motion_query
+seed-0022,Explain the difference between affect and effect.,chat
+seed-0023,Can you suggest a gentle stretching routine in words?,chat
+seed-0024,Explain machine learning without using jargon.,chat
+seed-0025,Are you able to learn my preferences?,chat
+seed-0026,Hold your current pose.,motion_query
+seed-0027,Tell me the steps for setting a reminder.,chat
+seed-0028,Do not come any closer.,motion_query
+seed-0029,Show the class how to fold the paper.,motion_query
+seed-0030,Write a short scene set in a library.,chat
+seed-0031,Run your arm through its full range of motion.,motion_query
+seed-0032,Point the audience toward the display.,motion_query
+seed-0033,Press the elevator button.,motion_query
+seed-0034,Mirror my stretch.,motion_query
+seed-0035,Write a friendly thank-you note.,chat
+seed-0036,Can you explain recursion in simple terms?,chat
+seed-0037,Do you detect any obstacles nearby?,chat
+seed-0038,Move to the center of the room.,motion_query
+seed-0039,Pour water into the cup if you can.,motion_query
+seed-0040,Can you store that I prefer metric units?,chat
+seed-0041,What podcast topic might help me learn history?,chat
+seed-0042,How do I pronounce 'algorithm'?,chat
+seed-0043,Walk slowly beside me.,motion_query
+seed-0044,What is a balanced breakfast idea?,chat
+seed-0045,How should I prepare for a coding test?,chat
+seed-0046,Can you salute the team?,motion_query
+seed-0047,"If I had only ten minutes, what should I do first?",chat
+seed-0048,Can you tell me a mystery riddle?,chat
+seed-0049,What is the capital of Canada?,chat
+seed-0050,What if two people ask you questions at once?,chat
+seed-0051,Can you suggest a calm playlist for studying?,chat
+seed-0052,How do I make this walkway less slippery?,chat
+seed-0053,Guide the group to the cafeteria.,motion_query
+seed-0054,Can you explain where the charging station is?,chat
+seed-0055,Use a thumbs up if you agree.,motion_query
+seed-0056,Guide my hand to the rail.,motion_query
+seed-0057,Clap twice for the rhythm game.,motion_query
+seed-0058,Can you listen while I vent?,chat
+seed-0059,Can you summarize how GPS works?,chat
+seed-0060,Reach out so I can place the item in your hand.,motion_query
+seed-0061,What movements are hardest for you?,chat
+seed-0062,Clean the whiteboard with the eraser.,motion_query
+seed-0063,"If I split 42 cookies among 7 people, how many does each get?",chat
+seed-0064,Can you do a gentle side bend?,motion_query
+seed-0065,How should I divide my time before the meeting?,chat
+seed-0066,Open the door for me.,motion_query
+seed-0067,Who wrote Pride and Prejudice?,chat
+seed-0068,What reminders did I ask for today?,chat
+seed-0069,Turn the page for me.,motion_query
+seed-0070,Show a charades clue for a movie title.,motion_query
+seed-0071,What should I ask a doctor about my cough?,chat
+seed-0072,What is photosynthesis?,chat
+seed-0073,Describe the route to the cafeteria.,chat
+seed-0074,Show me a playful pose.,motion_query
+seed-0075,Can you look confused?,motion_query
+seed-0076,How does a battery store energy?,chat
+seed-0077,Can you list the dances you know without doing them?,chat
+seed-0078,Place the book on the table.,motion_query
+seed-0079,How many planets are in the solar system?,chat
+seed-0080,My laptop will not connect to Wi-Fi; what should I try?,chat
+seed-0081,Can you define the word 'resilient'?,chat
+seed-0082,How do you decide what to say?,chat
+seed-0083,Act out checking your pockets.,motion_query
+seed-0084,Please lead us to the emergency exit.,motion_query
+seed-0085,Go get the mail from the table.,motion_query
+seed-0086,Extend your arm for a handshake.,motion_query
+seed-0087,Lower your arm slowly.,motion_query
+seed-0088,Are you saying I should start with the small task?,chat
+seed-0089,How do vaccines train the immune system?,chat
+seed-0090,Look at the person raising their hand.,motion_query
+seed-0091,Can you remember that I prefer short answers?,chat
+seed-0092,Did you understand my last question?,chat
+seed-0093,Use text only for this one.,chat
+seed-0094,Answer quietly without any gesture.,chat
+seed-0095,What did I say my favorite color was?,chat
+seed-0096,Go to the charging station.,motion_query
+seed-0097,"If you could not move, how would you still help?",chat
+seed-0098,What should I say when someone gives me a gift?,chat
+seed-0099,Pass me the salt.,motion_query
+seed-0100,Act out rowing a boat for the guessing game.,motion_query
+seed-0101,Is the room bright right now?,chat
+seed-0102,Can you report the temperature if you know it?,chat
+seed-0103,Orient yourself toward the charging dock.,motion_query
+seed-0104,Can you give me an example?,chat
+seed-0105,What is the freezing point of water in Celsius?,chat
+seed-0106,Help me organize a study schedule for next week.,chat
+seed-0107,Open and close your gripper.,motion_query
+seed-0108,How would you handle a noisy room?,chat
+seed-0109,Show a victory gesture when you win.,motion_query
+seed-0110,What book should I read if I like mystery stories?,chat
+seed-0111,Do a quick dance for the kids.,motion_query
+seed-0112,Wipe the table.,motion_query
+seed-0113,Please walk to the doorway.,motion_query
+seed-0114,Can you help me think about whether to switch majors?,chat
+seed-0115,Stay still until I say go.,motion_query
+seed-0116,I only need a verbal response.,chat
+seed-0117,Can you nod if the answer is yes?,motion_query
+seed-0118,Shake my hand.,motion_query
+seed-0119,Can you act sleepy?,motion_query
+seed-0120,When did the first airplane fly?,chat
+seed-0121,Tell me the difference between a nod and a bow.,chat
+seed-0122,What is your battery level?,chat
+seed-0123,Do what I do with my hands.,motion_query
+seed-0124,What have you learned about my morning routine?,chat
+seed-0125,Tidy the cables under the desk.,motion_query
+seed-0126,Clap the syllables for this word.,motion_query
+seed-0127,Help me write an email to my professor.,chat
+seed-0128,What is 15 plus 28?,chat
+seed-0129,Use body language to answer.,motion_query
+seed-0130,Copy the way I point.,motion_query
+seed-0131,Please do a slow dance move.,motion_query
+seed-0132,Can you point at the object you mean?,motion_query
+seed-0133,Hold the light over the book.,motion_query
+seed-0134,Mirror my arm movement.,motion_query
+seed-0135,Hand the microphone to the next speaker.,motion_query
+seed-0136,Show me which button to press by pointing.,motion_query
+seed-0137,"I had a rough day, can we talk?",chat
+seed-0138,Show me how to signal stop with your hand.,motion_query
+seed-0139,What is the best way to take notes?,chat
+seed-0140,Show excitement without speaking.,motion_query
+seed-0141,Can you help me think through a conflict with a friend?,chat
+seed-0142,Where is the restroom on this floor?,chat
+seed-0143,What is a kind message I can send myself?,chat
+seed-0144,Hand me the marker.,motion_query
+seed-0145,Why do leaves change color in autumn?,chat
+seed-0146,Summarize this meeting topic for me.,chat
+seed-0147,What is the area of a rectangle that is 5 by 9 meters?,chat
+seed-0148,Keep your camera pointed at the table.,motion_query
+seed-0149,Can you repeat that in simpler words?,chat
+seed-0150,Can you offer a fist bump?,motion_query
+seed-0151,Set the container on the scale.,motion_query
+seed-0152,Can you make this sentence sound friendlier?,chat
+seed-0153,Walk me to the meeting room.,motion_query
+seed-0154,Indicate the correct shelf with your hand.,motion_query
+seed-0155,Carry the tray to the counter.,motion_query
+seed-0156,Why do people like music?,chat
+seed-0157,Can you describe how you would wave?,chat
+seed-0158,Write the answer on the board.,motion_query
+seed-0159,Make a calm reassuring gesture.,motion_query
+seed-0160,Demonstrate how to wave someone over.,motion_query
+seed-0161,Follow the ball with your gaze.,motion_query
+seed-0162,Make a proud victory pose.,motion_query
+seed-0163,How do I find the front desk?,chat
+seed-0164,Tell me a clean joke.,chat
+seed-0165,Perform a slow arm circle.,motion_query
+seed-0166,Press the green button.,motion_query
+seed-0167,Can you respond with motion only?,motion_query
+seed-0168,Make up a riddle about a clock.,chat
+seed-0169,Can you invent a name for my robot assistant?,chat
+seed-0170,Open the drawer if you can.,motion_query
+seed-0171,Shake your head to say no.,motion_query
+seed-0172,Can you remind me what I said about the grocery list?,chat
+seed-0173,Take this cup to the sink.,motion_query
+seed-0174,Stand beside the speaker and gesture to them.,motion_query
+seed-0175,Place the sample on the tray.,motion_query
+seed-0176,"Hello there, who am I talking to?",chat
+seed-0177,Demonstrate how to warm up before running.,motion_query
+seed-0178,Can you gesture toward the person speaking?,motion_query
+seed-0179,How much is a 20 percent tip on 38 dollars?,chat
+seed-0180,Can you escort the visitor to the lobby?,motion_query
+seed-0181,Stretch your arms overhead.,motion_query
+seed-0182,Please give me a friendly wave.,motion_query
+seed-0183,Show agreement with a simple gesture.,motion_query
+seed-0184,Show a simple two-step dance.,motion_query
+seed-0185,Do you understand spoken instructions?,chat
+seed-0186,What is your view on lifelong learning?,chat
+seed-0187,Repeat the gesture I just made.,motion_query
+seed-0188,Rotate your wrist slowly.,motion_query
+seed-0189,Show me a balance pose.,motion_query
+seed-0190,Collect the cups from the meeting room.,motion_query
+seed-0191,Unveil the sign by pulling the cover.,motion_query
+seed-0192,Greet the guest with a hand wave.,motion_query
+seed-0193,Can you carry this box to the shelf?,motion_query
+seed-0194,Ask me a trivia question.,chat
+seed-0195,How can I store cleaning chemicals safely?,chat
+seed-0196,Can you explain your limitations?,chat
+seed-0197,What game can we play without moving?,chat
+seed-0198,How can I thank a host after dinner?,chat
+seed-0199,Demonstrate the science experiment motion.,motion_query
+seed-0200,Can you review my project plan conceptually?,chat
+seed-0201,How do I recover a forgotten password safely?,chat
+seed-0202,Show me your best robot dance.,motion_query
+seed-0203,Can you match my walking pace?,motion_query
+seed-0204,Hold up the certificate for the photo.,motion_query
+seed-0205,Face the window.,motion_query
+seed-0206,"If the meeting is canceled, how should I use the time?",chat
+seed-0207,Watch the doorway.,motion_query
+seed-0208,Can you follow me to the kitchen?,motion_query
+seed-0209,What did you mean by 'calibrate'?,chat
+seed-0210,What is the square root of 144?,chat
+seed-0211,How does a microwave heat food?,chat
+seed-0212,What is your current connection status?,chat
+seed-0213,Raise your hand to say hi.,motion_query
+seed-0214,What should I do during a small kitchen fire?,chat
+seed-0215,Can you scan the room from left to right?,motion_query
+seed-0216,Stir the soup gently.,motion_query
+seed-0217,Track my hand with your head.,motion_query
+seed-0218,Move your head from side to side.,motion_query
+seed-0219,How can I prepare for a visitor tomorrow?,chat
+seed-0220,Can you correct this sentence: I has a dog?,chat
+seed-0221,Who painted the Mona Lisa?,chat
+seed-0222,Look down at the floor marker.,motion_query
+seed-0223,Can you tell me the route without pointing?,chat
+seed-0224,Can you help me respond to a compliment?,chat
+seed-0225,What is a sensible plan for preparing dinner?,chat
+seed-0226,Why is my phone battery draining so fast?,chat
+seed-0227,What causes tides in the ocean?,chat
+seed-0228,Bring the cane from the corner.,motion_query
+seed-0229,Draft a funny birthday message.,chat
+seed-0230,Can you demonstrate a calf stretch?,motion_query
+seed-0231,Raise your left arm for calibration.,motion_query
+seed-0232,Convert 72 degrees Fahrenheit to Celsius.,chat
+seed-0233,Offer your hand to the guest.,motion_query
+seed-0234,Show me the left door with a point.,motion_query
+seed-0235,"What should I cook with rice, eggs, and spinach?",chat
+seed-0236,What tasks are you designed for?,chat
+seed-0237,Stand next to the poster.,motion_query
+seed-0238,Do you need internet access to answer questions?,chat
+seed-0239,Can you suggest a simple workout plan I can read first?,chat
+seed-0240,Hand me a clean napkin.,motion_query
+seed-0241,Do three jumping jacks.,motion_query
+seed-0242,Which indoor plant is easy to care for?,chat
+seed-0243,Step back a little.,motion_query
+seed-0244,How can I make my computer run faster?,chat
+seed-0245,What makes a conversation feel respectful?,chat
+seed-0246,Can you summarize my preferences so far?,chat
+seed-0247,Please retrieve my glasses from the desk.,motion_query
+seed-0248,What does it mean for a robot to keep balance?,chat
+seed-0249,Can you show me instead of telling me?,motion_query
+seed-0250,Pretend to throw an invisible ball.,motion_query
+seed-0251,Give me a bedtime story idea.,chat
+seed-0252,What should I pack for a two-day trip?,chat
+seed-0253,Pick up the dropped keys.,motion_query
+seed-0254,Move the pan off the burner.,motion_query
+seed-0255,Which hallway leads to the conference room?,chat
+seed-0256,Turn your head toward the screen.,motion_query
+seed-0257,Pick up the papers from the floor.,motion_query
+seed-0258,Can you tell me what sensors you have?,chat
+seed-0259,Move away from the edge.,motion_query
+seed-0260,Give me a thumbs down if that is wrong.,motion_query
+seed-0261,Can you imitate this dance step?,motion_query
+seed-0262,What reminder phrase should I put on a sticky note?,chat
+seed-0263,Dance for ten seconds.,motion_query
+seed-0264,Please demonstrate your answer.,motion_query
+seed-0265,Can you teach me the basics of probability?,chat
+seed-0266,Suppose I cannot find my badge; what should I do?,chat
+seed-0267,Put the toy back in the bin.,motion_query
+seed-0268,Give us a celebratory dance.,motion_query
+seed-0269,Can you show how to scan a room?,motion_query
+seed-0270,Press the emergency stop button.,motion_query
+seed-0271,What should I check if the printer is offline?,chat
+seed-0272,Stop moving right now.,motion_query
+seed-0273,Move the chair so I can sit.,motion_query
+seed-0274,What should I do if I smell gas?,chat
+seed-0275,What kinds of gestures can you perform?,chat
+seed-0276,Show me what yes looks like.,motion_query
+seed-0277,Can you summarize my errands so I remember them?,chat
+seed-0278,Use a gesture to explain it.,motion_query
+seed-0279,Lead me to the elevator.,motion_query
+seed-0280,Describe your arm range of motion.,chat
+seed-0281,Lift your right hand to shoulder height.,motion_query
+seed-0282,Why is patience important?,chat
+seed-0283,Compose a haiku about rain.,chat
+seed-0284,Write a short poem about sunrise.,chat
+seed-0285,What is a healthy snack idea?,chat
+seed-0286,Show disappointment with your body language.,motion_query
+seed-0287,Please describe it instead of demonstrating.,chat
+seed-0288,Pick up the blue cup.,motion_query
+seed-0289,Do you remember my coffee order?,chat
+seed-0290,Can you make a study quiz about biology?,chat
+seed-0291,Can you draft a respectful disagreement?,chat
+seed-0292,Point the camera at the circuit board.,motion_query
+seed-0293,Deliver this note to Sam.,motion_query
+seed-0294,Can you demonstrate a squat?,motion_query
+seed-0295,Hold out your hand for the badge.,motion_query
+seed-0296,Can you help me check this budget total?,chat
+seed-0297,Please look away from the screen.,motion_query
+seed-0298,Can you explain basic first aid for a minor cut?,chat
+seed-0299,Put the plate on the counter.,motion_query
+seed-0300,Give me a high five.,motion_query
+seed-0301,Can you help me debug this error message?,chat
+seed-0302,What do you see in front of you?,chat
+seed-0303,Why is my microphone not working in calls?,chat
+seed-0304,Which movie would be good for a rainy evening?,chat
+seed-0305,Can you act out placing dishes on a shelf?,motion_query
+seed-0306,Let's have a conversation about movies.,chat
+seed-0307,What should I do if the elevator is busy?,chat
+seed-0308,Can you list the deadlines I mentioned?,chat
+seed-0309,Can you physically show me where the printer is?,motion_query
+seed-0310,Give me the explanation while remaining still.,chat
+seed-0311,Can you recommend a beginner-friendly programming project?,chat
+seed-0312,I feel lonely right now.,chat
+seed-0313,Do you think routines are helpful?,chat
+seed-0314,How do I reset a stuck application?,chat
+seed-0315,Do not move; just tell me the answer.,chat
+seed-0316,What are your main capabilities?,chat
+seed-0317,Freeze in place.,motion_query
+seed-0318,Should I touch a wet power outlet?,chat
+seed-0319,What are signs that I should drink more water?,chat
+seed-0320,Give me three synonyms for 'quick'.,chat
+seed-0321,Pull the lever down.,motion_query
+seed-0322,Can you summarize your answer?,chat
+seed-0323,What languages can you communicate in?,chat
+seed-0324,What qualities make a good teammate?,chat
+seed-0325,Back away from the spill.,motion_query
+seed-0326,How might a robot learn a new household routine?,chat
+seed-0327,Back up until you are clear of the table.,motion_query
+seed-0328,Use your arm to signal approval.,motion_query
+seed-0329,Can you make the response physical?,motion_query
+seed-0330,Can you help me reframe a mistake?,chat
+seed-0331,Follow my clapping rhythm.,motion_query
+seed-0332,Which door should I use for the lab?,chat
+seed-0333,Mimic my head tilt.,motion_query
+seed-0334,What would you say to a child asking about robots?,chat
+seed-0335,Can you dance in place?,motion_query
+seed-0336,Raise your hand when you are ready.,motion_query
+seed-0337,Play charades with me.,motion_query
+seed-0338,Sweep this small area.,motion_query
+seed-0339,Point toward the kitchen.,motion_query
+seed-0340,Please answer with words only.,chat
+seed-0341,Demonstrate how to tie an imaginary knot.,motion_query
+seed-0342,Can you look at the whiteboard?,motion_query
+seed-0343,Turn the knob clockwise.,motion_query
+seed-0344,Can you help me brainstorm character names?,chat
+seed-0345,Can you compare remote work and office work?,chat
+seed-0346,Can you tell me how to get to the nearest elevator?,chat
+seed-0347,Close the oven door.,motion_query
+seed-0348,Are you having a good day?,chat
+seed-0349,Can you do a safe elbow bump?,motion_query
+seed-0350,Can you talk about your walking speed?,chat
+seed-0351,What should I include in a status update?,chat
+seed-0352,Move aside so I can pass.,motion_query
+seed-0353,Can you adapt your answers to my reading level?,chat
+seed-0354,Can you help me outline this report?,chat
+seed-0355,Act it out for me.,motion_query
+seed-0356,What should I say to welcome a new teammate?,chat
+seed-0357,Turn in place for sensor calibration.,motion_query
+seed-0358,What would be a good icebreaker question?,chat
+seed-0359,What are general tips for better sleep?,chat
+seed-0360,What questions should I ask in the interview?,chat
+seed-0361,Can you do a small welcome gesture?,motion_query
+seed-0362,Can we play a word guessing game verbally?,chat
+seed-0363,Put the dishes in the rack.,motion_query
+seed-0364,What are some good ways to relax after work?,chat
+seed-0365,Fetch the small towel.,motion_query
+seed-0366,What should I remember before leaving the house?,chat
+seed-0367,Can you throw this wrapper in the bin?,motion_query
+seed-0368,Pivot ninety degrees to the right.,motion_query
+seed-0369,Open the refrigerator door.,motion_query
+seed-0370,How would you point to an object if asked?,chat
+seed-0371,Point to where I should stand.,motion_query
+seed-0372,Please bow politely to welcome them.,motion_query
+seed-0373,What does fairness mean in everyday life?,chat
+seed-0374,What is a fun fact about space?,chat
+seed-0375,Keep your arms down.,motion_query
+seed-0376,How do I negotiate a deadline politely?,chat
+seed-0377,Answer by moving your arm.,motion_query
+seed-0378,Stay where you are and explain the process.,chat
+seed-0379,How do I introduce two coworkers?,chat
+seed-0380,Turn toward the visitor and wave.,motion_query
+seed-0381,What is a polite way to interrupt someone?,chat
+seed-0382,Can you bring the remote control?,motion_query
+seed-0383,Step onto the marker for the group picture.,motion_query
+seed-0384,How should I greet a guest at the door?,chat
+seed-0385,Give me a nonverbal response.,motion_query
+seed-0386,How do I calm down before an exam?,chat
+seed-0387,Show me a cheerful greeting pose.,motion_query
+seed-0388,Take me to the lab entrance.,motion_query
+seed-0389,How many minutes are in 2.5 hours?,chat
+seed-0390,What is a prime number?,chat
+seed-0391,What is the difference between velocity and speed?,chat
+seed-0392,Move the tool to the workbench.,motion_query
+seed-0393,Can you explain why posture matters?,chat
+seed-0394,Point to the map.,motion_query
+seed-0395,How do I check whether food is spoiled?,chat
+seed-0396,Turn the page on the projector.,motion_query
+seed-0397,Can you create a slogan for a science fair booth?,chat
+seed-0398,It is nice to meet you.,chat
+seed-0399,Tell me which way the parking lot is.,chat
+seed-0400,Show me a shoulder stretch.,motion_query
+seed-0401,How do I say thank you in Japanese?,chat
+seed-0402,Hold the part steady.,motion_query
+seed-0403,Can you play Simon Says and copy the command?,motion_query
+seed-0404,I feel nervous about my presentation; what should I do?,chat
+seed-0405,Lift the lid carefully.,motion_query
+seed-0406,Stand on the floor marker.,motion_query
+seed-0407,Walk ahead and show me the way.,motion_query
+seed-0408,Translate 'good evening' into Spanish.,chat
+seed-0409,"Good morning, what can you help me with?",chat
+seed-0410,Give the child a gentle high five.,motion_query
+seed-0411,What are safe steps during an earthquake?,chat
+seed-0412,Can you perform a tiny victory dance?,motion_query
+seed-0413,Can you say something encouraging?,chat
+seed-0414,Please show a basic yoga pose.,motion_query
+seed-0415,Hold the bag while I tie my shoe.,motion_query
+seed-0416,Is there a person near the table?,chat
+seed-0417,What kind of robot are you?,chat
+seed-0418,Why is the sky blue?,chat
+seed-0419,Make a pose for freeze dance.,motion_query
+seed-0420,Extend both arms straight ahead.,motion_query
+seed-0421,Please do not act it out.,chat
+seed-0422,Please clarify the second point.,chat
+seed-0423,What does 'bonjour' mean?,chat
+seed-0424,Can you do a short dance?,motion_query
+seed-0425,Where is the exit from here?,chat
+seed-0426,Can you help me prioritize these tasks?,chat
+seed-0427,Pose next to the display for the announcement.,motion_query
+seed-0428,Please note that I like direct feedback.,chat
+seed-0429,Show me the route by moving there first.,motion_query
+seed-0430,Tell me something interesting to start the day.,chat
+seed-0431,What is good etiquette during a video meeting?,chat
+seed-0432,Can you restate that without technical terms?,chat
+seed-0433,Take one step forward for testing.,motion_query
+seed-0434,Use your arm to indicate the red box.,motion_query
+seed-0435,"Hi, how are you today?",chat
+seed-0436,Can you make a checklist for cleaning the kitchen?,chat
+seed-0437,Show the motion for brushing teeth.,motion_query
+seed-0438,Move to the beat of this song.,motion_query
+seed-0439,Come closer to me.,motion_query
+seed-0440,Give a closing bow.,motion_query
+seed-0441,Show me how to lift a box safely.,motion_query
+seed-0442,Tilt your head if you are not sure.,motion_query
+seed-0443,What are common ways to reduce eye strain?,chat
+seed-0444,Carry the groceries to the kitchen.,motion_query
+seed-0445,How can I clean up broken glass safely?,chat
+seed-0446,Move the chair closer to the desk.,motion_query
+seed-0447,Can you signal no without speaking?,motion_query
+seed-0448,Can you describe breathing exercises without demonstrating?,chat
+seed-0449,Slide the component into the slot.,motion_query
+seed-0450,Can you help me apologize for being late?,chat
+seed-0451,Turn to face me.,motion_query
+seed-0452,Tell me a story about a clever engineer.,chat
+seed-0453,Raise the flag for the ceremony.,motion_query
+seed-0454,Can you point at the exit?,motion_query
+seed-0455,Move these shoes against the wall.,motion_query
+seed-0456,What does this warning light mean?,chat
+seed-0457,Indicate uncertainty with a shrug.,motion_query
+seed-0458,Can you help me word a reminder to call Alex?,chat
+seed-0459,Carry this folder to the office.,motion_query
+seed-0460,What should I do when I feel overwhelmed?,chat
+seed-0461,Push the cart forward.,motion_query
+seed-0462,How much sleep do adults usually need?,chat
+seed-0463,Can you wave hello?,motion_query
+seed-0464,Bring me the water bottle.,motion_query
+seed-0465,Look at me while I speak.,motion_query
+seed-0466,Please turn around.,motion_query
+seed-0467,Face the person who is speaking.,motion_query
+seed-0468,Do you remember talking with me before?,chat
+seed-0469,What would happen if the power went out?,chat
+seed-0470,Close the cabinet door.,motion_query
+seed-0471,Please outline a morning routine for me.,chat
+seed-0472,What is a more formal way to say 'help me out'?,chat
+seed-0473,Rotate to your left.,motion_query
+seed-0474,How should I address you?,chat
+seed-0475,Demonstrate the correct hand position.,motion_query
+seed-0476,What is the safest way to lift a heavy box?,chat
+seed-0477,What is your favorite way to greet people?,chat
+seed-0478,Can you describe the objects on the desk?,chat
+seed-0479,Clear a path to the table.,motion_query
+seed-0480,Do the motion for rock in rock-paper-scissors.,motion_query
+seed-0481,Place the spoon beside the bowl.,motion_query
+seed-0482,What should you keep in mind when helping me?,chat
+seed-0483,Explain how a robot plans a safe path.,chat
+seed-0484,Give me a thumbs-up greeting.,motion_query
+seed-0485,Pretend to be thinking deeply.,motion_query
+seed-0486,Can you help me plan my afternoon?,chat
+seed-0487,How far is the Moon from Earth?,chat
+seed-0488,Copy my pose.,motion_query
+seed-0489,Collect the pencils from the desks.,motion_query
+seed-0490,Pause your movement.,motion_query
+seed-0491,Could you answer more briefly?,chat
+seed-0492,Move forward one meter.,motion_query
+seed-0493,Can you tap my shoulder gently to get my attention?,motion_query
+seed-0494,Can you act out opening a door?,motion_query
+seed-0495,Can you give me walking directions to the library?,chat
+seed-0496,Convert 3 miles to kilometers.,chat
+seed-0497,Guide me to the reception desk.,motion_query
+seed-0498,Act out a profession for me to guess.,motion_query
+seed-0499,Can you walk me through restarting the router?,chat
+seed-0500,Move the package to the entryway.,motion_query
