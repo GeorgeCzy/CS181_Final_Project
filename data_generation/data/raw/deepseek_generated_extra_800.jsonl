@@ -1,0 +1,800 @@
+{"utterance": "Can you name all the planets in order from the sun?", "label": "chat", "id": "deepseek-extra800-00001"}
+{"utterance": "I am stressed about my exam. Any advice?", "label": "chat", "id": "deepseek-extra800-00002"}
+{"utterance": "Place the vase on the table.", "label": "motion_query", "id": "deepseek-extra800-00003"}
+{"utterance": "How many planets are in our solar system?", "label": "chat", "id": "deepseek-extra800-00004"}
+{"utterance": "Raise your arm to the side.", "label": "motion_query", "id": "deepseek-extra800-00005"}
+{"utterance": "I need advice on how to negotiate a salary raise.", "label": "chat", "id": "deepseek-extra800-00006"}
+{"utterance": "Demonstrate how to swing a golf club.", "label": "motion_query", "id": "deepseek-extra800-00007"}
+{"utterance": "Act as if you're smelling a flower.", "label": "motion_query", "id": "deepseek-extra800-00008"}
+{"utterance": "Do you think AI will replace jobs?", "label": "chat", "id": "deepseek-extra800-00009"}
+{"utterance": "Pick up that book.", "label": "motion_query", "id": "deepseek-extra800-00010"}
+{"utterance": "Gesture thumbs up.", "label": "motion_query", "id": "deepseek-extra800-00011"}
+{"utterance": "Why does the sky appear blue?", "label": "chat", "id": "deepseek-extra800-00012"}
+{"utterance": "Lean forward to see the clock.", "label": "motion_query", "id": "deepseek-extra800-00013"}
+{"utterance": "I have a headache, any remedies?", "label": "chat", "id": "deepseek-extra800-00014"}
+{"utterance": "How do I set up my new phone?", "label": "chat", "id": "deepseek-extra800-00015"}
+{"utterance": "How do you process visual information?", "label": "chat", "id": "deepseek-extra800-00016"}
+{"utterance": "Please describe the dance move rather than showing it.", "label": "chat", "id": "deepseek-extra800-00017"}
+{"utterance": "Shake your head to show disagreement.", "label": "motion_query", "id": "deepseek-extra800-00018"}
+{"utterance": "I need to plan a dinner party, any ideas?", "label": "chat", "id": "deepseek-extra800-00019"}
+{"utterance": "Can you describe the layout of the museum?", "label": "chat", "id": "deepseek-extra800-00020"}
+{"utterance": "How do you distinguish between objects?", "label": "chat", "id": "deepseek-extra800-00021"}
+{"utterance": "How many people are in this room?", "label": "chat", "id": "deepseek-extra800-00022"}
+{"utterance": "What's the recipe for pancakes?", "label": "chat", "id": "deepseek-extra800-00023"}
+{"utterance": "What time is my appointment?", "label": "chat", "id": "deepseek-extra800-00024"}
+{"utterance": "Turn left.", "label": "motion_query", "id": "deepseek-extra800-00025"}
+{"utterance": "Act out what happened in the story.", "label": "motion_query", "id": "deepseek-extra800-00026"}
+{"utterance": "Move forward two meters and stop.", "label": "motion_query", "id": "deepseek-extra800-00027"}
+{"utterance": "Turn around and face the whiteboard.", "label": "motion_query", "id": "deepseek-extra800-00028"}
+{"utterance": "Place the groceries on the counter.", "label": "motion_query", "id": "deepseek-extra800-00029"}
+{"utterance": "I need advice on managing my time better.", "label": "chat", "id": "deepseek-extra800-00030"}
+{"utterance": "Walk to the door and wait for me.", "label": "motion_query", "id": "deepseek-extra800-00031"}
+{"utterance": "Demonstrate the dance move you learned.", "label": "motion_query", "id": "deepseek-extra800-00032"}
+{"utterance": "Throw the ball back to me.", "label": "motion_query", "id": "deepseek-extra800-00033"}
+{"utterance": "Act out pouring a cup of tea.", "label": "motion_query", "id": "deepseek-extra800-00034"}
+{"utterance": "Can you recommend a recipe for pasta?", "label": "chat", "id": "deepseek-extra800-00035"}
+{"utterance": "Can you help me plan a surprise party?", "label": "chat", "id": "deepseek-extra800-00036"}
+{"utterance": "Answer by raising your arm.", "label": "motion_query", "id": "deepseek-extra800-00037"}
+{"utterance": "Stop moving completely.", "label": "motion_query", "id": "deepseek-extra800-00038"}
+{"utterance": "Can you explain how your sensors work?", "label": "chat", "id": "deepseek-extra800-00039"}
+{"utterance": "Come here and look at this screen.", "label": "motion_query", "id": "deepseek-extra800-00040"}
+{"utterance": "Show me a dance move.", "label": "motion_query", "id": "deepseek-extra800-00041"}
+{"utterance": "Please explain the steps to bake a cake.", "label": "chat", "id": "deepseek-extra800-00042"}
+{"utterance": "Look at the clock and then back at me.", "label": "motion_query", "id": "deepseek-extra800-00043"}
+{"utterance": "Raise your arm to signal the start.", "label": "motion_query", "id": "deepseek-extra800-00044"}
+{"utterance": "Answer with a wave.", "label": "motion_query", "id": "deepseek-extra800-00045"}
+{"utterance": "Reach out your hand for a handshake.", "label": "motion_query", "id": "deepseek-extra800-00046"}
+{"utterance": "What does it mean when someone says 'break a leg'?", "label": "chat", "id": "deepseek-extra800-00047"}
+{"utterance": "Do you like classical music?", "label": "chat", "id": "deepseek-extra800-00048"}
+{"utterance": "I feel a bit down today.", "label": "chat", "id": "deepseek-extra800-00049"}
+{"utterance": "Bend down and pick up the keys.", "label": "motion_query", "id": "deepseek-extra800-00050"}
+{"utterance": "My laptop keeps freezing, any ideas?", "label": "chat", "id": "deepseek-extra800-00051"}
+{"utterance": "How do I get to the train station from here?", "label": "chat", "id": "deepseek-extra800-00052"}
+{"utterance": "Bow as if greeting someone.", "label": "motion_query", "id": "deepseek-extra800-00053"}
+{"utterance": "Show me how to bow using your body.", "label": "motion_query", "id": "deepseek-extra800-00054"}
+{"utterance": "Please hand me the remote.", "label": "motion_query", "id": "deepseek-extra800-00055"}
+{"utterance": "Can you remind me to call mom at 3 PM?", "label": "chat", "id": "deepseek-extra800-00056"}
+{"utterance": "What is the best way to clean this surface?", "label": "chat", "id": "deepseek-extra800-00057"}
+{"utterance": "I need a recipe for a quick dinner.", "label": "chat", "id": "deepseek-extra800-00058"}
+{"utterance": "Can you help me plan a weekly workout routine?", "label": "chat", "id": "deepseek-extra800-00059"}
+{"utterance": "Can you recognize different faces?", "label": "chat", "id": "deepseek-extra800-00060"}
+{"utterance": "Do you know any good exercises for back pain?", "label": "chat", "id": "deepseek-extra800-00061"}
+{"utterance": "Please answer only with words, no actions.", "label": "chat", "id": "deepseek-extra800-00062"}
+{"utterance": "Walk over to the whiteboard.", "label": "motion_query", "id": "deepseek-extra800-00063"}
+{"utterance": "Can you show me what you mean?", "label": "chat", "id": "deepseek-extra800-00064"}
+{"utterance": "What is the recipe for pancakes?", "label": "chat", "id": "deepseek-extra800-00065"}
+{"utterance": "What is the best strategy for learning a new language?", "label": "chat", "id": "deepseek-extra800-00066"}
+{"utterance": "Walk to the corner of the room.", "label": "motion_query", "id": "deepseek-extra800-00067"}
+{"utterance": "What time is the sunset?", "label": "chat", "id": "deepseek-extra800-00068"}
+{"utterance": "Walk over to the window.", "label": "motion_query", "id": "deepseek-extra800-00069"}
+{"utterance": "Hold your position until I say so.", "label": "motion_query", "id": "deepseek-extra800-00070"}
+{"utterance": "Hold still while I attach this sensor.", "label": "motion_query", "id": "deepseek-extra800-00071"}
+{"utterance": "Can you describe your sensors?", "label": "chat", "id": "deepseek-extra800-00072"}
+{"utterance": "How do I reboot the system?", "label": "chat", "id": "deepseek-extra800-00073"}
+{"utterance": "I feel sad today. Can you cheer me up with words?", "label": "chat", "id": "deepseek-extra800-00074"}
+{"utterance": "What are some tips for staying productive?", "label": "chat", "id": "deepseek-extra800-00075"}
+{"utterance": "What are some good ways to reduce stress?", "label": "chat", "id": "deepseek-extra800-00076"}
+{"utterance": "Raise your arm to signal.", "label": "motion_query", "id": "deepseek-extra800-00077"}
+{"utterance": "Can you list your available sensors?", "label": "chat", "id": "deepseek-extra800-00078"}
+{"utterance": "Take a step to your left.", "label": "motion_query", "id": "deepseek-extra800-00079"}
+{"utterance": "Do you have emotions like humans do?", "label": "chat", "id": "deepseek-extra800-00080"}
+{"utterance": "What is the capital of Japan?", "label": "chat", "id": "deepseek-extra800-00081"}
+{"utterance": "Pick up the ball from the floor.", "label": "motion_query", "id": "deepseek-extra800-00082"}
+{"utterance": "What are some common causes of headaches?", "label": "chat", "id": "deepseek-extra800-00083"}
+{"utterance": "Look at the painting on the left.", "label": "motion_query", "id": "deepseek-extra800-00084"}
+{"utterance": "Can you learn new tasks?", "label": "chat", "id": "deepseek-extra800-00085"}
+{"utterance": "Can you carry this box to the car?", "label": "motion_query", "id": "deepseek-extra800-00086"}
+{"utterance": "Hold your position until I say otherwise.", "label": "motion_query", "id": "deepseek-extra800-00087"}
+{"utterance": "Move the basket to the left.", "label": "motion_query", "id": "deepseek-extra800-00088"}
+{"utterance": "Pick up that ball and hand it to me.", "label": "motion_query", "id": "deepseek-extra800-00089"}
+{"utterance": "What's on my schedule for today?", "label": "chat", "id": "deepseek-extra800-00090"}
+{"utterance": "Can you calculate the tip for a $45 bill at 15%?", "label": "chat", "id": "deepseek-extra800-00091"}
+{"utterance": "Close the window gently.", "label": "motion_query", "id": "deepseek-extra800-00092"}
+{"utterance": "Can you give me advice on dealing with stress?", "label": "chat", "id": "deepseek-extra800-00093"}
+{"utterance": "Move left and stop at the marker.", "label": "motion_query", "id": "deepseek-extra800-00094"}
+{"utterance": "Move three steps to the left.", "label": "motion_query", "id": "deepseek-extra800-00095"}
+{"utterance": "Point at the number on the screen.", "label": "motion_query", "id": "deepseek-extra800-00096"}
+{"utterance": "Can you help me write a thank-you note?", "label": "chat", "id": "deepseek-extra800-00097"}
+{"utterance": "Bend forward to pick up the paper.", "label": "motion_query", "id": "deepseek-extra800-00098"}
+{"utterance": "What do you recommend for dinner tonight?", "label": "chat", "id": "deepseek-extra800-00099"}
+{"utterance": "Please pick up that pen from the floor.", "label": "motion_query", "id": "deepseek-extra800-00100"}
+{"utterance": "Raise your hand if you hear me.", "label": "motion_query", "id": "deepseek-extra800-00101"}
+{"utterance": "How long does it take to travel to Mars?", "label": "chat", "id": "deepseek-extra800-00102"}
+{"utterance": "Can you solve this math problem verbally?", "label": "chat", "id": "deepseek-extra800-00103"}
+{"utterance": "Can you compose a poem about friendship?", "label": "chat", "id": "deepseek-extra800-00104"}
+{"utterance": "I'm feeling stressed. Can you calm me down?", "label": "chat", "id": "deepseek-extra800-00105"}
+{"utterance": "Can you tell me about the history of the wheel?", "label": "chat", "id": "deepseek-extra800-00106"}
+{"utterance": "Stop moving!", "label": "motion_query", "id": "deepseek-extra800-00107"}
+{"utterance": "Which song should I play for a relaxing evening?", "label": "chat", "id": "deepseek-extra800-00108"}
+{"utterance": "Fetch my phone from the desk.", "label": "motion_query", "id": "deepseek-extra800-00109"}
+{"utterance": "Guard the entrance.", "label": "motion_query", "id": "deepseek-extra800-00110"}
+{"utterance": "How do I improve my vocabulary?", "label": "chat", "id": "deepseek-extra800-00111"}
+{"utterance": "Follow the blue line on the floor.", "label": "motion_query", "id": "deepseek-extra800-00112"}
+{"utterance": "What does the term 'robot ethics' mean?", "label": "chat", "id": "deepseek-extra800-00113"}
+{"utterance": "Hold still while I adjust your sensor.", "label": "motion_query", "id": "deepseek-extra800-00114"}
+{"utterance": "What does it mean to be empathetic?", "label": "chat", "id": "deepseek-extra800-00115"}
+{"utterance": "Pick up that cup.", "label": "motion_query", "id": "deepseek-extra800-00116"}
+{"utterance": "Can you suggest a good book for me?", "label": "chat", "id": "deepseek-extra800-00117"}
+{"utterance": "Let's plan a surprise party for Sarah.", "label": "chat", "id": "deepseek-extra800-00118"}
+{"utterance": "Explain the concept of machine learning.", "label": "chat", "id": "deepseek-extra800-00119"}
+{"utterance": "Can you help me draft a response to a job offer?", "label": "chat", "id": "deepseek-extra800-00120"}
+{"utterance": "I'm feeling stressed, can you help me relax?", "label": "chat", "id": "deepseek-extra800-00121"}
+{"utterance": "Can you help me plan a weekly schedule?", "label": "chat", "id": "deepseek-extra800-00122"}
+{"utterance": "Do you think it will rain today?", "label": "chat", "id": "deepseek-extra800-00123"}
+{"utterance": "Demonstrate a backflip.", "label": "motion_query", "id": "deepseek-extra800-00124"}
+{"utterance": "Point at the person in the red shirt.", "label": "motion_query", "id": "deepseek-extra800-00125"}
+{"utterance": "What should I do this weekend?", "label": "chat", "id": "deepseek-extra800-00126"}
+{"utterance": "I need advice on how to improve my public speaking.", "label": "chat", "id": "deepseek-extra800-00127"}
+{"utterance": "I need advice on handling stress at work.", "label": "chat", "id": "deepseek-extra800-00128"}
+{"utterance": "Hold still while I clean your sensor.", "label": "motion_query", "id": "deepseek-extra800-00129"}
+{"utterance": "Should I take the bus or walk to work?", "label": "chat", "id": "deepseek-extra800-00130"}
+{"utterance": "Fetch the red ball.", "label": "motion_query", "id": "deepseek-extra800-00131"}
+{"utterance": "I need help with my math homework. Can you explain calculus?", "label": "chat", "id": "deepseek-extra800-00132"}
+{"utterance": "I need help planning my week.", "label": "chat", "id": "deepseek-extra800-00133"}
+{"utterance": "What is your name?", "label": "chat", "id": "deepseek-extra800-00134"}
+{"utterance": "Stop right there!", "label": "motion_query", "id": "deepseek-extra800-00135"}
+{"utterance": "What are your favorite genres of music?", "label": "chat", "id": "deepseek-extra800-00136"}
+{"utterance": "Tell me a fun fact about Mars.", "label": "chat", "id": "deepseek-extra800-00137"}
+{"utterance": "Turn right.", "label": "motion_query", "id": "deepseek-extra800-00138"}
+{"utterance": "Follow that person and stay three feet behind.", "label": "motion_query", "id": "deepseek-extra800-00139"}
+{"utterance": "Use a hand gesture to tell me yes.", "label": "motion_query", "id": "deepseek-extra800-00140"}
+{"utterance": "Can you list your features?", "label": "chat", "id": "deepseek-extra800-00141"}
+{"utterance": "Point to the person who spoke.", "label": "motion_query", "id": "deepseek-extra800-00142"}
+{"utterance": "How long will it take to charge your battery?", "label": "chat", "id": "deepseek-extra800-00143"}
+{"utterance": "Turn towards the sound of my voice.", "label": "motion_query", "id": "deepseek-extra800-00144"}
+{"utterance": "Show me your dancing moves.", "label": "motion_query", "id": "deepseek-extra800-00145"}
+{"utterance": "Stand still and don't move.", "label": "motion_query", "id": "deepseek-extra800-00146"}
+{"utterance": "How do I reset the alarm system?", "label": "chat", "id": "deepseek-extra800-00147"}
+{"utterance": "Can you summarize the plot of Harry Potter?", "label": "chat", "id": "deepseek-extra800-00148"}
+{"utterance": "Remind me to buy milk later.", "label": "chat", "id": "deepseek-extra800-00149"}
+{"utterance": "My laptop is running slow. What should I do?", "label": "chat", "id": "deepseek-extra800-00150"}
+{"utterance": "Reach out and touch the red button.", "label": "motion_query", "id": "deepseek-extra800-00151"}
+{"utterance": "Nod yes.", "label": "motion_query", "id": "deepseek-extra800-00152"}
+{"utterance": "I need a list of emergency numbers.", "label": "chat", "id": "deepseek-extra800-00153"}
+{"utterance": "What languages do you understand?", "label": "chat", "id": "deepseek-extra800-00154"}
+{"utterance": "Bring me a cup of water.", "label": "motion_query", "id": "deepseek-extra800-00155"}
+{"utterance": "What should I do to prepare for a job interview?", "label": "chat", "id": "deepseek-extra800-00156"}
+{"utterance": "Should I take the train or bus to work?", "label": "chat", "id": "deepseek-extra800-00157"}
+{"utterance": "Walk to the kitchen and bring me a cup.", "label": "motion_query", "id": "deepseek-extra800-00158"}
+{"utterance": "Tell me about your favorite memory.", "label": "chat", "id": "deepseek-extra800-00159"}
+{"utterance": "Tell me about your software update process.", "label": "chat", "id": "deepseek-extra800-00160"}
+{"utterance": "Raise your left arm and then your right.", "label": "motion_query", "id": "deepseek-extra800-00161"}
+{"utterance": "Pick up the box and place it on the shelf.", "label": "motion_query", "id": "deepseek-extra800-00162"}
+{"utterance": "Can you describe the painting on the wall?", "label": "chat", "id": "deepseek-extra800-00163"}
+{"utterance": "How does your speech recognition work?", "label": "chat", "id": "deepseek-extra800-00164"}
+{"utterance": "I'm feeling anxious, any relaxation tips?", "label": "chat", "id": "deepseek-extra800-00165"}
+{"utterance": "Stop immediately.", "label": "motion_query", "id": "deepseek-extra800-00166"}
+{"utterance": "Imitate a bird flapping its wings.", "label": "motion_query", "id": "deepseek-extra800-00167"}
+{"utterance": "Tell me a riddle.", "label": "chat", "id": "deepseek-extra800-00168"}
+{"utterance": "Carry the box to the storage room.", "label": "motion_query", "id": "deepseek-extra800-00169"}
+{"utterance": "Can you explain the difference between a virus and a bacterium?", "label": "chat", "id": "deepseek-extra800-00170"}
+{"utterance": "Do you think it will rain tomorrow?", "label": "chat", "id": "deepseek-extra800-00171"}
+{"utterance": "Can you tell me more about your capabilities?", "label": "chat", "id": "deepseek-extra800-00172"}
+{"utterance": "Demonstrate a golf swing.", "label": "motion_query", "id": "deepseek-extra800-00173"}
+{"utterance": "Can you tell me about your navigation system?", "label": "chat", "id": "deepseek-extra800-00174"}
+{"utterance": "Give me advice on staying motivated.", "label": "chat", "id": "deepseek-extra800-00175"}
+{"utterance": "Pick up that fallen piece of paper.", "label": "motion_query", "id": "deepseek-extra800-00176"}
+{"utterance": "Can you help me practice for an interview?", "label": "chat", "id": "deepseek-extra800-00177"}
+{"utterance": "How do I reset the password on my account?", "label": "chat", "id": "deepseek-extra800-00178"}
+{"utterance": "Cover your eyes with your hands.", "label": "motion_query", "id": "deepseek-extra800-00179"}
+{"utterance": "Could you explain the difference between a stroke and a heart attack?", "label": "chat", "id": "deepseek-extra800-00180"}
+{"utterance": "Please raise your right hand.", "label": "motion_query", "id": "deepseek-extra800-00181"}
+{"utterance": "What's the best time to leave for the airport?", "label": "chat", "id": "deepseek-extra800-00182"}
+{"utterance": "What are some good restaurants nearby?", "label": "chat", "id": "deepseek-extra800-00183"}
+{"utterance": "Show me how to whistle.", "label": "motion_query", "id": "deepseek-extra800-00184"}
+{"utterance": "Can you describe your obstacle avoidance system?", "label": "chat", "id": "deepseek-extra800-00185"}
+{"utterance": "Bow your head.", "label": "motion_query", "id": "deepseek-extra800-00186"}
+{"utterance": "Do you have any advice for staying motivated?", "label": "chat", "id": "deepseek-extra800-00187"}
+{"utterance": "Hold your position for ten seconds.", "label": "motion_query", "id": "deepseek-extra800-00188"}
+{"utterance": "Can you explain how neural networks work?", "label": "chat", "id": "deepseek-extra800-00189"}
+{"utterance": "Can you give me directions to the park?", "label": "chat", "id": "deepseek-extra800-00190"}
+{"utterance": "Signal 'yes' by blinking twice.", "label": "motion_query", "id": "deepseek-extra800-00191"}
+{"utterance": "Nod your head to agree.", "label": "motion_query", "id": "deepseek-extra800-00192"}
+{"utterance": "Gaze at the picture on the wall.", "label": "motion_query", "id": "deepseek-extra800-00193"}
+{"utterance": "What's a good recipe for a quick dinner?", "label": "chat", "id": "deepseek-extra800-00194"}
+{"utterance": "Describe the layout of the house.", "label": "chat", "id": "deepseek-extra800-00195"}
+{"utterance": "Act out a lion.", "label": "motion_query", "id": "deepseek-extra800-00196"}
+{"utterance": "Can you remember what I asked you yesterday?", "label": "chat", "id": "deepseek-extra800-00197"}
+{"utterance": "I need advice on handling a difficult coworker.", "label": "chat", "id": "deepseek-extra800-00198"}
+{"utterance": "Turn left and go to the kitchen.", "label": "motion_query", "id": "deepseek-extra800-00199"}
+{"utterance": "Can you help me plan a picnic?", "label": "chat", "id": "deepseek-extra800-00200"}
+{"utterance": "Which is the best restaurant in town for Italian food?", "label": "chat", "id": "deepseek-extra800-00201"}
+{"utterance": "Describe the plot of Romeo and Juliet.", "label": "chat", "id": "deepseek-extra800-00202"}
+{"utterance": "Show me how to perform a somersault.", "label": "motion_query", "id": "deepseek-extra800-00203"}
+{"utterance": "Nod once if you understand.", "label": "motion_query", "id": "deepseek-extra800-00204"}
+{"utterance": "Lower your gripper.", "label": "motion_query", "id": "deepseek-extra800-00205"}
+{"utterance": "Act out being a robot waking up.", "label": "motion_query", "id": "deepseek-extra800-00206"}
+{"utterance": "Can you give me some tips for better sleep?", "label": "chat", "id": "deepseek-extra800-00207"}
+{"utterance": "Explain the concept of metaphor.", "label": "chat", "id": "deepseek-extra800-00208"}
+{"utterance": "What if I ask you two questions at once?", "label": "chat", "id": "deepseek-extra800-00209"}
+{"utterance": "Act out a simple dance move.", "label": "motion_query", "id": "deepseek-extra800-00210"}
+{"utterance": "Salute the flag.", "label": "motion_query", "id": "deepseek-extra800-00211"}
+{"utterance": "Gesture to the left.", "label": "motion_query", "id": "deepseek-extra800-00212"}
+{"utterance": "I have a headache, what should I do?", "label": "chat", "id": "deepseek-extra800-00213"}
+{"utterance": "Look at the red object on my left.", "label": "motion_query", "id": "deepseek-extra800-00214"}
+{"utterance": "Point at the exit sign.", "label": "motion_query", "id": "deepseek-extra800-00215"}
+{"utterance": "How long have you been operating?", "label": "chat", "id": "deepseek-extra800-00216"}
+{"utterance": "Raise your right hand.", "label": "motion_query", "id": "deepseek-extra800-00217"}
+{"utterance": "Point at the picture on the wall.", "label": "motion_query", "id": "deepseek-extra800-00218"}
+{"utterance": "Can you list the ingredients for a salad?", "label": "chat", "id": "deepseek-extra800-00219"}
+{"utterance": "Explain the steps to change a tire.", "label": "chat", "id": "deepseek-extra800-00220"}
+{"utterance": "How much can you lift?", "label": "chat", "id": "deepseek-extra800-00221"}
+{"utterance": "Go to the corner and wait there.", "label": "motion_query", "id": "deepseek-extra800-00222"}
+{"utterance": "Can you explain the water cycle?", "label": "chat", "id": "deepseek-extra800-00223"}
+{"utterance": "Walk to the charging station.", "label": "motion_query", "id": "deepseek-extra800-00224"}
+{"utterance": "Grab the cup and hand it to me.", "label": "motion_query", "id": "deepseek-extra800-00225"}
+{"utterance": "What should I do if I feel lonely?", "label": "chat", "id": "deepseek-extra800-00226"}
+{"utterance": "What's the difference between a robot and an AI?", "label": "chat", "id": "deepseek-extra800-00227"}
+{"utterance": "Please explain that without moving.", "label": "chat", "id": "deepseek-extra800-00228"}
+{"utterance": "Describe your capabilities in simple terms.", "label": "chat", "id": "deepseek-extra800-00229"}
+{"utterance": "Pick up the red cup from the table.", "label": "motion_query", "id": "deepseek-extra800-00230"}
+{"utterance": "Give a thumbs up if you like it.", "label": "motion_query", "id": "deepseek-extra800-00231"}
+{"utterance": "What movie do you recommend?", "label": "chat", "id": "deepseek-extra800-00232"}
+{"utterance": "Can you demonstrate how to do a push-up?", "label": "motion_query", "id": "deepseek-extra800-00233"}
+{"utterance": "Act like a dog for a moment.", "label": "motion_query", "id": "deepseek-extra800-00234"}
+{"utterance": "Can you summarize the news today?", "label": "chat", "id": "deepseek-extra800-00235"}
+{"utterance": "Demonstrate the yoga pose.", "label": "motion_query", "id": "deepseek-extra800-00236"}
+{"utterance": "Should I take the train or bus to the airport?", "label": "chat", "id": "deepseek-extra800-00237"}
+{"utterance": "What are some fun weekend activities?", "label": "chat", "id": "deepseek-extra800-00238"}
+{"utterance": "Bring me that red book on the table.", "label": "motion_query", "id": "deepseek-extra800-00239"}
+{"utterance": "Write the number 5 on the whiteboard.", "label": "motion_query", "id": "deepseek-extra800-00240"}
+{"utterance": "Let's discuss philosophy.", "label": "chat", "id": "deepseek-extra800-00241"}
+{"utterance": "Stay there until I return.", "label": "motion_query", "id": "deepseek-extra800-00242"}
+{"utterance": "I need advice on how to negotiate a salary.", "label": "chat", "id": "deepseek-extra800-00243"}
+{"utterance": "What movie would you suggest for a family night?", "label": "chat", "id": "deepseek-extra800-00244"}
+{"utterance": "Stay in place until I come back.", "label": "motion_query", "id": "deepseek-extra800-00245"}
+{"utterance": "What should I have for dinner tonight?", "label": "chat", "id": "deepseek-extra800-00246"}
+{"utterance": "Can you remind me to buy groceries at 5 PM?", "label": "chat", "id": "deepseek-extra800-00247"}
+{"utterance": "Move to the left a little.", "label": "motion_query", "id": "deepseek-extra800-00248"}
+{"utterance": "What's the difference between affect and effect?", "label": "chat", "id": "deepseek-extra800-00249"}
+{"utterance": "How do I train for a 5K run?", "label": "chat", "id": "deepseek-extra800-00250"}
+{"utterance": "Can you explain how to change a tire?", "label": "chat", "id": "deepseek-extra800-00251"}
+{"utterance": "What is the best way to study for exams?", "label": "chat", "id": "deepseek-extra800-00252"}
+{"utterance": "What are some ways to reduce stress?", "label": "chat", "id": "deepseek-extra800-00253"}
+{"utterance": "Can you give me advice on handling stress?", "label": "chat", "id": "deepseek-extra800-00254"}
+{"utterance": "Hand me that wrench.", "label": "motion_query", "id": "deepseek-extra800-00255"}
+{"utterance": "Can you explain how to bake a cake?", "label": "chat", "id": "deepseek-extra800-00256"}
+{"utterance": "Act out the emotion 'surprise'.", "label": "motion_query", "id": "deepseek-extra800-00257"}
+{"utterance": "Scan the barcode on the package.", "label": "motion_query", "id": "deepseek-extra800-00258"}
+{"utterance": "Use a gesture to show agreement.", "label": "motion_query", "id": "deepseek-extra800-00259"}
+{"utterance": "Do you have any advice for reducing stress?", "label": "chat", "id": "deepseek-extra800-00260"}
+{"utterance": "How long will it take to charge the battery?", "label": "chat", "id": "deepseek-extra800-00261"}
+{"utterance": "What movie would you recommend for a family night?", "label": "chat", "id": "deepseek-extra800-00262"}
+{"utterance": "Raise your arm to wave.", "label": "motion_query", "id": "deepseek-extra800-00263"}
+{"utterance": "Show a sad expression.", "label": "motion_query", "id": "deepseek-extra800-00264"}
+{"utterance": "Act like you are thinking.", "label": "motion_query", "id": "deepseek-extra800-00265"}
+{"utterance": "Spin in a circle once.", "label": "motion_query", "id": "deepseek-extra800-00266"}
+{"utterance": "Turn left and point to the door.", "label": "motion_query", "id": "deepseek-extra800-00267"}
+{"utterance": "Guide my hand to the handle.", "label": "motion_query", "id": "deepseek-extra800-00268"}
+{"utterance": "Move the pen to the left.", "label": "motion_query", "id": "deepseek-extra800-00269"}
+{"utterance": "How long have you been operational?", "label": "chat", "id": "deepseek-extra800-00270"}
+{"utterance": "Turn on the light with your hand.", "label": "motion_query", "id": "deepseek-extra800-00271"}
+{"utterance": "Walk to the whiteboard and pick up a marker.", "label": "motion_query", "id": "deepseek-extra800-00272"}
+{"utterance": "Clear the table.", "label": "motion_query", "id": "deepseek-extra800-00273"}
+{"utterance": "Please hand me that book on the shelf.", "label": "motion_query", "id": "deepseek-extra800-00274"}
+{"utterance": "Take a bow after the performance.", "label": "motion_query", "id": "deepseek-extra800-00275"}
+{"utterance": "Gesture for 'come here'.", "label": "motion_query", "id": "deepseek-extra800-00276"}
+{"utterance": "Do you have any suggestions for a good book?", "label": "chat", "id": "deepseek-extra800-00277"}
+{"utterance": "Lead the way to the meeting room.", "label": "motion_query", "id": "deepseek-extra800-00278"}
+{"utterance": "Turn toward the door.", "label": "motion_query", "id": "deepseek-extra800-00279"}
+{"utterance": "Explain the difference between RAM and ROM.", "label": "chat", "id": "deepseek-extra800-00280"}
+{"utterance": "Raise your hand if you need help.", "label": "motion_query", "id": "deepseek-extra800-00281"}
+{"utterance": "Follow me to the office.", "label": "motion_query", "id": "deepseek-extra800-00282"}
+{"utterance": "Identify the red object by pointing at it.", "label": "motion_query", "id": "deepseek-extra800-00283"}
+{"utterance": "Can you describe your vision system?", "label": "chat", "id": "deepseek-extra800-00284"}
+{"utterance": "Point to the nearest exit door.", "label": "motion_query", "id": "deepseek-extra800-00285"}
+{"utterance": "Hold still while I measure you.", "label": "motion_query", "id": "deepseek-extra800-00286"}
+{"utterance": "What is the best way to cook pasta?", "label": "chat", "id": "deepseek-extra800-00287"}
+{"utterance": "Walk in a circle around the chair.", "label": "motion_query", "id": "deepseek-extra800-00288"}
+{"utterance": "Raise your right arm and wave.", "label": "motion_query", "id": "deepseek-extra800-00289"}
+{"utterance": "Back away slowly from the object.", "label": "motion_query", "id": "deepseek-extra800-00290"}
+{"utterance": "What capabilities do you have as a robot?", "label": "chat", "id": "deepseek-extra800-00291"}
+{"utterance": "Sweep the floor with your arm.", "label": "motion_query", "id": "deepseek-extra800-00292"}
+{"utterance": "My phone won't turn on. Any ideas?", "label": "chat", "id": "deepseek-extra800-00293"}
+{"utterance": "Can you give me step-by-step instructions to bake a cake?", "label": "chat", "id": "deepseek-extra800-00294"}
+{"utterance": "Lower your arm and relax.", "label": "motion_query", "id": "deepseek-extra800-00295"}
+{"utterance": "What does the term 'irony' mean?", "label": "chat", "id": "deepseek-extra800-00296"}
+{"utterance": "Pick up the book from the table and hand it to me.", "label": "motion_query", "id": "deepseek-extra800-00297"}
+{"utterance": "How do I get to the nearest pharmacy?", "label": "chat", "id": "deepseek-extra800-00298"}
+{"utterance": "Describe the process of mitosis.", "label": "chat", "id": "deepseek-extra800-00299"}
+{"utterance": "What steps should I take to improve my public speaking?", "label": "chat", "id": "deepseek-extra800-00300"}
+{"utterance": "How does the camera on your head work?", "label": "chat", "id": "deepseek-extra800-00301"}
+{"utterance": "Copy my dance moves.", "label": "motion_query", "id": "deepseek-extra800-00302"}
+{"utterance": "Give me tips for public speaking.", "label": "chat", "id": "deepseek-extra800-00303"}
+{"utterance": "Can you suggest a recipe for dinner?", "label": "chat", "id": "deepseek-extra800-00304"}
+{"utterance": "Can you list your capabilities?", "label": "chat", "id": "deepseek-extra800-00305"}
+{"utterance": "What is your weight capacity?", "label": "chat", "id": "deepseek-extra800-00306"}
+{"utterance": "Scan the room from side to side.", "label": "motion_query", "id": "deepseek-extra800-00307"}
+{"utterance": "I need advice on handling a difficult colleague.", "label": "chat", "id": "deepseek-extra800-00308"}
+{"utterance": "I feel stressed about the upcoming exam.", "label": "chat", "id": "deepseek-extra800-00309"}
+{"utterance": "What tasks are you capable of performing?", "label": "chat", "id": "deepseek-extra800-00310"}
+{"utterance": "Shake hands with the person next to me.", "label": "motion_query", "id": "deepseek-extra800-00311"}
+{"utterance": "Walk over to the door and open it.", "label": "motion_query", "id": "deepseek-extra800-00312"}
+{"utterance": "Walk three steps forward.", "label": "motion_query", "id": "deepseek-extra800-00313"}
+{"utterance": "Can you recommend a good book on mindfulness?", "label": "chat", "id": "deepseek-extra800-00314"}
+{"utterance": "Why is my computer running slowly?", "label": "chat", "id": "deepseek-extra800-00315"}
+{"utterance": "Make a fist and pump it in the air.", "label": "motion_query", "id": "deepseek-extra800-00316"}
+{"utterance": "Can you give me tips for public speaking?", "label": "chat", "id": "deepseek-extra800-00317"}
+{"utterance": "I'm feeling a bit down; can you cheer me up?", "label": "chat", "id": "deepseek-extra800-00318"}
+{"utterance": "Could you explain how to change a tire?", "label": "chat", "id": "deepseek-extra800-00319"}
+{"utterance": "Can you recommend a good book for learning Python?", "label": "chat", "id": "deepseek-extra800-00320"}
+{"utterance": "Can you recommend a movie similar to Inception?", "label": "chat", "id": "deepseek-extra800-00321"}
+{"utterance": "How do I make new friends?", "label": "chat", "id": "deepseek-extra800-00322"}
+{"utterance": "Come closer and look at this picture.", "label": "motion_query", "id": "deepseek-extra800-00323"}
+{"utterance": "Can you give me a step-by-step guide to bake a cake?", "label": "chat", "id": "deepseek-extra800-00324"}
+{"utterance": "Pick up the box and place it on the table.", "label": "motion_query", "id": "deepseek-extra800-00325"}
+{"utterance": "Raise your arm to signal a stop.", "label": "motion_query", "id": "deepseek-extra800-00326"}
+{"utterance": "Raise your hand when you hear your name.", "label": "motion_query", "id": "deepseek-extra800-00327"}
+{"utterance": "Can you help me set a reminder?", "label": "chat", "id": "deepseek-extra800-00328"}
+{"utterance": "What time is it currently?", "label": "chat", "id": "deepseek-extra800-00329"}
+{"utterance": "Can you suggest a workout routine for beginners?", "label": "chat", "id": "deepseek-extra800-00330"}
+{"utterance": "Can you define 'machine learning'?", "label": "chat", "id": "deepseek-extra800-00331"}
+{"utterance": "Pick up the fallen book.", "label": "motion_query", "id": "deepseek-extra800-00332"}
+{"utterance": "Can you remind me to buy milk tomorrow?", "label": "chat", "id": "deepseek-extra800-00333"}
+{"utterance": "Can you summarize the news headlines for today?", "label": "chat", "id": "deepseek-extra800-00334"}
+{"utterance": "Gesture towards the door.", "label": "motion_query", "id": "deepseek-extra800-00335"}
+{"utterance": "How do I cook spaghetti?", "label": "chat", "id": "deepseek-extra800-00336"}
+{"utterance": "Point to the floor.", "label": "motion_query", "id": "deepseek-extra800-00337"}
+{"utterance": "If I want to learn Spanish, where should I start?", "label": "chat", "id": "deepseek-extra800-00338"}
+{"utterance": "Can you describe what a black hole is?", "label": "chat", "id": "deepseek-extra800-00339"}
+{"utterance": "Open your gripper.", "label": "motion_query", "id": "deepseek-extra800-00340"}
+{"utterance": "What's a good book to read on a rainy day?", "label": "chat", "id": "deepseek-extra800-00341"}
+{"utterance": "Hand me the red marker.", "label": "motion_query", "id": "deepseek-extra800-00342"}
+{"utterance": "Stand still for two minutes.", "label": "motion_query", "id": "deepseek-extra800-00343"}
+{"utterance": "Move the red block to the left.", "label": "motion_query", "id": "deepseek-extra800-00344"}
+{"utterance": "What does 'machine learning' mean?", "label": "chat", "id": "deepseek-extra800-00345"}
+{"utterance": "Answer by gesturing towards the whiteboard.", "label": "motion_query", "id": "deepseek-extra800-00346"}
+{"utterance": "Make a fist and then open your hand.", "label": "motion_query", "id": "deepseek-extra800-00347"}
+{"utterance": "Raise your hand to stop the traffic.", "label": "motion_query", "id": "deepseek-extra800-00348"}
+{"utterance": "If my laptop won't start, what should I check first?", "label": "chat", "id": "deepseek-extra800-00349"}
+{"utterance": "Walk to the end of the hall and stop.", "label": "motion_query", "id": "deepseek-extra800-00350"}
+{"utterance": "How far can you reach with your arm?", "label": "chat", "id": "deepseek-extra800-00351"}
+{"utterance": "What's a good gift for a friend who loves cooking?", "label": "chat", "id": "deepseek-extra800-00352"}
+{"utterance": "Bring me the red book from the table.", "label": "motion_query", "id": "deepseek-extra800-00353"}
+{"utterance": "Demonstrate a proper push-up form.", "label": "motion_query", "id": "deepseek-extra800-00354"}
+{"utterance": "Nod if you understand me.", "label": "motion_query", "id": "deepseek-extra800-00355"}
+{"utterance": "How do I fix a frozen computer screen?", "label": "chat", "id": "deepseek-extra800-00356"}
+{"utterance": "Crouch down and look under the sofa.", "label": "motion_query", "id": "deepseek-extra800-00357"}
+{"utterance": "Can you translate this sentence into Spanish?", "label": "chat", "id": "deepseek-extra800-00358"}
+{"utterance": "Take this tray to the table over there.", "label": "motion_query", "id": "deepseek-extra800-00359"}
+{"utterance": "What steps should I take to start a garden?", "label": "chat", "id": "deepseek-extra800-00360"}
+{"utterance": "Guide me to the conference room.", "label": "motion_query", "id": "deepseek-extra800-00361"}
+{"utterance": "Act out a robot malfunction.", "label": "motion_query", "id": "deepseek-extra800-00362"}
+{"utterance": "Can you explain the plot of 'Inception'?", "label": "chat", "id": "deepseek-extra800-00363"}
+{"utterance": "Hold this object for me for a moment.", "label": "motion_query", "id": "deepseek-extra800-00364"}
+{"utterance": "Stop and stay in that position.", "label": "motion_query", "id": "deepseek-extra800-00365"}
+{"utterance": "Hand me the pen.", "label": "motion_query", "id": "deepseek-extra800-00366"}
+{"utterance": "Describe your personality.", "label": "chat", "id": "deepseek-extra800-00367"}
+{"utterance": "Give me a detailed description.", "label": "chat", "id": "deepseek-extra800-00368"}
+{"utterance": "What are the ingredients for pancakes?", "label": "chat", "id": "deepseek-extra800-00369"}
+{"utterance": "Stand still while I take a photo.", "label": "motion_query", "id": "deepseek-extra800-00370"}
+{"utterance": "Lower your arm, please.", "label": "motion_query", "id": "deepseek-extra800-00371"}
+{"utterance": "What are some good study habits?", "label": "chat", "id": "deepseek-extra800-00372"}
+{"utterance": "How do I train my dog?", "label": "chat", "id": "deepseek-extra800-00373"}
+{"utterance": "Stand still for a photo.", "label": "motion_query", "id": "deepseek-extra800-00374"}
+{"utterance": "Stand on one foot.", "label": "motion_query", "id": "deepseek-extra800-00375"}
+{"utterance": "How do I boil an egg?", "label": "chat", "id": "deepseek-extra800-00376"}
+{"utterance": "Tell me a story about robots.", "label": "chat", "id": "deepseek-extra800-00377"}
+{"utterance": "I don't understand this math problem, can you explain it?", "label": "chat", "id": "deepseek-extra800-00378"}
+{"utterance": "Please only respond with words.", "label": "chat", "id": "deepseek-extra800-00379"}
+{"utterance": "Answer me by raising your hand.", "label": "motion_query", "id": "deepseek-extra800-00380"}
+{"utterance": "Point to the book on the shelf.", "label": "motion_query", "id": "deepseek-extra800-00381"}
+{"utterance": "Show me how you can balance on one leg.", "label": "motion_query", "id": "deepseek-extra800-00382"}
+{"utterance": "Answer by tapping your foot.", "label": "motion_query", "id": "deepseek-extra800-00383"}
+{"utterance": "Come closer and look at this object.", "label": "motion_query", "id": "deepseek-extra800-00384"}
+{"utterance": "Explain how neural networks work.", "label": "chat", "id": "deepseek-extra800-00385"}
+{"utterance": "Sit down on the chair next to me.", "label": "motion_query", "id": "deepseek-extra800-00386"}
+{"utterance": "Describe the process of recycling plastic.", "label": "chat", "id": "deepseek-extra800-00387"}
+{"utterance": "Do you think I should accept the job offer?", "label": "chat", "id": "deepseek-extra800-00388"}
+{"utterance": "What should I cook for a quick dinner?", "label": "chat", "id": "deepseek-extra800-00389"}
+{"utterance": "Tell me something interesting about space.", "label": "chat", "id": "deepseek-extra800-00390"}
+{"utterance": "What does this error message mean?", "label": "chat", "id": "deepseek-extra800-00391"}
+{"utterance": "What does your face look like when you are happy?", "label": "chat", "id": "deepseek-extra800-00392"}
+{"utterance": "What are the main differences between cats and dogs?", "label": "chat", "id": "deepseek-extra800-00393"}
+{"utterance": "Can you recommend a good movie to watch?", "label": "chat", "id": "deepseek-extra800-00394"}
+{"utterance": "Move the box to the left.", "label": "motion_query", "id": "deepseek-extra800-00395"}
+{"utterance": "What are your favorite hobbies?", "label": "chat", "id": "deepseek-extra800-00396"}
+{"utterance": "Hold this bottle for me.", "label": "motion_query", "id": "deepseek-extra800-00397"}
+{"utterance": "Can you help me plan a healthy meal for the week?", "label": "chat", "id": "deepseek-extra800-00398"}
+{"utterance": "Take a step forward and stop.", "label": "motion_query", "id": "deepseek-extra800-00399"}
+{"utterance": "Pick up that cup and hand it to me.", "label": "motion_query", "id": "deepseek-extra800-00400"}
+{"utterance": "Raise your arm and wave hello.", "label": "motion_query", "id": "deepseek-extra800-00401"}
+{"utterance": "Bring me that red book from the shelf.", "label": "motion_query", "id": "deepseek-extra800-00402"}
+{"utterance": "What do you think about art?", "label": "chat", "id": "deepseek-extra800-00403"}
+{"utterance": "How do I set a reminder for my medication?", "label": "chat", "id": "deepseek-extra800-00404"}
+{"utterance": "How long does it take to learn a new language?", "label": "chat", "id": "deepseek-extra800-00405"}
+{"utterance": "Can you clarify what you meant by 'autonomous'?", "label": "chat", "id": "deepseek-extra800-00406"}
+{"utterance": "Help me plan a weekend itinerary for Paris.", "label": "chat", "id": "deepseek-extra800-00407"}
+{"utterance": "How do I create a strong password?", "label": "chat", "id": "deepseek-extra800-00408"}
+{"utterance": "List the steps to bake a chocolate cake.", "label": "chat", "id": "deepseek-extra800-00409"}
+{"utterance": "How does the weather look today?", "label": "chat", "id": "deepseek-extra800-00410"}
+{"utterance": "Bow deeply to greet the guest.", "label": "motion_query", "id": "deepseek-extra800-00411"}
+{"utterance": "Stop moving right now!", "label": "motion_query", "id": "deepseek-extra800-00412"}
+{"utterance": "How do you prioritize tasks?", "label": "chat", "id": "deepseek-extra800-00413"}
+{"utterance": "What should I pack for a hiking trip?", "label": "chat", "id": "deepseek-extra800-00414"}
+{"utterance": "Please explain the theory of relativity in simple terms.", "label": "chat", "id": "deepseek-extra800-00415"}
+{"utterance": "I'm feeling sad, can you tell me a joke?", "label": "chat", "id": "deepseek-extra800-00416"}
+{"utterance": "How good are you at recognizing faces?", "label": "chat", "id": "deepseek-extra800-00417"}
+{"utterance": "Push the box closer to me.", "label": "motion_query", "id": "deepseek-extra800-00418"}
+{"utterance": "Demonstrate how to bow properly.", "label": "motion_query", "id": "deepseek-extra800-00419"}
+{"utterance": "Point to the one you like best.", "label": "motion_query", "id": "deepseek-extra800-00420"}
+{"utterance": "I'm feeling a bit down, do you have any advice?", "label": "chat", "id": "deepseek-extra800-00421"}
+{"utterance": "Hold your hand out for a high-five.", "label": "motion_query", "id": "deepseek-extra800-00422"}
+{"utterance": "Can you suggest a good movie for tonight?", "label": "chat", "id": "deepseek-extra800-00423"}
+{"utterance": "What's the weather forecast today?", "label": "chat", "id": "deepseek-extra800-00424"}
+{"utterance": "Act like you are sad.", "label": "motion_query", "id": "deepseek-extra800-00425"}
+{"utterance": "Nod twice to show you understand.", "label": "motion_query", "id": "deepseek-extra800-00426"}
+{"utterance": "Please explain the term machine learning.", "label": "chat", "id": "deepseek-extra800-00427"}
+{"utterance": "What are the best exercises for lower back pain?", "label": "chat", "id": "deepseek-extra800-00428"}
+{"utterance": "Give a thumbs up if you agree.", "label": "motion_query", "id": "deepseek-extra800-00429"}
+{"utterance": "Hold your position and do not move.", "label": "motion_query", "id": "deepseek-extra800-00430"}
+{"utterance": "I'm feeling stressed, can you give me some encouragement?", "label": "chat", "id": "deepseek-extra800-00431"}
+{"utterance": "I feel a bit down today. Can you cheer me up?", "label": "chat", "id": "deepseek-extra800-00432"}
+{"utterance": "Do you have any advice for improving posture?", "label": "chat", "id": "deepseek-extra800-00433"}
+{"utterance": "Hold the door open.", "label": "motion_query", "id": "deepseek-extra800-00434"}
+{"utterance": "Can you help me plan my schedule for tomorrow?", "label": "chat", "id": "deepseek-extra800-00435"}
+{"utterance": "Wave goodbye to the audience.", "label": "motion_query", "id": "deepseek-extra800-00436"}
+{"utterance": "Show me how to wave goodbye.", "label": "motion_query", "id": "deepseek-extra800-00437"}
+{"utterance": "Answer by raising your left hand.", "label": "motion_query", "id": "deepseek-extra800-00438"}
+{"utterance": "Act out a penguin walking.", "label": "motion_query", "id": "deepseek-extra800-00439"}
+{"utterance": "Can you recommend a healthy breakfast?", "label": "chat", "id": "deepseek-extra800-00440"}
+{"utterance": "Close the cabinet door gently.", "label": "motion_query", "id": "deepseek-extra800-00441"}
+{"utterance": "Why did my computer crash?", "label": "chat", "id": "deepseek-extra800-00442"}
+{"utterance": "Take this book and place it on the shelf.", "label": "motion_query", "id": "deepseek-extra800-00443"}
+{"utterance": "Act like a dog for a few seconds.", "label": "motion_query", "id": "deepseek-extra800-00444"}
+{"utterance": "What's the weather like tomorrow?", "label": "chat", "id": "deepseek-extra800-00445"}
+{"utterance": "Guide my hand to the right tool.", "label": "motion_query", "id": "deepseek-extra800-00446"}
+{"utterance": "Move to the right so I can see the screen.", "label": "motion_query", "id": "deepseek-extra800-00447"}
+{"utterance": "Put your hand on your heart.", "label": "motion_query", "id": "deepseek-extra800-00448"}
+{"utterance": "Explain the concept of machine learning simply.", "label": "chat", "id": "deepseek-extra800-00449"}
+{"utterance": "Help me plan a dinner menu for four.", "label": "chat", "id": "deepseek-extra800-00450"}
+{"utterance": "Point to the red box on the table.", "label": "motion_query", "id": "deepseek-extra800-00451"}
+{"utterance": "Stop and stay where you are.", "label": "motion_query", "id": "deepseek-extra800-00452"}
+{"utterance": "Show me where the restroom is by gesturing.", "label": "motion_query", "id": "deepseek-extra800-00453"}
+{"utterance": "What does 'ephemeral' mean?", "label": "chat", "id": "deepseek-extra800-00454"}
+{"utterance": "I'm feeling anxious. Can you say something calming?", "label": "chat", "id": "deepseek-extra800-00455"}
+{"utterance": "Can you keep a secret?", "label": "chat", "id": "deepseek-extra800-00456"}
+{"utterance": "How can I reduce my carbon footprint?", "label": "chat", "id": "deepseek-extra800-00457"}
+{"utterance": "Move closer to the whiteboard.", "label": "motion_query", "id": "deepseek-extra800-00458"}
+{"utterance": "Move forward a few steps.", "label": "motion_query", "id": "deepseek-extra800-00459"}
+{"utterance": "Open the door and hold it for me.", "label": "motion_query", "id": "deepseek-extra800-00460"}
+{"utterance": "Tap your foot three times.", "label": "motion_query", "id": "deepseek-extra800-00461"}
+{"utterance": "Point to the red car.", "label": "motion_query", "id": "deepseek-extra800-00462"}
+{"utterance": "Give me a thumbs up sign.", "label": "motion_query", "id": "deepseek-extra800-00463"}
+{"utterance": "Do you think artificial intelligence will replace humans?", "label": "chat", "id": "deepseek-extra800-00464"}
+{"utterance": "Look at the ceiling for five seconds.", "label": "motion_query", "id": "deepseek-extra800-00465"}
+{"utterance": "Wave to the audience.", "label": "motion_query", "id": "deepseek-extra800-00466"}
+{"utterance": "Turn towards the door.", "label": "motion_query", "id": "deepseek-extra800-00467"}
+{"utterance": "Lean closer and whisper.", "label": "motion_query", "id": "deepseek-extra800-00468"}
+{"utterance": "Show me the way to the conference room by leading.", "label": "motion_query", "id": "deepseek-extra800-00469"}
+{"utterance": "Hold your position.", "label": "motion_query", "id": "deepseek-extra800-00470"}
+{"utterance": "Hand me the book from the shelf.", "label": "motion_query", "id": "deepseek-extra800-00471"}
+{"utterance": "How does a computer processor work?", "label": "chat", "id": "deepseek-extra800-00472"}
+{"utterance": "Gesture for me to come over.", "label": "motion_query", "id": "deepseek-extra800-00473"}
+{"utterance": "Pick up that red cup from the table.", "label": "motion_query", "id": "deepseek-extra800-00474"}
+{"utterance": "Can you define 'quantum entanglement'?", "label": "chat", "id": "deepseek-extra800-00475"}
+{"utterance": "Give a thumbs up.", "label": "motion_query", "id": "deepseek-extra800-00476"}
+{"utterance": "How would you plan a surprise party?", "label": "chat", "id": "deepseek-extra800-00477"}
+{"utterance": "Stop all movement immediately.", "label": "motion_query", "id": "deepseek-extra800-00478"}
+{"utterance": "Answer with a gesture instead of words.", "label": "motion_query", "id": "deepseek-extra800-00479"}
+{"utterance": "I need advice on how to study better.", "label": "chat", "id": "deepseek-extra800-00480"}
+{"utterance": "Act out a scene from Hamlet.", "label": "motion_query", "id": "deepseek-extra800-00481"}
+{"utterance": "Carry the box to the truck.", "label": "motion_query", "id": "deepseek-extra800-00482"}
+{"utterance": "Bend forward and touch your toes.", "label": "motion_query", "id": "deepseek-extra800-00483"}
+{"utterance": "I'm feeling sad. Can you cheer me up?", "label": "chat", "id": "deepseek-extra800-00484"}
+{"utterance": "I need advice on cooking pasta.", "label": "chat", "id": "deepseek-extra800-00485"}
+{"utterance": "How can I become more productive?", "label": "chat", "id": "deepseek-extra800-00486"}
+{"utterance": "Act out being a statue.", "label": "motion_query", "id": "deepseek-extra800-00487"}
+{"utterance": "Imitate a bird flying.", "label": "motion_query", "id": "deepseek-extra800-00488"}
+{"utterance": "What book should I read next?", "label": "chat", "id": "deepseek-extra800-00489"}
+{"utterance": "Turn your head to the left and look at me.", "label": "motion_query", "id": "deepseek-extra800-00490"}
+{"utterance": "Should I take the bus or train?", "label": "chat", "id": "deepseek-extra800-00491"}
+{"utterance": "Hand me the water bottle.", "label": "motion_query", "id": "deepseek-extra800-00492"}
+{"utterance": "Can you help me plan a dinner party?", "label": "chat", "id": "deepseek-extra800-00493"}
+{"utterance": "Kneel down to check the cable.", "label": "motion_query", "id": "deepseek-extra800-00494"}
+{"utterance": "Step aside.", "label": "motion_query", "id": "deepseek-extra800-00495"}
+{"utterance": "Come closer and look at this screen.", "label": "motion_query", "id": "deepseek-extra800-00496"}
+{"utterance": "What should I do to prepare for the meeting?", "label": "chat", "id": "deepseek-extra800-00497"}
+{"utterance": "What are your functions?", "label": "chat", "id": "deepseek-extra800-00498"}
+{"utterance": "Is it better to study in the morning or evening?", "label": "chat", "id": "deepseek-extra800-00499"}
+{"utterance": "Go to the kitchen and bring a glass.", "label": "motion_query", "id": "deepseek-extra800-00500"}
+{"utterance": "Can you hand me that cup?", "label": "motion_query", "id": "deepseek-extra800-00501"}
+{"utterance": "Can you tell me a story about space?", "label": "chat", "id": "deepseek-extra800-00502"}
+{"utterance": "What should I wear today based on the weather?", "label": "chat", "id": "deepseek-extra800-00503"}
+{"utterance": "Block my path.", "label": "motion_query", "id": "deepseek-extra800-00504"}
+{"utterance": "I need help planning my schedule.", "label": "chat", "id": "deepseek-extra800-00505"}
+{"utterance": "Can you help me study for my exam?", "label": "chat", "id": "deepseek-extra800-00506"}
+{"utterance": "Please bring me that book.", "label": "motion_query", "id": "deepseek-extra800-00507"}
+{"utterance": "Lift the lid of the pot.", "label": "motion_query", "id": "deepseek-extra800-00508"}
+{"utterance": "What can you carry with your arms?", "label": "chat", "id": "deepseek-extra800-00509"}
+{"utterance": "Show me how to do a jumping jack.", "label": "motion_query", "id": "deepseek-extra800-00510"}
+{"utterance": "What should I do if my computer freezes?", "label": "chat", "id": "deepseek-extra800-00511"}
+{"utterance": "Show me how to tie a knot by doing it.", "label": "motion_query", "id": "deepseek-extra800-00512"}
+{"utterance": "Can you solve this math problem: 12 x 15?", "label": "chat", "id": "deepseek-extra800-00513"}
+{"utterance": "Can you remind me to water the plants later?", "label": "chat", "id": "deepseek-extra800-00514"}
+{"utterance": "Turn your head and look at the painting.", "label": "motion_query", "id": "deepseek-extra800-00515"}
+{"utterance": "Open the drawer on your left.", "label": "motion_query", "id": "deepseek-extra800-00516"}
+{"utterance": "Spin around to show your full range of motion.", "label": "motion_query", "id": "deepseek-extra800-00517"}
+{"utterance": "How many objects can you recognize?", "label": "chat", "id": "deepseek-extra800-00518"}
+{"utterance": "Turn left and move forward two meters.", "label": "motion_query", "id": "deepseek-extra800-00519"}
+{"utterance": "Can you suggest a good book for a rainy afternoon?", "label": "chat", "id": "deepseek-extra800-00520"}
+{"utterance": "Lower your right arm slowly.", "label": "motion_query", "id": "deepseek-extra800-00521"}
+{"utterance": "Demonstrate the fire drill procedure.", "label": "motion_query", "id": "deepseek-extra800-00522"}
+{"utterance": "Open the door slowly.", "label": "motion_query", "id": "deepseek-extra800-00523"}
+{"utterance": "How can I improve my public speaking?", "label": "chat", "id": "deepseek-extra800-00524"}
+{"utterance": "Turn on the lamp on the table.", "label": "motion_query", "id": "deepseek-extra800-00525"}
+{"utterance": "Hand me the wrench.", "label": "motion_query", "id": "deepseek-extra800-00526"}
+{"utterance": "What are your capabilities in terms of conversation?", "label": "chat", "id": "deepseek-extra800-00527"}
+{"utterance": "Let go of the object.", "label": "motion_query", "id": "deepseek-extra800-00528"}
+{"utterance": "Go to the corner and stay there.", "label": "motion_query", "id": "deepseek-extra800-00529"}
+{"utterance": "Stand on one foot for balance.", "label": "motion_query", "id": "deepseek-extra800-00530"}
+{"utterance": "Turn your head toward the speaker.", "label": "motion_query", "id": "deepseek-extra800-00531"}
+{"utterance": "Crunch your shoulders like you're cold.", "label": "motion_query", "id": "deepseek-extra800-00532"}
+{"utterance": "Take this book to the shelf.", "label": "motion_query", "id": "deepseek-extra800-00533"}
+{"utterance": "How do I get to the airport?", "label": "chat", "id": "deepseek-extra800-00534"}
+{"utterance": "Gesture toward the window.", "label": "motion_query", "id": "deepseek-extra800-00535"}
+{"utterance": "Pick up the ball and throw it to me.", "label": "motion_query", "id": "deepseek-extra800-00536"}
+{"utterance": "Move the chair to the left side.", "label": "motion_query", "id": "deepseek-extra800-00537"}
+{"utterance": "Is it better to exercise in the morning or evening?", "label": "chat", "id": "deepseek-extra800-00538"}
+{"utterance": "Follow me to the living room.", "label": "motion_query", "id": "deepseek-extra800-00539"}
+{"utterance": "Take three steps forward.", "label": "motion_query", "id": "deepseek-extra800-00540"}
+{"utterance": "Place this box on the shelf.", "label": "motion_query", "id": "deepseek-extra800-00541"}
+{"utterance": "How do you navigate around obstacles?", "label": "chat", "id": "deepseek-extra800-00542"}
+{"utterance": "Follow me to the meeting room.", "label": "motion_query", "id": "deepseek-extra800-00543"}
+{"utterance": "Answer the question by showing me a number of fingers.", "label": "motion_query", "id": "deepseek-extra800-00544"}
+{"utterance": "Can you list the planets in order from the Sun?", "label": "chat", "id": "deepseek-extra800-00545"}
+{"utterance": "Please bring me the remote control.", "label": "motion_query", "id": "deepseek-extra800-00546"}
+{"utterance": "Can you suggest a healthy breakfast recipe?", "label": "chat", "id": "deepseek-extra800-00547"}
+{"utterance": "Fetch the remote from the coffee table.", "label": "motion_query", "id": "deepseek-extra800-00548"}
+{"utterance": "Bring me the remote.", "label": "motion_query", "id": "deepseek-extra800-00549"}
+{"utterance": "Hold this box for a moment.", "label": "motion_query", "id": "deepseek-extra800-00550"}
+{"utterance": "Go to the front door and open it.", "label": "motion_query", "id": "deepseek-extra800-00551"}
+{"utterance": "Demonstrate how to do a squat correctly.", "label": "motion_query", "id": "deepseek-extra800-00552"}
+{"utterance": "Nod your head.", "label": "motion_query", "id": "deepseek-extra800-00553"}
+{"utterance": "How do you handle errors?", "label": "chat", "id": "deepseek-extra800-00554"}
+{"utterance": "Can you repeat that in a simpler way?", "label": "chat", "id": "deepseek-extra800-00555"}
+{"utterance": "Pick up the ball and throw it.", "label": "motion_query", "id": "deepseek-extra800-00556"}
+{"utterance": "How do you define artificial intelligence?", "label": "chat", "id": "deepseek-extra800-00557"}
+{"utterance": "How old are you?", "label": "chat", "id": "deepseek-extra800-00558"}
+{"utterance": "Point to the whiteboard.", "label": "motion_query", "id": "deepseek-extra800-00559"}
+{"utterance": "Bring me the red box from the shelf.", "label": "motion_query", "id": "deepseek-extra800-00560"}
+{"utterance": "How do I bake a cake?", "label": "chat", "id": "deepseek-extra800-00561"}
+{"utterance": "What do you recommend for a beginner cook?", "label": "chat", "id": "deepseek-extra800-00562"}
+{"utterance": "Raise your arm above your head.", "label": "motion_query", "id": "deepseek-extra800-00563"}
+{"utterance": "Can you debug my code?", "label": "chat", "id": "deepseek-extra800-00564"}
+{"utterance": "I need advice on how to ask for a raise.", "label": "chat", "id": "deepseek-extra800-00565"}
+{"utterance": "I'm feeling a bit down, can you talk to me?", "label": "chat", "id": "deepseek-extra800-00566"}
+{"utterance": "Step forward two meters.", "label": "motion_query", "id": "deepseek-extra800-00567"}
+{"utterance": "Recommend a movie for tonight.", "label": "chat", "id": "deepseek-extra800-00568"}
+{"utterance": "Thanks for your help earlier.", "label": "chat", "id": "deepseek-extra800-00569"}
+{"utterance": "Describe the painting in front of you.", "label": "chat", "id": "deepseek-extra800-00570"}
+{"utterance": "Calculate the square root of 144.", "label": "chat", "id": "deepseek-extra800-00571"}
+{"utterance": "Can you say something in French?", "label": "chat", "id": "deepseek-extra800-00572"}
+{"utterance": "Turn toward the speaker.", "label": "motion_query", "id": "deepseek-extra800-00573"}
+{"utterance": "Point to the object I just mentioned.", "label": "motion_query", "id": "deepseek-extra800-00574"}
+{"utterance": "Turn around 180 degrees.", "label": "motion_query", "id": "deepseek-extra800-00575"}
+{"utterance": "Hold this object.", "label": "motion_query", "id": "deepseek-extra800-00576"}
+{"utterance": "Lower your hand slowly.", "label": "motion_query", "id": "deepseek-extra800-00577"}
+{"utterance": "Block the ball with your hand.", "label": "motion_query", "id": "deepseek-extra800-00578"}
+{"utterance": "Can you describe the layout of this room?", "label": "chat", "id": "deepseek-extra800-00579"}
+{"utterance": "Bring me the remote control from the couch.", "label": "motion_query", "id": "deepseek-extra800-00580"}
+{"utterance": "Reach out and grab the cup.", "label": "motion_query", "id": "deepseek-extra800-00581"}
+{"utterance": "Can you tell me a short story?", "label": "chat", "id": "deepseek-extra800-00582"}
+{"utterance": "Point at the red light.", "label": "motion_query", "id": "deepseek-extra800-00583"}
+{"utterance": "Point to where the noise is coming from.", "label": "motion_query", "id": "deepseek-extra800-00584"}
+{"utterance": "How do you write a haiku?", "label": "chat", "id": "deepseek-extra800-00585"}
+{"utterance": "Answer with a gesture, not words.", "label": "motion_query", "id": "deepseek-extra800-00586"}
+{"utterance": "Move that chair to the left.", "label": "motion_query", "id": "deepseek-extra800-00587"}
+{"utterance": "Guide me to the door.", "label": "motion_query", "id": "deepseek-extra800-00588"}
+{"utterance": "Pick up the toy and hand it to the child.", "label": "motion_query", "id": "deepseek-extra800-00589"}
+{"utterance": "What tasks can you help me with?", "label": "chat", "id": "deepseek-extra800-00590"}
+{"utterance": "Act out how to bow properly.", "label": "motion_query", "id": "deepseek-extra800-00591"}
+{"utterance": "Wave your hand when I say hello.", "label": "motion_query", "id": "deepseek-extra800-00592"}
+{"utterance": "What is your internal clock speed?", "label": "chat", "id": "deepseek-extra800-00593"}
+{"utterance": "Can you give me directions?", "label": "chat", "id": "deepseek-extra800-00594"}
+{"utterance": "Stay in place until I return.", "label": "motion_query", "id": "deepseek-extra800-00595"}
+{"utterance": "Move the vase to the left side.", "label": "motion_query", "id": "deepseek-extra800-00596"}
+{"utterance": "I need to remember to buy milk. Can you set a reminder?", "label": "chat", "id": "deepseek-extra800-00597"}
+{"utterance": "What movies are playing this weekend?", "label": "chat", "id": "deepseek-extra800-00598"}
+{"utterance": "How long would it take to learn programming?", "label": "chat", "id": "deepseek-extra800-00599"}
+{"utterance": "I'm feeling lonely; talk to me.", "label": "chat", "id": "deepseek-extra800-00600"}
+{"utterance": "Hold this tool steady.", "label": "motion_query", "id": "deepseek-extra800-00601"}
+{"utterance": "Hand me that wrench, please.", "label": "motion_query", "id": "deepseek-extra800-00602"}
+{"utterance": "Please point to the nearest exit.", "label": "motion_query", "id": "deepseek-extra800-00603"}
+{"utterance": "Show me how you would pick up a fragile object.", "label": "motion_query", "id": "deepseek-extra800-00604"}
+{"utterance": "Guide me through this dark hallway.", "label": "motion_query", "id": "deepseek-extra800-00605"}
+{"utterance": "How do I set a reminder for my meeting?", "label": "chat", "id": "deepseek-extra800-00606"}
+{"utterance": "Can you give me advice on staying motivated?", "label": "chat", "id": "deepseek-extra800-00607"}
+{"utterance": "Go to the kitchen and check the stove.", "label": "motion_query", "id": "deepseek-extra800-00608"}
+{"utterance": "How can I improve my cooking skills?", "label": "chat", "id": "deepseek-extra800-00609"}
+{"utterance": "Bring me the blue cup from the shelf.", "label": "motion_query", "id": "deepseek-extra800-00610"}
+{"utterance": "Catch the ball when I throw it.", "label": "motion_query", "id": "deepseek-extra800-00611"}
+{"utterance": "I'm worried about the exam.", "label": "chat", "id": "deepseek-extra800-00612"}
+{"utterance": "Scratch your head as if thinking.", "label": "motion_query", "id": "deepseek-extra800-00613"}
+{"utterance": "Convert 1 cup to milliliters.", "label": "chat", "id": "deepseek-extra800-00614"}
+{"utterance": "What is the best route to the airport?", "label": "chat", "id": "deepseek-extra800-00615"}
+{"utterance": "Do you think solar energy is efficient?", "label": "chat", "id": "deepseek-extra800-00616"}
+{"utterance": "Lead me out of this room.", "label": "motion_query", "id": "deepseek-extra800-00617"}
+{"utterance": "Can you explain how solar panels work?", "label": "chat", "id": "deepseek-extra800-00618"}
+{"utterance": "Go to the kitchen and check if the oven is off.", "label": "motion_query", "id": "deepseek-extra800-00619"}
+{"utterance": "I feel lonely today. Can you chat with me?", "label": "chat", "id": "deepseek-extra800-00620"}
+{"utterance": "What is the best way to organize my desk?", "label": "chat", "id": "deepseek-extra800-00621"}
+{"utterance": "Place your hand on your heart.", "label": "motion_query", "id": "deepseek-extra800-00622"}
+{"utterance": "How do I get to the train station?", "label": "chat", "id": "deepseek-extra800-00623"}
+{"utterance": "What song is this? (playing music)", "label": "chat", "id": "deepseek-extra800-00624"}
+{"utterance": "Act out how to greet someone.", "label": "motion_query", "id": "deepseek-extra800-00625"}
+{"utterance": "Raise your eyebrows.", "label": "motion_query", "id": "deepseek-extra800-00626"}
+{"utterance": "Move the table to the corner.", "label": "motion_query", "id": "deepseek-extra800-00627"}
+{"utterance": "Do you think I should apologize to her?", "label": "chat", "id": "deepseek-extra800-00628"}
+{"utterance": "Spin around.", "label": "motion_query", "id": "deepseek-extra800-00629"}
+{"utterance": "Push the button on top of the console.", "label": "motion_query", "id": "deepseek-extra800-00630"}
+{"utterance": "Raise your hand if you agree with me.", "label": "motion_query", "id": "deepseek-extra800-00631"}
+{"utterance": "Pick up that paper from the floor.", "label": "motion_query", "id": "deepseek-extra800-00632"}
+{"utterance": "How do I stay productive when working from home?", "label": "chat", "id": "deepseek-extra800-00633"}
+{"utterance": "I'm planning a trip to Japan. Any recommendations?", "label": "chat", "id": "deepseek-extra800-00634"}
+{"utterance": "What are your capabilities in terms of movement?", "label": "chat", "id": "deepseek-extra800-00635"}
+{"utterance": "Take the box to the delivery area.", "label": "motion_query", "id": "deepseek-extra800-00636"}
+{"utterance": "My computer won't turn on, what should I do?", "label": "chat", "id": "deepseek-extra800-00637"}
+{"utterance": "Hand me the pen on the desk.", "label": "motion_query", "id": "deepseek-extra800-00638"}
+{"utterance": "How do I reset the network router?", "label": "chat", "id": "deepseek-extra800-00639"}
+{"utterance": "What's the weather like?", "label": "chat", "id": "deepseek-extra800-00640"}
+{"utterance": "Demonstrate how to do jumping jacks.", "label": "motion_query", "id": "deepseek-extra800-00641"}
+{"utterance": "What should I do to improve my memory?", "label": "chat", "id": "deepseek-extra800-00642"}
+{"utterance": "Lift your right arm.", "label": "motion_query", "id": "deepseek-extra800-00643"}
+{"utterance": "I'm feeling a bit down today. Can you cheer me up?", "label": "chat", "id": "deepseek-extra800-00644"}
+{"utterance": "Act out a happy celebration.", "label": "motion_query", "id": "deepseek-extra800-00645"}
+{"utterance": "Tell me a story.", "label": "chat", "id": "deepseek-extra800-00646"}
+{"utterance": "Turn towards the window.", "label": "motion_query", "id": "deepseek-extra800-00647"}
+{"utterance": "Who wrote Romeo and Juliet?", "label": "chat", "id": "deepseek-extra800-00648"}
+{"utterance": "Step aside to let me pass.", "label": "motion_query", "id": "deepseek-extra800-00649"}
+{"utterance": "Push the red button.", "label": "motion_query", "id": "deepseek-extra800-00650"}
+{"utterance": "Can you list your available colors?", "label": "chat", "id": "deepseek-extra800-00651"}
+{"utterance": "Do you prefer classical or jazz music?", "label": "chat", "id": "deepseek-extra800-00652"}
+{"utterance": "Can you help me relax?", "label": "chat", "id": "deepseek-extra800-00653"}
+{"utterance": "Crouch down to tie my shoe.", "label": "motion_query", "id": "deepseek-extra800-00654"}
+{"utterance": "Look at the red button.", "label": "motion_query", "id": "deepseek-extra800-00655"}
+{"utterance": "Push the button to start the machine.", "label": "motion_query", "id": "deepseek-extra800-00656"}
+{"utterance": "What does the acronym NASA stand for?", "label": "chat", "id": "deepseek-extra800-00657"}
+{"utterance": "Stop moving and stay perfectly still.", "label": "motion_query", "id": "deepseek-extra800-00658"}
+{"utterance": "How can I organize my closet efficiently?", "label": "chat", "id": "deepseek-extra800-00659"}
+{"utterance": "Wave your arm to greet the visitor.", "label": "motion_query", "id": "deepseek-extra800-00660"}
+{"utterance": "What are the differences between Java and Python?", "label": "chat", "id": "deepseek-extra800-00661"}
+{"utterance": "How do I reset the password?", "label": "chat", "id": "deepseek-extra800-00662"}
+{"utterance": "Come here and show me your hand.", "label": "motion_query", "id": "deepseek-extra800-00663"}
+{"utterance": "Tell me about your programming.", "label": "chat", "id": "deepseek-extra800-00664"}
+{"utterance": "Show me how to chop an onion.", "label": "motion_query", "id": "deepseek-extra800-00665"}
+{"utterance": "Can you describe the plot of 'The Matrix'?", "label": "chat", "id": "deepseek-extra800-00666"}
+{"utterance": "Can you give me a step-by-step recipe for pasta?", "label": "chat", "id": "deepseek-extra800-00667"}
+{"utterance": "Act like you are surprised.", "label": "motion_query", "id": "deepseek-extra800-00668"}
+{"utterance": "Hold this book steady.", "label": "motion_query", "id": "deepseek-extra800-00669"}
+{"utterance": "Show me how you can balance on one foot.", "label": "motion_query", "id": "deepseek-extra800-00670"}
+{"utterance": "My phone won't turn on, what should I do?", "label": "chat", "id": "deepseek-extra800-00671"}
+{"utterance": "How do I pair my phone via Bluetooth?", "label": "chat", "id": "deepseek-extra800-00672"}
+{"utterance": "What time is it in Tokyo right now?", "label": "chat", "id": "deepseek-extra800-00673"}
+{"utterance": "What steps should I take to start a vegetable garden?", "label": "chat", "id": "deepseek-extra800-00674"}
+{"utterance": "I'm feeling stressed, any advice to relax?", "label": "chat", "id": "deepseek-extra800-00675"}
+{"utterance": "Can you explain the difference between AI and machine learning?", "label": "chat", "id": "deepseek-extra800-00676"}
+{"utterance": "Can you calculate 25% of 80?", "label": "chat", "id": "deepseek-extra800-00677"}
+{"utterance": "Stand up and step back.", "label": "motion_query", "id": "deepseek-extra800-00678"}
+{"utterance": "Can you describe the taste of a mango?", "label": "chat", "id": "deepseek-extra800-00679"}
+{"utterance": "Catch this ball if possible.", "label": "motion_query", "id": "deepseek-extra800-00680"}
+{"utterance": "Lower the platform a few feet.", "label": "motion_query", "id": "deepseek-extra800-00681"}
+{"utterance": "Turn around and look at me.", "label": "motion_query", "id": "deepseek-extra800-00682"}
+{"utterance": "Lift your arm.", "label": "motion_query", "id": "deepseek-extra800-00683"}
+{"utterance": "Can you describe your maintenance schedule?", "label": "chat", "id": "deepseek-extra800-00684"}
+{"utterance": "Take the box and put it on the chair.", "label": "motion_query", "id": "deepseek-extra800-00685"}
+{"utterance": "Reach for the book on the top shelf.", "label": "motion_query", "id": "deepseek-extra800-00686"}
+{"utterance": "I need advice on a work problem.", "label": "chat", "id": "deepseek-extra800-00687"}
+{"utterance": "Can you confirm the password policy?", "label": "chat", "id": "deepseek-extra800-00688"}
+{"utterance": "Can you explain how a microwave works?", "label": "chat", "id": "deepseek-extra800-00689"}
+{"utterance": "Show me how to salute.", "label": "motion_query", "id": "deepseek-extra800-00690"}
+{"utterance": "Act out a dog barking.", "label": "motion_query", "id": "deepseek-extra800-00691"}
+{"utterance": "I'm having trouble with my math homework, can you help?", "label": "chat", "id": "deepseek-extra800-00692"}
+{"utterance": "Can you speak in a different language?", "label": "chat", "id": "deepseek-extra800-00693"}
+{"utterance": "How do you handle unexpected obstacles?", "label": "chat", "id": "deepseek-extra800-00694"}
+{"utterance": "Spell your name with your body.", "label": "motion_query", "id": "deepseek-extra800-00695"}
+{"utterance": "Pick up the cup and place it on the shelf.", "label": "motion_query", "id": "deepseek-extra800-00696"}
+{"utterance": "Turn toward me and smile.", "label": "motion_query", "id": "deepseek-extra800-00697"}
+{"utterance": "Follow that person to the lobby.", "label": "motion_query", "id": "deepseek-extra800-00698"}
+{"utterance": "Lead me to the conference room.", "label": "motion_query", "id": "deepseek-extra800-00699"}
+{"utterance": "Do you know any fun facts about octopuses?", "label": "chat", "id": "deepseek-extra800-00700"}
+{"utterance": "Show me how you can juggle.", "label": "motion_query", "id": "deepseek-extra800-00701"}
+{"utterance": "Follow me into the next room.", "label": "motion_query", "id": "deepseek-extra800-00702"}
+{"utterance": "Nod your head yes.", "label": "motion_query", "id": "deepseek-extra800-00703"}
+{"utterance": "What is the meaning of 'serendipity'?", "label": "chat", "id": "deepseek-extra800-00704"}
+{"utterance": "Can you explain the concept of empathy?", "label": "chat", "id": "deepseek-extra800-00705"}
+{"utterance": "Gesture come here to the dog.", "label": "motion_query", "id": "deepseek-extra800-00706"}
+{"utterance": "How do I get to the nearest library?", "label": "chat", "id": "deepseek-extra800-00707"}
+{"utterance": "Place the tray on the table.", "label": "motion_query", "id": "deepseek-extra800-00708"}
+{"utterance": "Follow the red line on the floor.", "label": "motion_query", "id": "deepseek-extra800-00709"}
+{"utterance": "Act out how you would open a door.", "label": "motion_query", "id": "deepseek-extra800-00710"}
+{"utterance": "What is the difference between jam and jelly?", "label": "chat", "id": "deepseek-extra800-00711"}
+{"utterance": "What is the time difference between New York and London?", "label": "chat", "id": "deepseek-extra800-00712"}
+{"utterance": "Explain how airplanes fly.", "label": "chat", "id": "deepseek-extra800-00713"}
+{"utterance": "How do I clean the robot's sensors?", "label": "chat", "id": "deepseek-extra800-00714"}
+{"utterance": "I'm having trouble with my code.", "label": "chat", "id": "deepseek-extra800-00715"}
+{"utterance": "Follow that person through the hallway.", "label": "motion_query", "id": "deepseek-extra800-00716"}
+{"utterance": "How do you store data internally?", "label": "chat", "id": "deepseek-extra800-00717"}
+{"utterance": "Raise your arm to ask a question.", "label": "motion_query", "id": "deepseek-extra800-00718"}
+{"utterance": "What is the difference between empathy and sympathy?", "label": "chat", "id": "deepseek-extra800-00719"}
+{"utterance": "Can you give me advice on how to negotiate a salary?", "label": "chat", "id": "deepseek-extra800-00720"}
+{"utterance": "What movies are similar to Inception?", "label": "chat", "id": "deepseek-extra800-00721"}
+{"utterance": "Can you give me tips for better time management?", "label": "chat", "id": "deepseek-extra800-00722"}
+{"utterance": "Press the start button.", "label": "motion_query", "id": "deepseek-extra800-00723"}
+{"utterance": "Stop! Don't move.", "label": "motion_query", "id": "deepseek-extra800-00724"}
+{"utterance": "Why do some plants need more sunlight than others?", "label": "chat", "id": "deepseek-extra800-00725"}
+{"utterance": "Can you suggest a good recipe for pasta?", "label": "chat", "id": "deepseek-extra800-00726"}
+{"utterance": "I'm feeling stressed, do you have any relaxation tips?", "label": "chat", "id": "deepseek-extra800-00727"}
+{"utterance": "Guide my hand to draw a circle.", "label": "motion_query", "id": "deepseek-extra800-00728"}
+{"utterance": "Act out a lion roaring.", "label": "motion_query", "id": "deepseek-extra800-00729"}
+{"utterance": "Step forward and extend your hand for a handshake.", "label": "motion_query", "id": "deepseek-extra800-00730"}
+{"utterance": "I feel a bit stressed; can you tell me a joke?", "label": "chat", "id": "deepseek-extra800-00731"}
+{"utterance": "Fetch the red ball from the corner.", "label": "motion_query", "id": "deepseek-extra800-00732"}
+{"utterance": "Do you understand emotions?", "label": "chat", "id": "deepseek-extra800-00733"}
+{"utterance": "Plan a birthday party for me.", "label": "chat", "id": "deepseek-extra800-00734"}
+{"utterance": "Can you recommend a good movie in the sci-fi genre?", "label": "chat", "id": "deepseek-extra800-00735"}
+{"utterance": "Walk around the table and return to your starting position.", "label": "motion_query", "id": "deepseek-extra800-00736"}
+{"utterance": "Come closer and look at this diagram.", "label": "motion_query", "id": "deepseek-extra800-00737"}
+{"utterance": "I need advice on budgeting.", "label": "chat", "id": "deepseek-extra800-00738"}
+{"utterance": "Turn around 90 degrees.", "label": "motion_query", "id": "deepseek-extra800-00739"}
+{"utterance": "Bring me that red book.", "label": "motion_query", "id": "deepseek-extra800-00740"}
+{"utterance": "I'm feeling sad today. Can you cheer me up?", "label": "chat", "id": "deepseek-extra800-00741"}
+{"utterance": "Bring me the blue cup from the table.", "label": "motion_query", "id": "deepseek-extra800-00742"}
+{"utterance": "Guide me to the restroom.", "label": "motion_query", "id": "deepseek-extra800-00743"}
+{"utterance": "Crouch down to look under the bed.", "label": "motion_query", "id": "deepseek-extra800-00744"}
+{"utterance": "Point toward the exit.", "label": "motion_query", "id": "deepseek-extra800-00745"}
+{"utterance": "Raise your right hand and wave.", "label": "motion_query", "id": "deepseek-extra800-00746"}
+{"utterance": "Imitate my facial expression.", "label": "motion_query", "id": "deepseek-extra800-00747"}
+{"utterance": "Pass me the remote control.", "label": "motion_query", "id": "deepseek-extra800-00748"}
+{"utterance": "Can you just talk to me for a while?", "label": "chat", "id": "deepseek-extra800-00749"}
+{"utterance": "What movie do you recommend for a family night?", "label": "chat", "id": "deepseek-extra800-00750"}
+{"utterance": "Point at the fire extinguisher.", "label": "motion_query", "id": "deepseek-extra800-00751"}
+{"utterance": "Pick up that pencil and bring it to me.", "label": "motion_query", "id": "deepseek-extra800-00752"}
+{"utterance": "Hold this position for five seconds.", "label": "motion_query", "id": "deepseek-extra800-00753"}
+{"utterance": "Can you recommend a good book on machine learning?", "label": "chat", "id": "deepseek-extra800-00754"}
+{"utterance": "Show me how you can spin.", "label": "motion_query", "id": "deepseek-extra800-00755"}
+{"utterance": "Act out the motion of drinking.", "label": "motion_query", "id": "deepseek-extra800-00756"}
+{"utterance": "Just give me a verbal summary of the news.", "label": "chat", "id": "deepseek-extra800-00757"}
+{"utterance": "What is the weather like outside?", "label": "chat", "id": "deepseek-extra800-00758"}
+{"utterance": "Can you explain the theory of relativity simply?", "label": "chat", "id": "deepseek-extra800-00759"}
+{"utterance": "Can you multiply 123 by 456?", "label": "chat", "id": "deepseek-extra800-00760"}
+{"utterance": "Can you process images?", "label": "chat", "id": "deepseek-extra800-00761"}
+{"utterance": "Hand me the red book from the shelf.", "label": "motion_query", "id": "deepseek-extra800-00762"}
+{"utterance": "What are some tips for better time management?", "label": "chat", "id": "deepseek-extra800-00763"}
+{"utterance": "Do you have a name?", "label": "chat", "id": "deepseek-extra800-00764"}
+{"utterance": "What are your capabilities as a robot?", "label": "chat", "id": "deepseek-extra800-00765"}
+{"utterance": "Could you tell me a joke?", "label": "chat", "id": "deepseek-extra800-00766"}
+{"utterance": "Can you say that again more slowly?", "label": "chat", "id": "deepseek-extra800-00767"}
+{"utterance": "Can you calculate 15% tip on $45.50?", "label": "chat", "id": "deepseek-extra800-00768"}
+{"utterance": "What do you think about the new policy?", "label": "chat", "id": "deepseek-extra800-00769"}
+{"utterance": "Pick up the fallen book and place it on the desk.", "label": "motion_query", "id": "deepseek-extra800-00770"}
+{"utterance": "Orient your sensors toward the sound.", "label": "motion_query", "id": "deepseek-extra800-00771"}
+{"utterance": "Do you have a favorite color?", "label": "chat", "id": "deepseek-extra800-00772"}
+{"utterance": "I need help planning a surprise party.", "label": "chat", "id": "deepseek-extra800-00773"}
+{"utterance": "Raise your right arm above your head.", "label": "motion_query", "id": "deepseek-extra800-00774"}
+{"utterance": "Move out of my way.", "label": "motion_query", "id": "deepseek-extra800-00775"}
+{"utterance": "Can you listen while I practice my presentation?", "label": "chat", "id": "deepseek-extra800-00776"}
+{"utterance": "Can you repeat that more slowly?", "label": "chat", "id": "deepseek-extra800-00777"}
+{"utterance": "Answer with a wave of your hand.", "label": "motion_query", "id": "deepseek-extra800-00778"}
+{"utterance": "What's the capital of Mongolia?", "label": "chat", "id": "deepseek-extra800-00779"}
+{"utterance": "Act out a sad emotion.", "label": "motion_query", "id": "deepseek-extra800-00780"}
+{"utterance": "What are the steps for CPR?", "label": "chat", "id": "deepseek-extra800-00781"}
+{"utterance": "Wave goodbye to our guest.", "label": "motion_query", "id": "deepseek-extra800-00782"}
+{"utterance": "Follow that person and stay behind them.", "label": "motion_query", "id": "deepseek-extra800-00783"}
+{"utterance": "I need a recipe for chocolate chip cookies.", "label": "chat", "id": "deepseek-extra800-00784"}
+{"utterance": "Follow that person and stop when they stop.", "label": "motion_query", "id": "deepseek-extra800-00785"}
+{"utterance": "Remind me of the meeting time tomorrow.", "label": "chat", "id": "deepseek-extra800-00786"}
+{"utterance": "What steps should I follow to install the software?", "label": "chat", "id": "deepseek-extra800-00787"}
+{"utterance": "Please answer in words only.", "label": "chat", "id": "deepseek-extra800-00788"}
+{"utterance": "Look at the ceiling and then at the floor.", "label": "motion_query", "id": "deepseek-extra800-00789"}
+{"utterance": "Follow that person in red.", "label": "motion_query", "id": "deepseek-extra800-00790"}
+{"utterance": "Gaze at the painting on the wall.", "label": "motion_query", "id": "deepseek-extra800-00791"}
+{"utterance": "Can you give me advice on time management?", "label": "chat", "id": "deepseek-extra800-00792"}
+{"utterance": "Stop and hold your position.", "label": "motion_query", "id": "deepseek-extra800-00793"}
+{"utterance": "Tell me a fun fact about history.", "label": "chat", "id": "deepseek-extra800-00794"}
+{"utterance": "Pick up the red ball from the floor.", "label": "motion_query", "id": "deepseek-extra800-00795"}
+{"utterance": "What are the best exercises for back pain?", "label": "chat", "id": "deepseek-extra800-00796"}
+{"utterance": "Point to the correct answer.", "label": "motion_query", "id": "deepseek-extra800-00797"}
+{"utterance": "Can you describe your programming capabilities?", "label": "chat", "id": "deepseek-extra800-00798"}
+{"utterance": "Act out a dramatic reading of this line.", "label": "motion_query", "id": "deepseek-extra800-00799"}
+{"utterance": "Can you summarize today's news headlines?", "label": "chat", "id": "deepseek-extra800-00800"}

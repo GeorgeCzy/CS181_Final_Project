@@ -1,0 +1,501 @@
+id,utterance,label
+deepseek-00001,What's your favorite hobby?,chat
+deepseek-00002,What's the difference between a cat and a dog?,chat
+deepseek-00003,Be still and let me measure your height.,motion_query
+deepseek-00004,Come closer so I can show you something.,motion_query
+deepseek-00005,"I'm feeling sad, can you cheer me up?",chat
+deepseek-00006,Take a step backward.,motion_query
+deepseek-00007,What's a good recipe for pasta?,chat
+deepseek-00008,Turn your head to the right.,motion_query
+deepseek-00009,Stay where you are.,motion_query
+deepseek-00010,Place the book on the top shelf.,motion_query
+deepseek-00011,What's the difference between a turtle and a tortoise?,chat
+deepseek-00012,Bow down as a sign of respect.,motion_query
+deepseek-00013,What is the weather forecast for tomorrow?,chat
+deepseek-00014,Can you solve this math problem for me?,chat
+deepseek-00015,Raise your hand if you understand.,motion_query
+deepseek-00016,What are your favorite colors?,chat
+deepseek-00017,Hold your position for five seconds.,motion_query
+deepseek-00018,Explain how a car engine works.,chat
+deepseek-00019,Turn around slowly.,motion_query
+deepseek-00020,Imitate a cat stretching.,motion_query
+deepseek-00021,How does a car engine work?,chat
+deepseek-00022,Show me how to perform the dance step.,motion_query
+deepseek-00023,How can I be more productive?,chat
+deepseek-00024,Slide the book to the right.,motion_query
+deepseek-00025,How can I learn Spanish quickly?,chat
+deepseek-00026,Bring me the remote control.,motion_query
+deepseek-00027,Can you help me plan my vacation itinerary?,chat
+deepseek-00028,What should I cook for dinner tonight?,chat
+deepseek-00029,What's the weather like outside?,chat
+deepseek-00030,Point to the exit sign.,motion_query
+deepseek-00031,Cover the food with a lid.,motion_query
+deepseek-00032,What does this button do?,chat
+deepseek-00033,Push the chair under the table.,motion_query
+deepseek-00034,What sensors do you have?,chat
+deepseek-00035,What's the capital of Australia?,chat
+deepseek-00036,"I'm feeling a bit down, can you cheer me up?",chat
+deepseek-00037,Raise your right arm.,motion_query
+deepseek-00038,Tap your foot twice if you hear me.,motion_query
+deepseek-00039,Point to the exit.,motion_query
+deepseek-00040,Can you tell me a story?,chat
+deepseek-00041,What are your capabilities for object detection?,chat
+deepseek-00042,What is the meaning of life?,chat
+deepseek-00043,Can you tell me a joke?,chat
+deepseek-00044,Shake your head if you disagree.,motion_query
+deepseek-00045,Bow to the audience.,motion_query
+deepseek-00046,What is the best way to learn coding?,chat
+deepseek-00047,Lower your voice (but no motion needed).,chat
+deepseek-00048,Can you describe your emotions?,chat
+deepseek-00049,Can you tell me a fun fact about space?,chat
+deepseek-00050,How do I install a new app on my phone?,chat
+deepseek-00051,Bring me the book from the table.,motion_query
+deepseek-00052,Wave your hand goodbye.,motion_query
+deepseek-00053,Point to the picture on the wall.,motion_query
+deepseek-00054,Gesture towards the screen.,motion_query
+deepseek-00055,Pick up the book from the table.,motion_query
+deepseek-00056,Answer by raising your hand.,motion_query
+deepseek-00057,I need a motivational quote.,chat
+deepseek-00058,Turn your head to look at the screen.,motion_query
+deepseek-00059,Describe the painting 'Starry Night'.,chat
+deepseek-00060,Take three steps to the left.,motion_query
+deepseek-00061,Hold this for a moment.,motion_query
+deepseek-00062,Can you remember my name?,chat
+deepseek-00063,Wave goodbye.,motion_query
+deepseek-00064,What is your opinion on artificial intelligence?,chat
+deepseek-00065,How do I calculate the area of a circle?,chat
+deepseek-00066,Look at the painting on the wall.,motion_query
+deepseek-00067,Can you suggest a healthy breakfast?,chat
+deepseek-00068,Bring me the book on the table.,motion_query
+deepseek-00069,Demonstrate how to tie a knot.,motion_query
+deepseek-00070,Hand me the remote control.,motion_query
+deepseek-00071,How do I get to the nearest hospital?,chat
+deepseek-00072,Turn your head to the left.,motion_query
+deepseek-00073,"I feel a bit down today, can you cheer me up?",chat
+deepseek-00074,Raise your arm to stop traffic.,motion_query
+deepseek-00075,Follow that person in the red jacket.,motion_query
+deepseek-00076,Explain the theory of relativity in simple terms.,chat
+deepseek-00077,Explain the theory of relativity.,chat
+deepseek-00078,Demonstrate how to do a push-up.,motion_query
+deepseek-00079,What was the score of the game last night?,chat
+deepseek-00080,Tell me a fun fact about space.,chat
+deepseek-00081,Stay here and watch the door.,motion_query
+deepseek-00082,Go to the kitchen and check if the oven is on.,motion_query
+deepseek-00083,What should I wear for an interview?,chat
+deepseek-00084,What are the advantages of solar energy?,chat
+deepseek-00085,Show me how to do a push-up.,motion_query
+deepseek-00086,Take this note to the front desk.,motion_query
+deepseek-00087,Gesture 'come here' with your hand.,motion_query
+deepseek-00088,What ingredients are in this recipe?,chat
+deepseek-00089,Can you write a poem about robots?,chat
+deepseek-00090,Walk to the door and stop.,motion_query
+deepseek-00091,Show me how you dance.,motion_query
+deepseek-00092,Mime brushing your teeth.,motion_query
+deepseek-00093,Can you help me plan a weekend trip?,chat
+deepseek-00094,How does machine learning work?,chat
+deepseek-00095,Can you tell me about your capabilities?,chat
+deepseek-00096,Demonstrate the dance move.,motion_query
+deepseek-00097,Push the button on the table.,motion_query
+deepseek-00098,Explain how to change a tire.,chat
+deepseek-00099,Can you tell me the news headlines?,chat
+deepseek-00100,Point at the red object.,motion_query
+deepseek-00101,What did you have for breakfast?,chat
+deepseek-00102,Carry this box to the storage room.,motion_query
+deepseek-00103,Walk in a circle around me.,motion_query
+deepseek-00104,Can you translate this sentence to Spanish?,chat
+deepseek-00105,Show me how to do a cartwheel.,motion_query
+deepseek-00106,Demonstrate how you wave.,motion_query
+deepseek-00107,What are the ingredients for a cake?,chat
+deepseek-00108,What does 'serendipity' mean?,chat
+deepseek-00109,Tell me a story about a brave knight.,chat
+deepseek-00110,How do I boil an egg perfectly?,chat
+deepseek-00111,How do I cook pasta?,chat
+deepseek-00112,Tell me about the history of the internet.,chat
+deepseek-00113,What is the largest mammal on Earth?,chat
+deepseek-00114,What's the story behind the Mona Lisa?,chat
+deepseek-00115,Compose a poem about autumn.,chat
+deepseek-00116,How do I backup my phone?,chat
+deepseek-00117,Move out of the way.,motion_query
+deepseek-00118,What's the best time to visit Japan?,chat
+deepseek-00119,Pick up the cup from the table.,motion_query
+deepseek-00120,Explain how photosynthesis works.,chat
+deepseek-00121,What movie would you suggest for a rainy day?,chat
+deepseek-00122,What's the most popular song right now?,chat
+deepseek-00123,Stand still for five seconds.,motion_query
+deepseek-00124,Catch this ball.,motion_query
+deepseek-00125,Do you know any good recipes for pasta?,chat
+deepseek-00126,Bend over to pick up the pen.,motion_query
+deepseek-00127,Can you point to the exit?,motion_query
+deepseek-00128,How are you feeling today?,chat
+deepseek-00129,Could you check the spelling in this sentence?,chat
+deepseek-00130,Can you explain how to reset my password?,chat
+deepseek-00131,Demonstrate how to bow.,motion_query
+deepseek-00132,Do you know any good jokes?,chat
+deepseek-00133,Turn around and face the door.,motion_query
+deepseek-00134,Gesture goodbye to the visitor.,motion_query
+deepseek-00135,Raise your arm if you agree.,motion_query
+deepseek-00136,Can you give me a list of healthy snacks?,chat
+deepseek-00137,Step back two paces.,motion_query
+deepseek-00138,How do I cook pasta al dente?,chat
+deepseek-00139,What are the steps to bake a cake?,chat
+deepseek-00140,Nod your head if you understand.,motion_query
+deepseek-00141,What are the symptoms of the flu?,chat
+deepseek-00142,Point to yourself and then to me.,motion_query
+deepseek-00143,Hold still so I can measure you.,motion_query
+deepseek-00144,Do you know any good movies from the 90s?,chat
+deepseek-00145,Stop moving and stand still.,motion_query
+deepseek-00146,Use your hand to gesture 'come here'.,motion_query
+deepseek-00147,Can you explain how to use this software?,chat
+deepseek-00148,Play some relaxing music.,chat
+deepseek-00149,Gently take this cup from me.,motion_query
+deepseek-00150,Hold this bag for me.,motion_query
+deepseek-00151,"Just tell me, don't show me.",chat
+deepseek-00152,"Lower your arm, it's too high.",motion_query
+deepseek-00153,Can you recommend a movie to watch tonight?,chat
+deepseek-00154,What's your favorite color?,chat
+deepseek-00155,Can you give me directions to the library?,chat
+deepseek-00156,What should I have for dinner?,chat
+deepseek-00157,What's the recipe for chocolate cake?,chat
+deepseek-00158,Pick up the cup and hand it to me.,motion_query
+deepseek-00159,Can you recommend a good book to read?,chat
+deepseek-00160,Tell me a bedtime story.,chat
+deepseek-00161,What is 2/3 divided by 4/5?,chat
+deepseek-00162,Can you list the steps to bake bread?,chat
+deepseek-00163,Demonstrate how to clap your hands.,motion_query
+deepseek-00164,Lift the box onto the table.,motion_query
+deepseek-00165,Step forward two paces.,motion_query
+deepseek-00166,Stop waving your arm.,motion_query
+deepseek-00167,What is the news today?,chat
+deepseek-00168,Tell me about your programming language.,chat
+deepseek-00169,Back away slowly.,motion_query
+deepseek-00170,Clap your hands three times.,motion_query
+deepseek-00171,What time is my appointment tomorrow?,chat
+deepseek-00172,Show me the dance move.,motion_query
+deepseek-00173,Turn your head to look at the painting.,motion_query
+deepseek-00174,Hold this book up.,motion_query
+deepseek-00175,Point to the exit door.,motion_query
+deepseek-00176,Shake your head to disagree.,motion_query
+deepseek-00177,Can you translate 'hello' to Spanish?,chat
+deepseek-00178,Can you help me plan a dinner menu?,chat
+deepseek-00179,Crouch down to my level.,motion_query
+deepseek-00180,Shake your head.,motion_query
+deepseek-00181,Nod to confirm what I said.,motion_query
+deepseek-00182,Why is my phone battery draining fast?,chat
+deepseek-00183,Can you give me directions to the nearest hospital?,chat
+deepseek-00184,How many languages do you speak?,chat
+deepseek-00185,How do I get to the nearest subway station?,chat
+deepseek-00186,What are the ingredients for a good friendship?,chat
+deepseek-00187,Back up three steps.,motion_query
+deepseek-00188,What should I do to improve my posture?,chat
+deepseek-00189,How do I fix a clogged sink?,chat
+deepseek-00190,Nod your head if you agree.,motion_query
+deepseek-00191,Can you help me write an email to my boss?,chat
+deepseek-00192,Act out a surprised face.,motion_query
+deepseek-00193,What's the capital of France?,chat
+deepseek-00194,Can you give me a weather update?,chat
+deepseek-00195,Can you recommend a good book on AI?,chat
+deepseek-00196,Hold still while I clean your sensors.,motion_query
+deepseek-00197,Turn around and face the wall.,motion_query
+deepseek-00198,Tell me the steps to change a car tire.,chat
+deepseek-00199,Lead me to the living room.,motion_query
+deepseek-00200,Can you hand me that book?,motion_query
+deepseek-00201,Hold this object for a moment.,motion_query
+deepseek-00202,Do you support voice commands in Spanish?,chat
+deepseek-00203,Can you sing a song?,chat
+deepseek-00204,Please just talk to me in words.,chat
+deepseek-00205,Show me how to do a yoga pose.,motion_query
+deepseek-00206,Can you tell me a joke without moving?,chat
+deepseek-00207,Hold still while I measure your height.,motion_query
+deepseek-00208,Act out a scene from your favorite movie.,motion_query
+deepseek-00209,Turn around so I can see your back.,motion_query
+deepseek-00210,Can you suggest a good workout routine?,chat
+deepseek-00211,What time is it?,chat
+deepseek-00212,What time is the meeting?,chat
+deepseek-00213,Move the chair to the other side of the table.,motion_query
+deepseek-00214,Stop where you are and don't move.,motion_query
+deepseek-00215,I need advice on how to study effectively.,chat
+deepseek-00216,Can you recommend a book on artificial intelligence?,chat
+deepseek-00217,Show me the dance move you learned.,motion_query
+deepseek-00218,Lead the way to the conference room.,motion_query
+deepseek-00219,Raise your arm to indicate the direction.,motion_query
+deepseek-00220,Move the chair under the table.,motion_query
+deepseek-00221,Roll forward a little bit.,motion_query
+deepseek-00222,Point to the nearest exit.,motion_query
+deepseek-00223,Point to the door.,motion_query
+deepseek-00224,"I'm having a tough day, can you say something encouraging?",chat
+deepseek-00225,What is the weather like today?,chat
+deepseek-00226,Get down from the ledge.,motion_query
+deepseek-00227,Raise both arms above your head.,motion_query
+deepseek-00228,Turn the handle clockwise.,motion_query
+deepseek-00229,Do you have any suggestions for a gift?,chat
+deepseek-00230,What's the time in Tokyo?,chat
+deepseek-00231,Can you give me directions to the museum?,chat
+deepseek-00232,Move the chair closer to the table.,motion_query
+deepseek-00233,Can you help me write an email?,chat
+deepseek-00234,How do I fix a leaky faucet?,chat
+deepseek-00235,Point to the object I'm holding.,motion_query
+deepseek-00236,How do I improve my public speaking?,chat
+deepseek-00237,What is your favorite song?,chat
+deepseek-00238,Close the door behind you.,motion_query
+deepseek-00239,Imitate my dance move.,motion_query
+deepseek-00240,How do I say 'thank you' in Japanese?,chat
+deepseek-00241,Can you explain photosynthesis?,chat
+deepseek-00242,I'm feeling sad today.,chat
+deepseek-00243,Can you recommend a movie?,chat
+deepseek-00244,Back away from the stairs.,motion_query
+deepseek-00245,Act out a happy emotion.,motion_query
+deepseek-00246,Bend over and pick up the box.,motion_query
+deepseek-00247,Can you suggest a gift for my friend's birthday?,chat
+deepseek-00248,Where can I find a good coffee shop near here?,chat
+deepseek-00249,Point to the book on the top shelf.,motion_query
+deepseek-00250,Nod your head if you understand me.,motion_query
+deepseek-00251,What should I cook for dinner?,chat
+deepseek-00252,Point at the red book.,motion_query
+deepseek-00253,Can you suggest a book to read?,chat
+deepseek-00254,Move to the left so I can pass.,motion_query
+deepseek-00255,Can you show me how to perform a squat?,motion_query
+deepseek-00256,Place your hand on the table.,motion_query
+deepseek-00257,Nod your head to confirm.,motion_query
+deepseek-00258,Take a step back.,motion_query
+deepseek-00259,Close your grippers gently.,motion_query
+deepseek-00260,Hold your arm up for five seconds.,motion_query
+deepseek-00261,What should I wear today?,chat
+deepseek-00262,How does a microwave work?,chat
+deepseek-00263,Imitate my hand gesture.,motion_query
+deepseek-00264,Bend down and touch your toes.,motion_query
+deepseek-00265,How can I improve my sleep schedule?,chat
+deepseek-00266,Show me how to do a squat.,motion_query
+deepseek-00267,Act out the motion of pouring water.,motion_query
+deepseek-00268,How do I pair my phone with Bluetooth?,chat
+deepseek-00269,Wave your hand at the camera.,motion_query
+deepseek-00270,Point towards the nearest exit.,motion_query
+deepseek-00271,I need advice on how to deal with stress.,chat
+deepseek-00272,Gesture to confirm you understand.,motion_query
+deepseek-00273,Can you explain the difference between empathy and sympathy?,chat
+deepseek-00274,Push the button on the remote.,motion_query
+deepseek-00275,Step back two meters.,motion_query
+deepseek-00276,Can you recommend a good restaurant?,chat
+deepseek-00277,Turn your head and look at the window.,motion_query
+deepseek-00278,Point to yourself and then to the door.,motion_query
+deepseek-00279,Clap your hands twice.,motion_query
+deepseek-00280,Can you recommend a good book on artificial intelligence?,chat
+deepseek-00281,Bring me the red cup from the table.,motion_query
+deepseek-00282,Can you differentiate between empathy and sympathy?,chat
+deepseek-00283,Wave your hand to say hello.,motion_query
+deepseek-00284,Hold your position until I return.,motion_query
+deepseek-00285,Can you explain how a car engine works?,chat
+deepseek-00286,How do I improve my public speaking skills?,chat
+deepseek-00287,Wave your hand if you understand.,motion_query
+deepseek-00288,Could you recommend a good book on robotics?,chat
+deepseek-00289,Lift the lid of the box.,motion_query
+deepseek-00290,Adjust your grip on that object.,motion_query
+deepseek-00291,I feel sad today. Can you cheer me up?,chat
+deepseek-00292,Recommend a good movie for tonight.,chat
+deepseek-00293,How many languages can you understand?,chat
+deepseek-00294,Stop moving and stay where you are.,motion_query
+deepseek-00295,Wave goodbye to me.,motion_query
+deepseek-00296,Clap your hands to the beat.,motion_query
+deepseek-00297,Can you explain the theory of relativity?,chat
+deepseek-00298,What time is it in Tokyo?,chat
+deepseek-00299,What is your opinion on climate change?,chat
+deepseek-00300,What is the best way to learn a new language?,chat
+deepseek-00301,What are the latest advancements in AI?,chat
+deepseek-00302,Hold still while I take a picture.,motion_query
+deepseek-00303,Act out the emotion of surprise.,motion_query
+deepseek-00304,Tell me a joke.,chat
+deepseek-00305,Move closer so I can see you.,motion_query
+deepseek-00306,Follow me to the conference room.,motion_query
+deepseek-00307,What's your favorite book?,chat
+deepseek-00308,Look at the ceiling.,motion_query
+deepseek-00309,Show me a thumbs up.,motion_query
+deepseek-00310,What's your opinion on renewable energy?,chat
+deepseek-00311,Turn your head left.,motion_query
+deepseek-00312,Can you help me with my math homework?,chat
+deepseek-00313,What's the weather like today?,chat
+deepseek-00314,I need advice on how to apologize to a friend.,chat
+deepseek-00315,Tell me about your capabilities.,chat
+deepseek-00316,Nod your head twice.,motion_query
+deepseek-00317,What are your thoughts on artificial intelligence?,chat
+deepseek-00318,What's the latest news?,chat
+deepseek-00319,Crawl under the table.,motion_query
+deepseek-00320,"Please explain it verbally, no gestures.",chat
+deepseek-00321,Give me a high-five!,motion_query
+deepseek-00322,Point at the red button.,motion_query
+deepseek-00323,What's the schedule for today?,chat
+deepseek-00324,Do you think I should take a break?,chat
+deepseek-00325,Give me a thumbs up.,motion_query
+deepseek-00326,What's the difference between TCP and UDP?,chat
+deepseek-00327,How do you process language?,chat
+deepseek-00328,What is the capabilty of your sensors?,chat
+deepseek-00329,Can you explain how photosynthesis works?,chat
+deepseek-00330,Can you explain how a battery works?,chat
+deepseek-00331,Explain the theory of relativity simply.,chat
+deepseek-00332,Can you help me plan a trip to Paris?,chat
+deepseek-00333,Can you solve this math problem: 3x + 7 = 22?,chat
+deepseek-00334,Answer with a thumbs up.,motion_query
+deepseek-00335,Catch the ball.,motion_query
+deepseek-00336,Make a gesture that means 'come here'.,motion_query
+deepseek-00337,"Lower your arm, it's in the way.",motion_query
+deepseek-00338,Go to the door and wait.,motion_query
+deepseek-00339,How do I improve my posture?,chat
+deepseek-00340,Can you tell me a fun fact about Mars?,chat
+deepseek-00341,Follow that person.,motion_query
+deepseek-00342,Push that button on the panel.,motion_query
+deepseek-00343,Explain without moving.,chat
+deepseek-00344,Can you give me advice on job interviews?,chat
+deepseek-00345,How long can you operate on a full charge?,chat
+deepseek-00346,Tell me about your daily routines.,chat
+deepseek-00347,Walk to the door and open it.,motion_query
+deepseek-00348,Use your hand to block the light.,motion_query
+deepseek-00349,Gesture for me to come closer.,motion_query
+deepseek-00350,Walk in a circle.,motion_query
+deepseek-00351,Raise your arm to indicate stop.,motion_query
+deepseek-00352,How long does it take to boil an egg?,chat
+deepseek-00353,What's the difference between a virus and a bacterium?,chat
+deepseek-00354,I'm feeling a bit down today.,chat
+deepseek-00355,What's the difference between AI and machine learning?,chat
+deepseek-00356,Pick up that toy from the floor.,motion_query
+deepseek-00357,Who invented the telephone?,chat
+deepseek-00358,What's the square root of 144?,chat
+deepseek-00359,"I'm feeling lonely, can you talk to me?",chat
+deepseek-00360,Is the store open on Sundays?,chat
+deepseek-00361,What is the capital of France?,chat
+deepseek-00362,Bring me a glass of water.,motion_query
+deepseek-00363,Can you remind me to buy milk later?,chat
+deepseek-00364,What's the best way to learn a new language?,chat
+deepseek-00365,Push the button to start.,motion_query
+deepseek-00366,What are the benefits of meditation?,chat
+deepseek-00367,Point to the tallest building.,motion_query
+deepseek-00368,Hand me the pen from your tray.,motion_query
+deepseek-00369,How does photosynthesis work?,chat
+deepseek-00370,Take three steps backward.,motion_query
+deepseek-00371,Raise your left arm.,motion_query
+deepseek-00372,Can you simplify this math problem?,chat
+deepseek-00373,Put the box on the shelf.,motion_query
+deepseek-00374,Bring me the remote control from the table.,motion_query
+deepseek-00375,Place the item on the shelf.,motion_query
+deepseek-00376,Can you schedule a meeting for tomorrow?,chat
+deepseek-00377,Answer with a thumbs up or down.,motion_query
+deepseek-00378,Wave your hand to greet me.,motion_query
+deepseek-00379,Can you translate 'hello' into Spanish?,chat
+deepseek-00380,Point to the tallest building over there.,motion_query
+deepseek-00381,Can you help me debug this Python code?,chat
+deepseek-00382,Demonstrate how to stretch your legs.,motion_query
+deepseek-00383,Can you update me on today's news?,chat
+deepseek-00384,Explain the process of photosynthesis.,chat
+deepseek-00385,Should I take an umbrella today?,chat
+deepseek-00386,Stop moving immediately!,motion_query
+deepseek-00387,What's your opinion on artificial intelligence?,chat
+deepseek-00388,Show me how to perform a squat.,motion_query
+deepseek-00389,I feel a bit stressed today.,chat
+deepseek-00390,I need to relax. Any tips?,chat
+deepseek-00391,Can you suggest a workout routine?,chat
+deepseek-00392,What is the speed of light?,chat
+deepseek-00393,Can you recommend a good book?,chat
+deepseek-00394,Shrug your shoulders to say 'I don't know'.,motion_query
+deepseek-00395,Can you explain the rules of chess?,chat
+deepseek-00396,How can I improve my memory?,chat
+deepseek-00397,How do I change a flat tire?,chat
+deepseek-00398,Demonstrate how to perform a squat.,motion_query
+deepseek-00399,Carry these boxes to the garage.,motion_query
+deepseek-00400,Push the button on the left.,motion_query
+deepseek-00401,What are the rules of chess?,chat
+deepseek-00402,Recommend a good book to read.,chat
+deepseek-00403,Carry this tray to the kitchen.,motion_query
+deepseek-00404,Stop moving and stay still.,motion_query
+deepseek-00405,Can you help me plan a birthday party?,chat
+deepseek-00406,Can you give me some tips for public speaking?,chat
+deepseek-00407,What is the meaning of the word 'serendipity'?,chat
+deepseek-00408,Lower your voice and stand still.,motion_query
+deepseek-00409,Imitate my gesture.,motion_query
+deepseek-00410,Fetch the newspaper from the porch.,motion_query
+deepseek-00411,Raise your arm to wave hello.,motion_query
+deepseek-00412,Step to the left so I can see the screen.,motion_query
+deepseek-00413,Wave your arm to greet the guests.,motion_query
+deepseek-00414,I'm trying to decide between two restaurants. Which one is better?,chat
+deepseek-00415,How do I change a tire?,chat
+deepseek-00416,Can you explain the theory of relativity in simple terms?,chat
+deepseek-00417,Act out a scene from a play.,motion_query
+deepseek-00418,Can you guide me through this maze?,motion_query
+deepseek-00419,I need advice on managing stress.,chat
+deepseek-00420,Can you help me plan a workout routine?,chat
+deepseek-00421,Take this book and put it on the shelf.,motion_query
+deepseek-00422,Place the book on the shelf.,motion_query
+deepseek-00423,Follow me to the kitchen.,motion_query
+deepseek-00424,What are some healthy lunch ideas?,chat
+deepseek-00425,Orient your camera toward the whiteboard.,motion_query
+deepseek-00426,Press the button on the microwave.,motion_query
+deepseek-00427,Can you tell me a fun fact about dolphins?,chat
+deepseek-00428,Shake your head no.,motion_query
+deepseek-00429,Show me how to wave hello.,motion_query
+deepseek-00430,What's the difference between a virus and a bacteria?,chat
+deepseek-00431,Imitate a penguin walk.,motion_query
+deepseek-00432,"I'm feeling lonely, can you keep me company?",chat
+deepseek-00433,Stop moving immediately.,motion_query
+deepseek-00434,Do a silly dance.,motion_query
+deepseek-00435,What time does the museum close today?,chat
+deepseek-00436,How do I fix a leaking faucet?,chat
+deepseek-00437,Pick up that pencil from the floor.,motion_query
+deepseek-00438,What is your favorite color?,chat
+deepseek-00439,I need help with my homework.,chat
+deepseek-00440,Shake my hand firmly.,motion_query
+deepseek-00441,How do I meditate properly?,chat
+deepseek-00442,What's the square root of 169?,chat
+deepseek-00443,Lead me to the exit.,motion_query
+deepseek-00444,What are the symptoms of a cold?,chat
+deepseek-00445,Hand me the book on the shelf.,motion_query
+deepseek-00446,Can you suggest a good recipe for dinner?,chat
+deepseek-00447,Answer by bowing.,motion_query
+deepseek-00448,Can you give me a list of groceries?,chat
+deepseek-00449,Make a gesture to say hello.,motion_query
+deepseek-00450,Act out a lion roar.,motion_query
+deepseek-00451,Lower your arm now.,motion_query
+deepseek-00452,Nod if you understand.,motion_query
+deepseek-00453,Can you show me what you can do?,motion_query
+deepseek-00454,I need a recommendation for a good book.,chat
+deepseek-00455,Kneel down to my level.,motion_query
+deepseek-00456,What are some good books to read?,chat
+deepseek-00457,How do I stay motivated?,chat
+deepseek-00458,Point to the tallest building in the skyline.,motion_query
+deepseek-00459,Move the chair to the left.,motion_query
+deepseek-00460,I feel lonely today.,chat
+deepseek-00461,Tell me about your battery life.,chat
+deepseek-00462,Show me how to tie a tie.,motion_query
+deepseek-00463,Can you summarize this article for me?,chat
+deepseek-00464,Spin around once.,motion_query
+deepseek-00465,Can you help me plan a weekly menu?,chat
+deepseek-00466,Turn left and point to the red object.,motion_query
+deepseek-00467,Back up slowly.,motion_query
+deepseek-00468,Nod to indicate yes.,motion_query
+deepseek-00469,What are your thoughts on the latest movie?,chat
+deepseek-00470,Nod your head once for yes.,motion_query
+deepseek-00471,Hold this box while I tape it.,motion_query
+deepseek-00472,I feel a bit sad today.,chat
+deepseek-00473,Show me your dance moves.,motion_query
+deepseek-00474,Pick up the trash and throw it away.,motion_query
+deepseek-00475,What are the ingredients in a Caesar salad?,chat
+deepseek-00476,Hold your position and don't move.,motion_query
+deepseek-00477,What's the difference between a comet and an asteroid?,chat
+deepseek-00478,Why do we dream?,chat
+deepseek-00479,What's the meaning of life?,chat
+deepseek-00480,How do I set up a meeting in Outlook?,chat
+deepseek-00481,Bring me the newspaper from the table.,motion_query
+deepseek-00482,Hold this object steady.,motion_query
+deepseek-00483,Back away from the edge.,motion_query
+deepseek-00484,What is the capital of Australia?,chat
+deepseek-00485,Can you recommend a book to read?,chat
+deepseek-00486,What movies are playing tonight?,chat
+deepseek-00487,Remain still while I take a photo.,motion_query
+deepseek-00488,Walk toward me slowly.,motion_query
+deepseek-00489,Shake your head in disagreement.,motion_query
+deepseek-00490,Come closer and look at this painting.,motion_query
+deepseek-00491,Tell me a story about a dragon.,chat
+deepseek-00492,Shake your head to indicate no.,motion_query
+deepseek-00493,How do you process speech?,chat
+deepseek-00494,Wave goodbye to the guests.,motion_query
+deepseek-00495,Bend down and pick up the pen.,motion_query
+deepseek-00496,Raise your hand if you agree.,motion_query
+deepseek-00497,How do I reset my password?,chat
+deepseek-00498,"My laptop won't turn on, what should I check first?",chat
+deepseek-00499,I need a recipe for gluten-free pancakes.,chat
+deepseek-00500,Place the cup on the coaster.,motion_query
