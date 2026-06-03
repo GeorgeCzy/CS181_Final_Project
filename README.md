@@ -18,6 +18,25 @@ pip install -r requirements.txt
 
 See **mode-classifier-main/README.md** for training, comparison, and prefix evaluation.
 
+## Top-level TF-IDF baseline
+
+The simple TF-IDF + logistic regression baseline reads the top-level `data/`
+folder:
+
+```bash
+pip install -r requirements.txt
+python scripts/train_tfidf_logreg.py
+```
+
+On the local Windows machine, the Anaconda Python environment can run it with:
+
+```powershell
+& "D:\anaconda3\python.exe" scripts\train_tfidf_logreg.py
+```
+
+The script writes the trained model, metrics, and validation/test predictions to
+`artifacts/tfidf_logreg/`.
+
 ## Submission zip
 
 Include: PDF report, `mode-classifier-main/` (with its README), and this file if desired.
