@@ -57,6 +57,27 @@ written to `experiments/results/latest/` so training-loss curves and test
 metrics can be committed without model weights. See `experiments/README.md` for
 the exact file structure and run names.
 
+## Version2 Prefix Early Classification
+
+Version2 is isolated under `version2_prefix/`. It changes the task from
+full-utterance binary classification to prefix-based three-class prediction:
+
+```text
+chat
+motion_query
+wait
+```
+
+Build the prefix dataset and run the version2 experiment grid with:
+
+```powershell
+& "D:\anaconda3\python.exe" version2_prefix\scripts\build_prefix_dataset.py
+& "D:\anaconda3\python.exe" version2_prefix\scripts\run_prefix_experiments.py
+```
+
+See `version2_prefix/README.md` for the version2 data layout, artifact naming,
+and report files.
+
 ## Submission zip
 
 Include: PDF report, `mode-classifier-main/` (with its README), and this file if desired.

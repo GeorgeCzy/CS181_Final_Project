@@ -1,0 +1,26 @@
+{
+  "version": "version2_prefix",
+  "labels": [
+    "chat",
+    "motion_query",
+    "wait"
+  ],
+  "input_column": "prefix_utterance",
+  "encoders": [
+    "tfidf",
+    "minilm",
+    "clip",
+    "qwen3_0_6b"
+  ],
+  "heads": [
+    "logreg",
+    "mlp"
+  ],
+  "data_dir": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\version2_prefix\\data",
+  "device": "cuda",
+  "artifact_layout": {
+    "embedding_cache": "artifacts/version2_prefix/embeddings/{encoder}/",
+    "run_output": "artifacts/version2_prefix/runs/{encoder}__{head}/",
+    "report_snapshot": "version2_prefix/results/latest/"
+  }
+}

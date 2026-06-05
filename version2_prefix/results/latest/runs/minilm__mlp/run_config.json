@@ -1,0 +1,17 @@
+{
+  "run_name": "minilm__mlp",
+  "encoder": "minilm",
+  "head": "mlp",
+  "task": "version2_prefix_three_class",
+  "text_column": "prefix_utterance",
+  "device": "cuda",
+  "input_dim": 384,
+  "epochs_requested": 60,
+  "epochs_completed": 44,
+  "best_epoch": 29,
+  "batch_size": 128,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "mlp_hidden_dim": 256,
+  "dropout": 0.2
+}
