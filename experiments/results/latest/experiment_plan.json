@@ -1,0 +1,20 @@
+{
+  "encoders": [
+    "tfidf",
+    "minilm",
+    "clip",
+    "qwen3_0_6b"
+  ],
+  "heads": [
+    "logreg",
+    "mlp"
+  ],
+  "data_dir": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\data",
+  "device": "cuda",
+  "seed": 20260518,
+  "artifact_layout": {
+    "embedding_cache": "artifacts/ours/embeddings/{encoder}/",
+    "run_output": "artifacts/ours/runs/{encoder}__{head}/",
+    "summary": "artifacts/ours/summary.csv and summary.md"
+  }
+}

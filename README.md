@@ -37,6 +37,26 @@ On the local Windows machine, the Anaconda Python environment can run it with:
 The script writes the trained model, metrics, and validation/test predictions to
 `artifacts/tfidf_logreg/`.
 
+## Our 4x2 Encoder/Head Experiments
+
+Our implementation is in `experiments/`, separate from the imported
+`mode-classifier-main/` folder.
+
+It runs 4 encoders (`tfidf`, `minilm`, `clip`, `qwen3_0_6b`) with 2 classifier
+heads (`logreg`, `mlp`), for 8 total combinations. The code uses CUDA for neural
+encoders and classifier-head training when a GPU is available.
+
+```powershell
+& "D:\anaconda3\python.exe" experiments\run_experiments.py
+```
+
+Full outputs are written to `artifacts/ours/`, including embedding caches,
+models, predictions, per-run `history.csv`, `loss_curve.png`, `metrics.json`,
+and global `summary.csv` / `summary.md`. A lightweight report snapshot is also
+written to `experiments/results/latest/` so training-loss curves and test
+metrics can be committed without model weights. See `experiments/README.md` for
+the exact file structure and run names.
+
 ## Submission zip
 
 Include: PDF report, `mode-classifier-main/` (with its README), and this file if desired.
