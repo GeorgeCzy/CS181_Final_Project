@@ -18,6 +18,15 @@
   ],
   "data_dir": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\version2_prefix\\data",
   "device": "cuda",
+  "decision_thresholds": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "summary_threshold": 0.7,
+  "evaluation_note": "`wait` is treated as abstention for selective-decision metrics.",
   "artifact_layout": {
     "embedding_cache": "artifacts/version2_prefix/embeddings/{encoder}/",
     "run_output": "artifacts/version2_prefix/runs/{encoder}__{head}/",

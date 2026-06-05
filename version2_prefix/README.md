@@ -72,9 +72,31 @@ version2_prefix/results/latest/
     history.csv
     loss_curve.png
     metrics.json
+    test_threshold_sweep.csv
+    test_selective_metrics_by_prefix_ratio_t070.csv
+    test_first_decisions_t070.csv
     test_metrics_by_prefix_ratio.csv
     test_prefix_metrics.png
 ```
+
+The main report metrics treat `wait` as abstention, not as a correct answer.
+At each confidence threshold, the evaluator asks:
+
+- How often does the model make a non-wait `chat`/`motion_query` decision?
+- When it makes such a decision, how accurate is it against the original full
+  utterance label?
+- For each original utterance, at what prefix ratio does the first confident
+  decision occur?
+
+Recommended files for presentation:
+
+- `summary.md`: high-level comparison at the summary threshold.
+- `test_threshold_sweep.csv`: accuracy/coverage tradeoff across confidence
+  thresholds.
+- `test_selective_metrics_by_prefix_ratio_t070.csv`: decision rate and decision
+  accuracy by prefix length at threshold 0.70.
+- `test_first_decisions_t070.csv`: one row per original utterance, recording the
+  first confident decision.
 
 Run all 8 combinations:
 

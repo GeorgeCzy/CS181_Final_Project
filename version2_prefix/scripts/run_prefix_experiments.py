@@ -54,6 +54,7 @@ HEAD_CHOICES = ["logreg", "mlp"]
 class Split:
     name: str
     ids: list[str]
+    original_ids: list[str]
     texts: list[str]
     labels: list[str]
     full_labels: list[str]
@@ -100,6 +101,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--force-recompute-embeddings", action="store_true")
     parser.add_argument("--skip-existing", action="store_true")
     parser.add_argument("--no-report-copy", action="store_true")
+    parser.add_argument(
+        "--decision-thresholds",
+        nargs="+",
+        type=float,
+        default=[0.50, 0.60, 0.70, 0.80, 0.90],
+        help="Non-wait confidence thresholds for selective early-decision evaluation.",
+    )
+    parser.add_argument(
+        "--summary-threshold",
+        type=float,
+        default=0.70,
+        help="Threshold highlighted in summary tables.",
+    )
     return parser.parse_args()
 
 
@@ -141,6 +155,7 @@ def read_split(path: Path, *, text_column: str, limit: int | None = None) -> Spl
 
     required = {
         "id",
+        "original_id",
         text_column,
         "label",
         "full_label",
@@ -155,6 +170,7 @@ def read_split(path: Path, *, text_column: str, limit: int | None = None) -> Spl
         raise ValueError(f"{path} is missing columns: {sorted(missing)}")
 
     ids: list[str] = []
+    original_ids: list[str] = []
     texts: list[str] = []
     labels: list[str] = []
     full_labels: list[str] = []
@@ -168,6 +184,7 @@ def read_split(path: Path, *, text_column: str, limit: int | None = None) -> Spl
         if label not in LABEL_TO_INDEX:
             raise ValueError(f"{path}:{line_number} has invalid label {label!r}")
         ids.append(row["id"])
+        original_ids.append(row["original_id"])
         texts.append(row[text_column])
         labels.append(label)
         full_labels.append(row["full_label"])
@@ -180,6 +197,7 @@ def read_split(path: Path, *, text_column: str, limit: int | None = None) -> Spl
     return Split(
         name=path.stem,
         ids=ids,
+        original_ids=original_ids,
         texts=texts,
         labels=labels,
         full_labels=full_labels,
@@ -498,6 +516,242 @@ def compute_metrics(labels: list[str], predictions: list[str]) -> dict[str, obje
     }
 
 
+def decisions_from_probabilities(
+    p_chat: list[float],
+    p_motion: list[float],
+    *,
+    threshold: float,
+) -> tuple[list[str], list[float]]:
+    decisions: list[str] = []
+    confidences: list[float] = []
+    for chat_probability, motion_probability in zip(p_chat, p_motion):
+        if chat_probability >= motion_probability:
+            label = "chat"
+            confidence = chat_probability
+        else:
+            label = "motion_query"
+            confidence = motion_probability
+
+        if confidence >= threshold:
+            decisions.append(label)
+        else:
+            decisions.append("wait")
+        confidences.append(confidence)
+    return decisions, confidences
+
+
+def selective_row_metrics(
+    *,
+    full_labels: list[str],
+    decisions: list[str],
+    confidences: list[float],
+) -> dict[str, object]:
+    decision_indices = [
+        index for index, decision in enumerate(decisions) if decision != "wait"
+    ]
+    correct_decisions = [
+        index
+        for index in decision_indices
+        if decisions[index] == full_labels[index]
+    ]
+    if decision_indices:
+        decision_accuracy: float | str = len(correct_decisions) / len(decision_indices)
+        mean_decision_confidence: float | str = float(
+            np.mean([confidences[index] for index in decision_indices])
+        )
+    else:
+        decision_accuracy = ""
+        mean_decision_confidence = ""
+
+    total = len(full_labels)
+    return {
+        "num_prefix_rows": total,
+        "decision_count": len(decision_indices),
+        "abstain_count": total - len(decision_indices),
+        "decision_rate": len(decision_indices) / total,
+        "abstain_rate": 1 - (len(decision_indices) / total),
+        "decision_accuracy": decision_accuracy,
+        "correct_decision_rate": len(correct_decisions) / total,
+        "wrong_decision_rate": (len(decision_indices) - len(correct_decisions)) / total,
+        "mean_decision_confidence": mean_decision_confidence,
+    }
+
+
+def early_decision_metrics(
+    split: Split,
+    decisions: list[str],
+    confidences: list[float],
+) -> dict[str, object]:
+    grouped_indices: dict[str, list[int]] = defaultdict(list)
+    for index, original_id in enumerate(split.original_ids):
+        grouped_indices[original_id].append(index)
+
+    first_decision_ratios: list[float] = []
+    first_decision_confidences: list[float] = []
+    first_decision_correct = 0
+    no_decision_count = 0
+    details: list[dict[str, object]] = []
+
+    for original_id, indices in grouped_indices.items():
+        ordered = sorted(
+            indices,
+            key=lambda index: (split.visible_ratios[index], split.prefix_tokens[index]),
+        )
+        first_index = next(
+            (index for index in ordered if decisions[index] != "wait"),
+            None,
+        )
+        full_label = split.full_labels[ordered[0]]
+        if first_index is None:
+            no_decision_count += 1
+            details.append(
+                {
+                    "original_id": original_id,
+                    "full_label": full_label,
+                    "first_decision": "wait",
+                    "first_decision_correct": "",
+                    "first_decision_visible_ratio": "",
+                    "first_decision_target_prefix_ratio": "",
+                    "first_decision_confidence": "",
+                }
+            )
+            continue
+
+        is_correct = decisions[first_index] == full_label
+        first_decision_correct += int(is_correct)
+        first_decision_ratios.append(split.visible_ratios[first_index])
+        first_decision_confidences.append(confidences[first_index])
+        details.append(
+            {
+                "original_id": original_id,
+                "full_label": full_label,
+                "first_decision": decisions[first_index],
+                "first_decision_correct": int(is_correct),
+                "first_decision_visible_ratio": f"{split.visible_ratios[first_index]:.6f}",
+                "first_decision_target_prefix_ratio": split.target_prefix_ratios[first_index],
+                "first_decision_confidence": f"{confidences[first_index]:.6f}",
+            }
+        )
+
+    num_utterances = len(grouped_indices)
+    decision_count = num_utterances - no_decision_count
+    first_decision_accuracy: float | str
+    mean_first_ratio: float | str
+    median_first_ratio: float | str
+    mean_first_confidence: float | str
+    if decision_count:
+        first_decision_accuracy = first_decision_correct / decision_count
+        mean_first_ratio = float(np.mean(first_decision_ratios))
+        median_first_ratio = float(np.median(first_decision_ratios))
+        mean_first_confidence = float(np.mean(first_decision_confidences))
+    else:
+        first_decision_accuracy = ""
+        mean_first_ratio = ""
+        median_first_ratio = ""
+        mean_first_confidence = ""
+
+    return {
+        "num_utterances": num_utterances,
+        "first_decision_count": decision_count,
+        "no_decision_count": no_decision_count,
+        "first_decision_coverage": decision_count / num_utterances,
+        "first_decision_accuracy": first_decision_accuracy,
+        "first_decision_correct_coverage": first_decision_correct / num_utterances,
+        "mean_first_decision_visible_ratio": mean_first_ratio,
+        "median_first_decision_visible_ratio": median_first_ratio,
+        "mean_first_decision_confidence": mean_first_confidence,
+        "details": details,
+    }
+
+
+def forced_final_accuracy(
+    split: Split,
+    p_chat: list[float],
+    p_motion: list[float],
+) -> float:
+    final_indices = [
+        index
+        for index, ratio in enumerate(split.target_prefix_ratios)
+        if ratio == "1.00"
+    ]
+    if not final_indices:
+        return 0.0
+    correct = 0
+    for index in final_indices:
+        decision = "chat" if p_chat[index] >= p_motion[index] else "motion_query"
+        correct += int(decision == split.full_labels[index])
+    return correct / len(final_indices)
+
+
+def threshold_sweep_metrics(
+    split: Split,
+    p_chat: list[float],
+    p_motion: list[float],
+    *,
+    thresholds: list[float],
+) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    forced_accuracy = forced_final_accuracy(split, p_chat, p_motion)
+    for threshold in thresholds:
+        decisions, confidences = decisions_from_probabilities(
+            p_chat,
+            p_motion,
+            threshold=threshold,
+        )
+        row_metrics = selective_row_metrics(
+            full_labels=split.full_labels,
+            decisions=decisions,
+            confidences=confidences,
+        )
+        early_metrics = early_decision_metrics(split, decisions, confidences)
+        rows.append(
+            {
+                "threshold": f"{threshold:.2f}",
+                "row_decision_rate": row_metrics["decision_rate"],
+                "row_abstain_rate": row_metrics["abstain_rate"],
+                "row_decision_accuracy": row_metrics["decision_accuracy"],
+                "row_correct_decision_rate": row_metrics["correct_decision_rate"],
+                "row_wrong_decision_rate": row_metrics["wrong_decision_rate"],
+                "first_decision_coverage": early_metrics["first_decision_coverage"],
+                "first_decision_accuracy": early_metrics["first_decision_accuracy"],
+                "first_decision_correct_coverage": early_metrics["first_decision_correct_coverage"],
+                "mean_first_decision_visible_ratio": early_metrics["mean_first_decision_visible_ratio"],
+                "median_first_decision_visible_ratio": early_metrics["median_first_decision_visible_ratio"],
+                "forced_final_accuracy": forced_accuracy,
+            }
+        )
+    return rows
+
+
+def selective_metrics_by_prefix_ratio(
+    split: Split,
+    decisions: list[str],
+    confidences: list[float],
+    *,
+    threshold: float,
+) -> list[dict[str, object]]:
+    grouped: dict[str, list[int]] = defaultdict(list)
+    for index, ratio in enumerate(split.target_prefix_ratios):
+        grouped[ratio].append(index)
+
+    rows: list[dict[str, object]] = []
+    for ratio in sorted(grouped, key=lambda value: float(value)):
+        indices = grouped[ratio]
+        row_metrics = selective_row_metrics(
+            full_labels=[split.full_labels[index] for index in indices],
+            decisions=[decisions[index] for index in indices],
+            confidences=[confidences[index] for index in indices],
+        )
+        rows.append(
+            {
+                "threshold": f"{threshold:.2f}",
+                "target_prefix_ratio": ratio,
+                **row_metrics,
+            }
+        )
+    return rows
+
+
 def metrics_by_prefix_ratio(split: Split, predictions: list[str]) -> list[dict[str, object]]:
     grouped: dict[str, list[int]] = defaultdict(list)
     for index, ratio in enumerate(split.target_prefix_ratios):
@@ -744,6 +998,10 @@ def train_one_run(
 
     split_metrics: dict[str, object] = {}
     prefix_ratio_metrics: dict[str, list[dict[str, object]]] = {}
+    threshold_sweeps: dict[str, list[dict[str, object]]] = {}
+    selective_prefix_metrics: dict[str, list[dict[str, object]]] = {}
+    early_decision_summaries: dict[str, dict[str, object]] = {}
+    summary_threshold = args.summary_threshold
     for split_name, split in splits.items():
         predictions, p_chat, p_motion, p_wait = predict(
             model,
@@ -753,6 +1011,28 @@ def train_one_run(
         )
         split_metrics[split_name] = compute_metrics(split.labels, predictions)
         prefix_ratio_metrics[split_name] = metrics_by_prefix_ratio(split, predictions)
+        threshold_sweeps[split_name] = threshold_sweep_metrics(
+            split,
+            p_chat,
+            p_motion,
+            thresholds=args.decision_thresholds,
+        )
+        summary_decisions, summary_confidences = decisions_from_probabilities(
+            p_chat,
+            p_motion,
+            threshold=summary_threshold,
+        )
+        early_decision_summaries[split_name] = early_decision_metrics(
+            split,
+            summary_decisions,
+            summary_confidences,
+        )
+        selective_prefix_metrics[split_name] = selective_metrics_by_prefix_ratio(
+            split,
+            summary_decisions,
+            summary_confidences,
+            threshold=summary_threshold,
+        )
         if split_name in {"val", "test"}:
             write_predictions(
                 run_dir / f"{split_name}_predictions.csv",
@@ -781,6 +1061,62 @@ def train_one_run(
             plot_prefix_metrics(
                 prefix_metrics_path,
                 run_dir / f"{split_name}_prefix_metrics.png",
+            )
+            threshold_sweep_path = run_dir / f"{split_name}_threshold_sweep.csv"
+            write_csv(
+                threshold_sweep_path,
+                threshold_sweeps[split_name],
+                [
+                    "threshold",
+                    "row_decision_rate",
+                    "row_abstain_rate",
+                    "row_decision_accuracy",
+                    "row_correct_decision_rate",
+                    "row_wrong_decision_rate",
+                    "first_decision_coverage",
+                    "first_decision_accuracy",
+                    "first_decision_correct_coverage",
+                    "mean_first_decision_visible_ratio",
+                    "median_first_decision_visible_ratio",
+                    "forced_final_accuracy",
+                ],
+            )
+            selective_prefix_path = (
+                run_dir
+                / f"{split_name}_selective_metrics_by_prefix_ratio_t{int(summary_threshold * 100):03d}.csv"
+            )
+            write_csv(
+                selective_prefix_path,
+                selective_prefix_metrics[split_name],
+                [
+                    "threshold",
+                    "target_prefix_ratio",
+                    "num_prefix_rows",
+                    "decision_count",
+                    "abstain_count",
+                    "decision_rate",
+                    "abstain_rate",
+                    "decision_accuracy",
+                    "correct_decision_rate",
+                    "wrong_decision_rate",
+                    "mean_decision_confidence",
+                ],
+            )
+            first_decisions_path = (
+                run_dir / f"{split_name}_first_decisions_t{int(summary_threshold * 100):03d}.csv"
+            )
+            write_csv(
+                first_decisions_path,
+                early_decision_summaries[split_name]["details"],
+                [
+                    "original_id",
+                    "full_label",
+                    "first_decision",
+                    "first_decision_correct",
+                    "first_decision_visible_ratio",
+                    "first_decision_target_prefix_ratio",
+                    "first_decision_confidence",
+                ],
             )
 
     torch.save(
@@ -813,11 +1149,12 @@ def train_one_run(
         "dropout": args.dropout,
     }
 
-    test_ratio_rows = {
-        row["target_prefix_ratio"]: row
-        for row in prefix_ratio_metrics["test"]
+    test_sweep_rows = {
+        row["threshold"]: row
+        for row in threshold_sweeps["test"]
     }
-    final_ratio = test_ratio_rows.get("1.00", {})
+    summary_threshold_key = f"{summary_threshold:.2f}"
+    highlighted_test = test_sweep_rows[summary_threshold_key]
     summary = {
         "run_name": run_name,
         "encoder": encoder_name,
@@ -825,13 +1162,18 @@ def train_one_run(
         "input_dim": input_dim,
         "epochs_completed": len(history_rows),
         "best_epoch": best_epoch,
-        "train_accuracy": split_metrics["train"]["accuracy"],
-        "val_accuracy": split_metrics["val"]["accuracy"],
-        "test_accuracy": split_metrics["test"]["accuracy"],
-        "test_macro_f1": split_metrics["test"]["macro_f1"],
-        "test_final_ratio_accuracy": final_ratio.get("accuracy", ""),
-        "test_avg_pred_decision_rate": float(np.mean([row["pred_decision_rate"] for row in prefix_ratio_metrics["test"]])),
-        "test_avg_pred_wait_rate": float(np.mean([row["pred_wait_rate"] for row in prefix_ratio_metrics["test"]])),
+        "summary_threshold": summary_threshold,
+        "train_three_class_accuracy": split_metrics["train"]["accuracy"],
+        "val_three_class_accuracy": split_metrics["val"]["accuracy"],
+        "test_three_class_accuracy": split_metrics["test"]["accuracy"],
+        "test_row_decision_rate_at_threshold": highlighted_test["row_decision_rate"],
+        "test_row_decision_accuracy_at_threshold": highlighted_test["row_decision_accuracy"],
+        "test_first_decision_coverage_at_threshold": highlighted_test["first_decision_coverage"],
+        "test_first_decision_accuracy_at_threshold": highlighted_test["first_decision_accuracy"],
+        "test_first_decision_correct_coverage_at_threshold": highlighted_test["first_decision_correct_coverage"],
+        "test_mean_first_decision_visible_ratio_at_threshold": highlighted_test["mean_first_decision_visible_ratio"],
+        "test_median_first_decision_visible_ratio_at_threshold": highlighted_test["median_first_decision_visible_ratio"],
+        "test_forced_final_accuracy": highlighted_test["forced_final_accuracy"],
         "elapsed_seconds": elapsed_seconds,
     }
 
@@ -843,12 +1185,23 @@ def train_one_run(
             "config": run_config,
             "metrics": split_metrics,
             "metrics_by_prefix_ratio": prefix_ratio_metrics,
+            "threshold_sweeps": threshold_sweeps,
+            "selective_metrics_by_prefix_ratio": selective_prefix_metrics,
+            "early_decision_summaries": {
+                split_name: {
+                    key: value
+                    for key, value in metrics.items()
+                    if key != "details"
+                }
+                for split_name, metrics in early_decision_summaries.items()
+            },
         },
     )
     print(
-        f"{run_name}: val={summary['val_accuracy']:.4f} "
-        f"test={summary['test_accuracy']:.4f} "
-        f"final={summary['test_final_ratio_accuracy']:.4f} "
+        f"{run_name}: first_acc@{summary_threshold:.2f}="
+        f"{summary['test_first_decision_accuracy_at_threshold']:.4f} "
+        f"coverage={summary['test_first_decision_coverage_at_threshold']:.4f} "
+        f"mean_prefix={summary['test_mean_first_decision_visible_ratio_at_threshold']:.4f} "
         f"epochs={summary['epochs_completed']}"
     )
     return summary
@@ -862,32 +1215,42 @@ def write_summary(output_dir: Path, summaries: list[dict[str, object]]) -> None:
         "input_dim",
         "epochs_completed",
         "best_epoch",
-        "train_accuracy",
-        "val_accuracy",
-        "test_accuracy",
-        "test_macro_f1",
-        "test_final_ratio_accuracy",
-        "test_avg_pred_decision_rate",
-        "test_avg_pred_wait_rate",
+        "summary_threshold",
+        "train_three_class_accuracy",
+        "val_three_class_accuracy",
+        "test_three_class_accuracy",
+        "test_row_decision_rate_at_threshold",
+        "test_row_decision_accuracy_at_threshold",
+        "test_first_decision_coverage_at_threshold",
+        "test_first_decision_accuracy_at_threshold",
+        "test_first_decision_correct_coverage_at_threshold",
+        "test_mean_first_decision_visible_ratio_at_threshold",
+        "test_median_first_decision_visible_ratio_at_threshold",
+        "test_forced_final_accuracy",
         "elapsed_seconds",
     ]
     write_csv(output_dir / "summary.csv", summaries, fieldnames)
     sorted_summaries = sorted(
         summaries,
-        key=lambda row: float(row.get("test_accuracy", 0.0)),
+        key=lambda row: float(row.get("test_first_decision_correct_coverage_at_threshold", 0.0)),
         reverse=True,
     )
     lines = [
-        "# Version2 Prefix Experiment Summary",
+        "# Version2 Prefix Selective-Decision Summary",
         "",
-        "| run | val acc | test acc | final-prefix acc | avg decision rate | epochs |",
-        "|---|---:|---:|---:|---:|---:|",
+        "At the summary threshold, `wait` is treated as abstention, not as a correct answer.",
+        "",
+        "| run | threshold | first-decision acc | first-decision coverage | correct coverage | mean first prefix | forced final acc |",
+        "|---|---:|---:|---:|---:|---:|---:|",
     ]
     for row in sorted_summaries:
         lines.append(
-            "| {run_name} | {val_accuracy:.4f} | {test_accuracy:.4f} | "
-            "{test_final_ratio_accuracy:.4f} | {test_avg_pred_decision_rate:.4f} | "
-            "{epochs_completed} |".format(**row)
+            "| {run_name} | {summary_threshold:.2f} | "
+            "{test_first_decision_accuracy_at_threshold:.4f} | "
+            "{test_first_decision_coverage_at_threshold:.4f} | "
+            "{test_first_decision_correct_coverage_at_threshold:.4f} | "
+            "{test_mean_first_decision_visible_ratio_at_threshold:.4f} | "
+            "{test_forced_final_accuracy:.4f} |".format(**row)
         )
     (output_dir / "summary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -911,12 +1274,18 @@ def write_report_snapshot(output_dir: Path, report_dir: Path, summaries: list[di
             "metrics.json",
             "test_metrics_by_prefix_ratio.csv",
             "test_prefix_metrics.png",
+            "test_threshold_sweep.csv",
             "val_metrics_by_prefix_ratio.csv",
             "val_prefix_metrics.png",
+            "val_threshold_sweep.csv",
         ):
             source = source_run_dir / filename
             if source.exists():
                 shutil.copy2(source, target_run_dir / filename)
+        for source in source_run_dir.glob("*_selective_metrics_by_prefix_ratio_t*.csv"):
+            shutil.copy2(source, target_run_dir / source.name)
+        for source in source_run_dir.glob("*_first_decisions_t*.csv"):
+            shutil.copy2(source, target_run_dir / source.name)
 
 
 def main() -> None:
@@ -925,6 +1294,7 @@ def main() -> None:
     args.data_dir = args.data_dir.resolve()
     encoders = resolve_choices(args.encoders, ENCODER_CHOICES, "encoders")
     heads = resolve_choices(args.heads, HEAD_CHOICES, "heads")
+    args.decision_thresholds = sorted(set(args.decision_thresholds + [args.summary_threshold]))
     set_seed(args.seed)
     device = resolve_device(args.device)
     print(f"device: {device}")
@@ -945,6 +1315,9 @@ def main() -> None:
             "heads": heads,
             "data_dir": str(args.data_dir),
             "device": str(device),
+            "decision_thresholds": args.decision_thresholds,
+            "summary_threshold": args.summary_threshold,
+            "evaluation_note": "`wait` is treated as abstention for selective-decision metrics.",
             "artifact_layout": {
                 "embedding_cache": "artifacts/version2_prefix/embeddings/{encoder}/",
                 "run_output": "artifacts/version2_prefix/runs/{encoder}__{head}/",

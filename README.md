@@ -76,7 +76,9 @@ Build the prefix dataset and run the version2 experiment grid with:
 ```
 
 See `version2_prefix/README.md` for the version2 data layout, artifact naming,
-and report files.
+and report files. The main version2 metrics treat `wait` as abstention; they
+report confidence-threshold accuracy, decision coverage, and the prefix length
+where each utterance first receives a non-wait answer.
 
 ## Submission zip
 
