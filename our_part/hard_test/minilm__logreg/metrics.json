@@ -1,0 +1,76 @@
+{
+  "run_name": "minilm__logreg",
+  "encoder": "minilm",
+  "head": "logreg",
+  "hard_test_file": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\our_part\\data\\hard_test\\hard_test.csv",
+  "metrics": {
+    "accuracy": 0.6583333333333333,
+    "macro_f1": 0.640114110160193,
+    "false_motion_count": 34,
+    "false_text_count": 7,
+    "false_motion_rate_total": 0.2833333333333333,
+    "false_text_rate_total": 0.058333333333333334,
+    "false_motion_rate_by_chat": 0.5666666666666667,
+    "false_text_rate_by_motion": 0.11666666666666667,
+    "chat_accuracy": 0.43333333333333335,
+    "motion_query_accuracy": 0.8833333333333333,
+    "confusion_matrix": {
+      "labels": [
+        "chat",
+        "motion_query"
+      ],
+      "matrix": [
+        [
+          26,
+          34
+        ],
+        [
+          7,
+          53
+        ]
+      ]
+    },
+    "classification_report": {
+      "chat": {
+        "precision": 0.7878787878787878,
+        "recall": 0.43333333333333335,
+        "f1-score": 0.5591397849462365,
+        "support": 60.0
+      },
+      "motion_query": {
+        "precision": 0.6091954022988506,
+        "recall": 0.8833333333333333,
+        "f1-score": 0.7210884353741497,
+        "support": 60.0
+      },
+      "accuracy": 0.6583333333333333,
+      "macro avg": {
+        "precision": 0.6985370950888192,
+        "recall": 0.6583333333333333,
+        "f1-score": 0.640114110160193,
+        "support": 120.0
+      },
+      "weighted avg": {
+        "precision": 0.6985370950888192,
+        "recall": 0.6583333333333333,
+        "f1-score": 0.6401141101601932,
+        "support": 120.0
+      }
+    }
+  },
+  "source_model_config": {
+    "run_name": "minilm__logreg",
+    "encoder": "minilm",
+    "head": "logreg",
+    "device": "cuda",
+    "input_dim": 384,
+    "epochs_requested": 60,
+    "epochs_completed": 60,
+    "best_epoch": 60,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "mlp_hidden_dim": 256,
+    "dropout": 0.2
+  }
+}

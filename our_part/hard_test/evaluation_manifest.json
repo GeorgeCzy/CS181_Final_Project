@@ -1,0 +1,21 @@
+{
+  "hard_test_file": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\our_part\\data\\hard_test\\hard_test.csv",
+  "artifact_dir": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\artifacts\\ours",
+  "output_dir": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\our_part\\hard_test",
+  "device": "cuda",
+  "num_examples": 120,
+  "labels": {
+    "chat": 60,
+    "motion_query": 60
+  },
+  "models_evaluated": [
+    "tfidf__logreg",
+    "tfidf__mlp",
+    "minilm__logreg",
+    "minilm__mlp",
+    "clip__logreg",
+    "clip__mlp",
+    "qwen3_0_6b__logreg",
+    "qwen3_0_6b__mlp"
+  ]
+}

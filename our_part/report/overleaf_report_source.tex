@@ -43,6 +43,8 @@ MLP).
 On full sentences, the eight encoder--head combinations reach 98.3--99.7\%
 test accuracy; CLIP+MLP performs best on the standard test split while
 TF-IDF+LogReg remains a strong compact baseline.
+On a newly curated 120-example hard test set, however, accuracy drops sharply:
+Qwen3+MLP performs best at 84.2\%, while TF-IDF+LogReg falls to 77.5\%.
 For prefix-based early prediction at confidence threshold~0.7, TF-IDF+LogReg
 achieves 99.2\% accuracy among first non-wait decisions, covers 86.7\% of test
 utterances, and commits after a mean 42.1\% of the sentence (median 33.3\%).
@@ -70,7 +72,7 @@ We therefore evaluate both \textbf{full-sentence classification} and
 Our contributions are:
 \begin{itemize}
   \item A balanced 3{,}000-utterance dataset for \texttt{chat} vs.\
-        \texttt{motion\_query}, with a 30-example hard test set of boundary
+        \texttt{motion\_query}, with a 120-example hard test set of boundary
         cases.
   \item A controlled $4 \times 2$ comparison (encoder $\times$ head) reporting
         accuracy, macro-F1, error counts, and tracked training runtime.
@@ -122,9 +124,11 @@ The full-input dataset used in the tracked experiments contains 3{,}000
 DeepSeek-generated utterances (1{,}500 per class).
 We split 80/10/10 into train/val/test (2{,}400 / 300 / 300) with
 stratification (seed~20260518).
-A separate \emph{hard test} set of 30 manually curated boundary utterances
-(e.g.\ \emph{``Can you explain how to wave properly?''}) evaluates
-robustness.
+A separate \emph{hard test} set of 120 manually curated boundary utterances
+(60 per class) evaluates robustness. It includes chat examples with motion
+vocabulary, negation, capability questions, hypotheticals, and word-only
+requests, plus motion examples with indirect requests, demonstrations,
+negation traps, and context-driven physical actions.
 
 Data were collected in two stages for the current experiments.
 First, 500 hand-written seed utterances established label conventions and
@@ -132,8 +136,8 @@ boundary patterns.
 Second, DeepSeek-generated batches expanded coverage with LLM diversity and
 formed the balanced 3{,}000-row dataset used for V1 and as the source data for
 V2 prefix generation.
-Table~\ref{tab:examples} illustrates typical cases and the ambiguity we
-target in the hard set.
+Table~\ref{tab:examples} illustrates typical cases and the ambiguity targeted
+by the hard test.
 
 \begin{table}[h]
   \centering
@@ -184,9 +188,11 @@ exceeds $\tau$. We report first-decision accuracy, decision coverage, and the
 visible prefix ratio where the first decision is made; \textsc{wait} is treated
 as abstention rather than as a correct final answer.
 
-\subsection{Baselines}
-A keyword rule baseline matches motion-related verbs and nouns; it requires no
-training and is included only in the hard-set sanity check below.
+\subsection{Hard-Test Construction}
+The hard test is not used for training or model selection. It is a held-out
+diagnostic set designed to stress the lexical shortcuts that make the standard
+random split easy: motion words inside chat questions, negated commands, and
+indirect physical requests without simple imperative phrasing.
 
 \subsection{Implementation Details}
 All heads use cross-entropy loss and AdamW ($\text{lr}=10^{-3}$, weight decay
@@ -227,45 +233,46 @@ from 98.3\% to 99.7\% test accuracy.
   \end{tabular}
 \end{table}
 
-On the 30-example hard set (Table~\ref{tab:hard}), larger encoders do not
-help: Qwen+MLP drops to 70.0\%, while MiniLM+LogReg reaches 90.0\% with zero
-false-text errors.
-TF-IDF+LogReg balances simplicity and hard-set performance (86.7\%).
+On the 120-example hard set (Table~\ref{tab:hard}), the standard-test ceiling
+largely disappears. Qwen3+MLP performs best at 84.2\%, followed by CLIP+MLP at
+82.5\%. TF-IDF+LogReg drops from 99.3\% on the standard test split to 77.5\%,
+which suggests that the original split is strongly lexically separable.
+The dominant failure mode is false motion: chat utterances that mention actions
+are often routed to \texttt{motion\_query}.
 
 \subsection{Error Analysis}
 Hard-set failures cluster into three patterns.
 \textbf{(1)~Lexical overlap:} chat utterances that mention motion vocabulary
 (\emph{``Can you explain how to wave properly?''}) are misclassified as
-\texttt{motion\_query} by TF-IDF and large encoders alike.
+\texttt{motion\_query} by many models.
 \textbf{(2)~Negation:} \emph{``Please do not move, just explain the answer''}
-triggers motion in Qwen3+MLP because the encoder attends to \emph{move}
-despite the prohibitive context.
+can still trigger motion because the classifier attends to \emph{move} despite
+the prohibitive context.
 \textbf{(3)~Capability queries:} \emph{``Can you show me what you can do?''}
 is ambiguous between a verbal capability summary and a physical demonstration;
-TF-IDF misses several of these (high FTR), while the keyword baseline misses
-purely informational questions that happen to contain motion words.
-MiniLM+LogReg is the only learned model that avoids false-text errors on the
-hard set, suggesting that compact semantic embeddings capture negation and
-instruction structure better than bag-of-words or oversized encoders under
-limited fine-tuning data.
+TF-IDF and frozen embedding models both struggle without task-specific examples
+that separate explanation from execution.
+The new hard-test results therefore support the hypothesis that high
+in-distribution accuracy mainly reflects surface lexical separability rather
+than robust semantic grounding.
 
 \begin{table}[h]
   \centering
-  \caption{Hard-set accuracy and error rates (30 boundary utterances).}
+  \caption{Hard-set accuracy and error rates (120 boundary utterances).}
   \label{tab:hard}
   \small
-  \begin{tabular}{lcccc}
+  \begin{tabular}{lccc}
     \toprule
     Model & Acc & FMR & FTR \\
     \midrule
-    Keyword baseline & 0.967 & 0.000 & 0.033 \\
-    TF-IDF+LogReg    & 0.867 & 0.033 & 0.100 \\
-    TF-IDF+MLP       & 0.833 & 0.067 & 0.100 \\
-    CLIP+LogReg      & 0.767 & 0.200 & 0.033 \\
-    Qwen3+LogReg     & 0.767 & 0.200 & 0.033 \\
-    Qwen3+MLP        & 0.700 & 0.133 & 0.167 \\
-    MiniLM+LogReg    & \textbf{0.900} & 0.100 & \textbf{0.000} \\
-    MiniLM+MLP       & 0.867 & 0.067 & 0.067 \\
+    Qwen3+MLP        & \textbf{0.842} & 0.133 & 0.025 \\
+    CLIP+MLP         & 0.825 & 0.133 & 0.042 \\
+    TF-IDF+LogReg    & 0.775 & 0.167 & 0.058 \\
+    TF-IDF+MLP       & 0.767 & 0.158 & 0.075 \\
+    MiniLM+MLP       & 0.758 & 0.183 & 0.058 \\
+    CLIP+LogReg      & 0.758 & 0.208 & 0.033 \\
+    Qwen3+LogReg     & 0.742 & 0.242 & \textbf{0.017} \\
+    MiniLM+LogReg    & 0.658 & 0.283 & 0.058 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -369,11 +376,14 @@ V2 thresholded prefix setting.
 \textbf{CLIP+MLP} gives the highest full-sentence accuracy (99.7\%) and strong
 early-decision coverage, while \textbf{Qwen3+LogReg} offers the best
 first-decision accuracy among the high-coverage prefix models.
+However, the 120-example hard test shows that standard random-split accuracy
+overstates robustness: the best hard-test model is Qwen3+MLP at 84.2\%, and
+TF-IDF+LogReg falls to 77.5\%.
 
 Limitations include the modest 3{,}000-row generated dataset, English-only
-coverage, the separate hard-set validation still needing tighter integration
-with the tracked experiment artifacts, and prefix simulation by word truncation
-rather than real ASR output.
+coverage, the need to expand the hard test with more natural ASR-style
+utterances, and prefix simulation by word truncation rather than real ASR
+output.
 Future work will integrate streaming speech recognition and deploy the chosen
 model on a physical humanoid platform with confidence-gated motion preparation.
 

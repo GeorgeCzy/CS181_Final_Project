@@ -1,0 +1,11 @@
+hard_category,count,accuracy,false_motion_count,false_text_count
+chat_capability,12,0.916667,1,0
+chat_hypothetical,12,0.500000,6,0
+chat_motion_explanation,12,0.916667,1,0
+chat_negation,12,0.333333,8,0
+chat_word_request,12,0.666667,4,0
+motion_contextual,12,0.916667,0,1
+motion_direct_action,12,1.000000,0,0
+motion_indirect_action,12,0.833333,0,2
+motion_negation_trap,12,0.666667,0,4
+motion_show_demonstrate,12,1.000000,0,0

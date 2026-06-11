@@ -13,6 +13,9 @@ in a structure that is easier to read for the final report/presentation.
   for early-decision classification.
 - `data/v2_prefix_input/manifest.json`: prefix-generation and split metadata
   for V2.
+- `data/hard_test/hard_test.csv`: 120-example balanced hard test for
+  full-utterance binary classification.
+- `data/hard_test/manifest.json`: hard-test design metadata.
 
 | Version | Train | Validation | Test |
 |---------|-------|------------|------|
@@ -52,6 +55,14 @@ the same core files as V1, plus prefix-specific evaluation reports:
 
 Top-level `summary.csv` and `summary.md` files in both `V1_full_input/` and
 `V2_prefix/` compare all eight combinations.
+
+## Hard Test
+
+- `hard_test/summary.csv` and `summary.md`: hard-test results for all eight V1
+  encoder/head combinations.
+- `hard_test/hard_accuracy.png`: accuracy bar chart.
+- `hard_test/{encoder}__{head}/`: per-combination predictions, metrics,
+  category metrics, and source run configuration.
 
 ## Report
 

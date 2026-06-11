@@ -1,0 +1,15 @@
+{
+  "run_name": "tfidf__mlp",
+  "encoder": "tfidf",
+  "head": "mlp",
+  "device": "cuda",
+  "input_dim": 5497,
+  "epochs_requested": 60,
+  "epochs_completed": 60,
+  "best_epoch": 60,
+  "batch_size": 64,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "mlp_hidden_dim": 256,
+  "dropout": 0.2
+}

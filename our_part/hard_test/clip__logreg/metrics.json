@@ -1,0 +1,76 @@
+{
+  "run_name": "clip__logreg",
+  "encoder": "clip",
+  "head": "logreg",
+  "hard_test_file": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\our_part\\data\\hard_test\\hard_test.csv",
+  "metrics": {
+    "accuracy": 0.7583333333333333,
+    "macro_f1": 0.7506984741027294,
+    "false_motion_count": 25,
+    "false_text_count": 4,
+    "false_motion_rate_total": 0.20833333333333334,
+    "false_text_rate_total": 0.03333333333333333,
+    "false_motion_rate_by_chat": 0.4166666666666667,
+    "false_text_rate_by_motion": 0.06666666666666667,
+    "chat_accuracy": 0.5833333333333334,
+    "motion_query_accuracy": 0.9333333333333333,
+    "confusion_matrix": {
+      "labels": [
+        "chat",
+        "motion_query"
+      ],
+      "matrix": [
+        [
+          35,
+          25
+        ],
+        [
+          4,
+          56
+        ]
+      ]
+    },
+    "classification_report": {
+      "chat": {
+        "precision": 0.8974358974358975,
+        "recall": 0.5833333333333334,
+        "f1-score": 0.7070707070707071,
+        "support": 60.0
+      },
+      "motion_query": {
+        "precision": 0.691358024691358,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.7943262411347518,
+        "support": 60.0
+      },
+      "accuracy": 0.7583333333333333,
+      "macro avg": {
+        "precision": 0.7943969610636277,
+        "recall": 0.7583333333333333,
+        "f1-score": 0.7506984741027294,
+        "support": 120.0
+      },
+      "weighted avg": {
+        "precision": 0.7943969610636278,
+        "recall": 0.7583333333333333,
+        "f1-score": 0.7506984741027295,
+        "support": 120.0
+      }
+    }
+  },
+  "source_model_config": {
+    "run_name": "clip__logreg",
+    "encoder": "clip",
+    "head": "logreg",
+    "device": "cuda",
+    "input_dim": 512,
+    "epochs_requested": 60,
+    "epochs_completed": 60,
+    "best_epoch": 60,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "mlp_hidden_dim": 256,
+    "dropout": 0.2
+  }
+}

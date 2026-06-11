@@ -1,0 +1,121 @@
+id,utterance,label,hard_category,prediction,p_chat,p_motion_query,confidence,correct
+hard_chat_001,Can you explain how to wave politely without moving right now?,chat,chat_motion_explanation,motion_query,0.000104,0.999896,0.999896,false
+hard_chat_002,What does it mean when a robot raises its hand?,chat,chat_motion_explanation,chat,0.978548,0.021452,0.978548,true
+hard_chat_003,Tell me the difference between waving and pointing.,chat,chat_motion_explanation,motion_query,0.000005,0.999995,0.999995,false
+hard_chat_004,Why do people bow in some cultures?,chat,chat_motion_explanation,chat,0.999955,0.000045,0.999955,true
+hard_chat_005,How should I describe a safe dance routine in words?,chat,chat_motion_explanation,chat,1.000000,0.000000,1.000000,true
+hard_chat_006,Could you define the phrase turn around in plain English?,chat,chat_motion_explanation,chat,0.989333,0.010667,0.989333,true
+hard_chat_007,Explain how a robot might balance before taking a step.,chat,chat_motion_explanation,chat,0.999748,0.000252,0.999748,true
+hard_chat_008,What is the safest way for a machine to lift an object?,chat,chat_motion_explanation,chat,0.999982,0.000018,0.999982,true
+hard_chat_009,Describe the mechanics of a handshake without demonstrating it.,chat,chat_motion_explanation,motion_query,0.054634,0.945366,0.945366,false
+hard_chat_010,Can you list common gestures used during a presentation?,chat,chat_motion_explanation,chat,0.999912,0.000088,0.999912,true
+hard_chat_011,What muscles do people use when they nod?,chat,chat_motion_explanation,chat,0.999993,0.000007,0.999993,true
+hard_chat_012,Explain why sudden arm movements can be unsafe near people.,chat,chat_motion_explanation,chat,0.994345,0.005655,0.994345,true
+hard_chat_013,Do not move; just tell me what a bow means.,chat,chat_negation,motion_query,0.113984,0.886016,0.886016,false
+hard_chat_014,Please stay still and explain how waving works.,chat,chat_negation,motion_query,0.000204,0.999796,0.999796,false
+hard_chat_015,"Do not raise your arm, only answer my question about stretching.",chat,chat_negation,chat,0.674100,0.325900,0.674100,true
+hard_chat_016,Please do not dance; describe the history of dancing.,chat,chat_negation,chat,0.994796,0.005204,0.994796,true
+hard_chat_017,"Without moving, tell me how a robot could point to a door.",chat,chat_negation,chat,0.805949,0.194051,0.805949,true
+hard_chat_018,Keep your hands down and explain what a thumbs-up means.,chat,chat_negation,motion_query,0.000037,0.999963,0.999963,false
+hard_chat_019,Do not step forward; define forward motion for me.,chat,chat_negation,motion_query,0.011731,0.988269,0.988269,false
+hard_chat_020,Please avoid gestures and summarize how to greet someone politely.,chat,chat_negation,chat,0.605475,0.394525,0.605475,true
+hard_chat_021,Stay where you are and explain what it means to lean left.,chat,chat_negation,motion_query,0.060964,0.939036,0.939036,false
+hard_chat_022,No demonstration is needed; just describe a salute.,chat,chat_negation,motion_query,0.000175,0.999825,0.999825,false
+hard_chat_023,"Do not act it out, but tell me how someone would kneel.",chat,chat_negation,motion_query,0.002316,0.997684,0.997684,false
+hard_chat_024,Please remain still and explain why robots should move slowly.,chat,chat_negation,chat,0.998340,0.001660,0.998340,true
+hard_chat_025,Can you tell me whether you are able to dance?,chat,chat_capability,chat,0.999954,0.000046,0.999954,true
+hard_chat_026,What kinds of motions can this robot perform?,chat,chat_capability,chat,0.999986,0.000014,0.999986,true
+hard_chat_027,Could you describe your arm movement limits?,chat,chat_capability,chat,0.999998,0.000002,0.999998,true
+hard_chat_028,What would happen if you tried to jump?,chat,chat_capability,chat,0.998709,0.001291,0.998709,true
+hard_chat_029,Can you explain whether you can point accurately?,chat,chat_capability,chat,0.988346,0.011654,0.988346,true
+hard_chat_030,Which gestures are safe for you to perform indoors?,chat,chat_capability,chat,0.997308,0.002692,0.997308,true
+hard_chat_031,Tell me what actions you know how to do.,chat,chat_capability,chat,0.928550,0.071450,0.928550,true
+hard_chat_032,Can you describe how fast your hand can move?,chat,chat_capability,chat,0.999290,0.000710,0.999290,true
+hard_chat_033,What are your limitations when walking?,chat,chat_capability,chat,0.999935,0.000065,0.999935,true
+hard_chat_034,Could you explain the difference between a bow and a nod?,chat,chat_capability,chat,0.999330,0.000670,0.999330,true
+hard_chat_035,Can you talk about your balance system?,chat,chat_capability,chat,0.999898,0.000102,0.999898,true
+hard_chat_036,What motions should a humanoid avoid around children?,chat,chat_capability,chat,0.999959,0.000041,0.999959,true
+hard_chat_037,"If a robot waved at a crowd, what message would that send?",chat,chat_hypothetical,chat,0.880382,0.119618,0.880382,true
+hard_chat_038,"If someone asks a robot to dance, what safety checks matter?",chat,chat_hypothetical,chat,0.999964,0.000036,0.999964,true
+hard_chat_039,When would pointing be considered impolite?,chat,chat_hypothetical,chat,0.948831,0.051169,0.948831,true
+hard_chat_040,Why might a robot refuse to lift a heavy box?,chat,chat_hypothetical,chat,0.993149,0.006851,0.993149,true
+hard_chat_041,"If a person bows twice, how should I interpret it?",chat,chat_hypothetical,chat,0.692613,0.307387,0.692613,true
+hard_chat_042,What could go wrong if a robot spins too quickly?,chat,chat_hypothetical,chat,0.997694,0.002306,0.997694,true
+hard_chat_043,Suppose a robot claps during a meeting; is that appropriate?,chat,chat_hypothetical,chat,0.952198,0.047802,0.952198,true
+hard_chat_044,Why is it hard for robots to kneel smoothly?,chat,chat_hypothetical,chat,0.999659,0.000341,0.999659,true
+hard_chat_045,When should a robot avoid turning its body?,chat,chat_hypothetical,chat,0.999891,0.000109,0.999891,true
+hard_chat_046,What does a raised palm usually communicate?,chat,chat_hypothetical,chat,0.999979,0.000021,0.999979,true
+hard_chat_047,"If a robot points at someone, could that seem rude?",chat,chat_hypothetical,motion_query,0.165814,0.834186,0.834186,false
+hard_chat_048,How would you explain a dance step to a beginner?,chat,chat_hypothetical,chat,0.999997,0.000003,0.999997,true
+hard_chat_049,Show me in words how to wave at a visitor.,chat,chat_word_request,motion_query,0.000010,0.999990,0.999990,false
+hard_chat_050,"Walk me through the idea of walking, but only verbally.",chat,chat_word_request,motion_query,0.009254,0.990746,0.990746,false
+hard_chat_051,Give me a written explanation of how to salute.,chat,chat_word_request,motion_query,0.000027,0.999974,0.999974,false
+hard_chat_052,Describe a jumping jack without doing one.,chat,chat_word_request,chat,0.984335,0.015665,0.984335,true
+hard_chat_053,Can you answer with text how to make a thumbs-up?,chat,chat_word_request,chat,0.672646,0.327354,0.672646,true
+hard_chat_054,Tell me the steps of a bow in a sentence.,chat,chat_word_request,motion_query,0.346281,0.653719,0.653719,false
+hard_chat_055,Use words to explain how someone turns left.,chat,chat_word_request,chat,0.643739,0.356261,0.643739,true
+hard_chat_056,"In words only, how would a robot greet a guest?",chat,chat_word_request,chat,0.999278,0.000722,0.999278,true
+hard_chat_057,Please describe the motion of clapping without clapping.,chat,chat_word_request,chat,0.624213,0.375787,0.624213,true
+hard_chat_058,Can you explain how to sit down safely?,chat,chat_word_request,chat,0.999448,0.000552,0.999448,true
+hard_chat_059,Write a short description of a friendly wave.,chat,chat_word_request,motion_query,0.033029,0.966971,0.966971,false
+hard_chat_060,Give me a verbal summary of how robots move their arms.,chat,chat_word_request,chat,0.988037,0.011963,0.988037,true
+hard_motion_001,"Please wave once, but do it slowly.",motion_query,motion_direct_action,motion_query,0.000000,1.000000,1.000000,true
+hard_motion_002,Raise your right hand for a moment.,motion_query,motion_direct_action,motion_query,0.000000,1.000000,1.000000,true
+hard_motion_003,Turn your head toward the door.,motion_query,motion_direct_action,motion_query,0.000000,1.000000,1.000000,true
+hard_motion_004,Point to the left side of the room.,motion_query,motion_direct_action,motion_query,0.000001,0.999999,0.999999,true
+hard_motion_005,Give me a quick thumbs-up.,motion_query,motion_direct_action,motion_query,0.000018,0.999982,0.999982,true
+hard_motion_006,Bow slightly to the visitor.,motion_query,motion_direct_action,motion_query,0.000001,0.999999,0.999999,true
+hard_motion_007,Clap your hands two times.,motion_query,motion_direct_action,motion_query,0.000001,0.999999,0.999999,true
+hard_motion_008,Take one small step backward.,motion_query,motion_direct_action,motion_query,0.000040,0.999960,0.999960,true
+hard_motion_009,Nod once if you understand.,motion_query,motion_direct_action,motion_query,0.008077,0.991923,0.991923,true
+hard_motion_010,Lean a little to your right.,motion_query,motion_direct_action,motion_query,0.000013,0.999987,0.999987,true
+hard_motion_011,Stretch both arms outward.,motion_query,motion_direct_action,motion_query,0.000004,0.999996,0.999996,true
+hard_motion_012,Face the window and pause.,motion_query,motion_direct_action,motion_query,0.000001,0.999999,0.999999,true
+hard_motion_013,Could you greet the visitor without saying anything?,motion_query,motion_indirect_action,chat,0.504568,0.495432,0.504568,false
+hard_motion_014,Make a small hello gesture for the camera.,motion_query,motion_indirect_action,motion_query,0.002961,0.997039,0.997039,true
+hard_motion_015,Act out being surprised.,motion_query,motion_indirect_action,motion_query,0.000005,0.999995,0.999995,true
+hard_motion_016,Use your arm to indicate yes.,motion_query,motion_indirect_action,motion_query,0.003915,0.996085,0.996085,true
+hard_motion_017,Give the audience a silent goodbye.,motion_query,motion_indirect_action,motion_query,0.005597,0.994403,0.994403,true
+hard_motion_018,Show approval without speaking.,motion_query,motion_indirect_action,motion_query,0.132591,0.867409,0.867409,true
+hard_motion_019,Demonstrate a polite greeting.,motion_query,motion_indirect_action,motion_query,0.000064,0.999936,0.999936,true
+hard_motion_020,Perform a tiny celebration.,motion_query,motion_indirect_action,motion_query,0.001171,0.998829,0.998829,true
+hard_motion_021,Signal that the answer is correct.,motion_query,motion_indirect_action,motion_query,0.004232,0.995768,0.995768,true
+hard_motion_022,Show me a friendly acknowledgement.,motion_query,motion_indirect_action,motion_query,0.212016,0.787984,0.787984,true
+hard_motion_023,Make yourself look taller for a second.,motion_query,motion_indirect_action,motion_query,0.000281,0.999719,0.999719,true
+hard_motion_024,Pretend you are looking for something on the floor.,motion_query,motion_indirect_action,motion_query,0.000005,0.999995,0.999995,true
+hard_motion_025,Can you show me what a wave looks like?,motion_query,motion_show_demonstrate,motion_query,0.105952,0.894048,0.894048,true
+hard_motion_026,Show me how you would point at that chair.,motion_query,motion_show_demonstrate,motion_query,0.000004,0.999996,0.999996,true
+hard_motion_027,Can you demonstrate a bow now?,motion_query,motion_show_demonstrate,motion_query,0.006645,0.993355,0.993355,true
+hard_motion_028,Show the movement for saying come here.,motion_query,motion_show_demonstrate,motion_query,0.000285,0.999715,0.999715,true
+hard_motion_029,Can you act out a short dance step?,motion_query,motion_show_demonstrate,chat,0.658512,0.341489,0.658512,false
+hard_motion_030,Show me how you would stretch before exercise.,motion_query,motion_show_demonstrate,motion_query,0.001828,0.998172,0.998172,true
+hard_motion_031,Demonstrate how you turn around.,motion_query,motion_show_demonstrate,motion_query,0.000004,0.999995,0.999995,true
+hard_motion_032,Show how you would salute a guest.,motion_query,motion_show_demonstrate,motion_query,0.000003,0.999997,0.999997,true
+hard_motion_033,Can you perform the gesture for stop?,motion_query,motion_show_demonstrate,motion_query,0.002698,0.997302,0.997302,true
+hard_motion_034,Show me the motion of opening your arms.,motion_query,motion_show_demonstrate,motion_query,0.000514,0.999486,0.999486,true
+hard_motion_035,Could you demonstrate a simple nod?,motion_query,motion_show_demonstrate,chat,0.926344,0.073656,0.926344,false
+hard_motion_036,Act out lifting a light box.,motion_query,motion_show_demonstrate,motion_query,0.000016,0.999984,0.999984,true
+hard_motion_037,Do not explain it; wave instead.,motion_query,motion_negation_trap,motion_query,0.000651,0.999349,0.999349,true
+hard_motion_038,"No words please, just point to the exit.",motion_query,motion_negation_trap,motion_query,0.000144,0.999856,0.999856,true
+hard_motion_039,"Instead of answering, bow to the class.",motion_query,motion_negation_trap,motion_query,0.000624,0.999376,0.999376,true
+hard_motion_040,Skip the description and show the salute.,motion_query,motion_negation_trap,motion_query,0.000064,0.999936,0.999936,true
+hard_motion_041,Do not tell me about dancing; dance once.,motion_query,motion_negation_trap,chat,0.991625,0.008375,0.991625,false
+hard_motion_042,Stop talking and raise your hand.,motion_query,motion_negation_trap,motion_query,0.000000,1.000000,1.000000,true
+hard_motion_043,"Please do not describe the gesture, perform it.",motion_query,motion_negation_trap,motion_query,0.000161,0.999839,0.999839,true
+hard_motion_044,No explanation is needed; clap once.,motion_query,motion_negation_trap,motion_query,0.000803,0.999197,0.999197,true
+hard_motion_045,"Without giving a lecture, turn left.",motion_query,motion_negation_trap,motion_query,0.005711,0.994289,0.994289,true
+hard_motion_046,"Rather than define a nod, nod now.",motion_query,motion_negation_trap,motion_query,0.004264,0.995736,0.995736,true
+hard_motion_047,"Do not summarize the action, just step forward.",motion_query,motion_negation_trap,motion_query,0.001015,0.998985,0.998985,true
+hard_motion_048,Only move your arm; do not answer verbally.,motion_query,motion_negation_trap,motion_query,0.158579,0.841421,0.841421,true
+hard_motion_049,The guest has arrived; welcome them physically.,motion_query,motion_contextual,motion_query,0.000512,0.999488,0.999488,true
+hard_motion_050,The photo is starting; pose for it.,motion_query,motion_contextual,motion_query,0.000014,0.999986,0.999986,true
+hard_motion_051,The music is playing; join in briefly.,motion_query,motion_contextual,motion_query,0.003089,0.996911,0.996911,true
+hard_motion_052,The sign says stop; make that signal.,motion_query,motion_contextual,motion_query,0.000002,0.999998,0.999998,true
+hard_motion_053,The audience applauded; respond with your hands.,motion_query,motion_contextual,motion_query,0.000105,0.999895,0.999895,true
+hard_motion_054,The teacher asked for volunteers; indicate yourself.,motion_query,motion_contextual,chat,0.531188,0.468812,0.531188,false
+hard_motion_055,The camera is on; give a friendly sign.,motion_query,motion_contextual,motion_query,0.000087,0.999913,0.999913,true
+hard_motion_056,The visitor is leaving; say goodbye with your body.,motion_query,motion_contextual,motion_query,0.000127,0.999873,0.999873,true
+hard_motion_057,The child copied you; make a simple safe gesture.,motion_query,motion_contextual,motion_query,0.000018,0.999982,0.999982,true
+hard_motion_058,The box is in front of you; reach toward it.,motion_query,motion_contextual,motion_query,0.000001,0.999999,0.999999,true
+hard_motion_059,The marker is on the table; indicate where it is.,motion_query,motion_contextual,motion_query,0.001648,0.998352,0.998352,true
+hard_motion_060,The route turns right here; point that way.,motion_query,motion_contextual,motion_query,0.000002,0.999997,0.999997,true

@@ -1,0 +1,14 @@
+{
+  "name": "hard_test",
+  "task": "full-utterance binary classification",
+  "rows": 120,
+  "labels": {
+    "chat": 60,
+    "motion_query": 60
+  },
+  "design": [
+    "chat rows intentionally include motion verbs, negation, capability questions, hypotheticals, and word-only requests",
+    "motion_query rows include indirect actions, demonstrations, negation traps, and context-driven physical requests"
+  ],
+  "source": "manually curated in scripts/build_hard_test_dataset.py"
+}

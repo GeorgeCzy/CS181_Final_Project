@@ -1,0 +1,76 @@
+{
+  "run_name": "qwen3_0_6b__logreg",
+  "encoder": "qwen3_0_6b",
+  "head": "logreg",
+  "hard_test_file": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\our_part\\data\\hard_test\\hard_test.csv",
+  "metrics": {
+    "accuracy": 0.7416666666666667,
+    "macro_f1": 0.727891156462585,
+    "false_motion_count": 29,
+    "false_text_count": 2,
+    "false_motion_rate_total": 0.24166666666666667,
+    "false_text_rate_total": 0.016666666666666666,
+    "false_motion_rate_by_chat": 0.48333333333333334,
+    "false_text_rate_by_motion": 0.03333333333333333,
+    "chat_accuracy": 0.5166666666666667,
+    "motion_query_accuracy": 0.9666666666666667,
+    "confusion_matrix": {
+      "labels": [
+        "chat",
+        "motion_query"
+      ],
+      "matrix": [
+        [
+          31,
+          29
+        ],
+        [
+          2,
+          58
+        ]
+      ]
+    },
+    "classification_report": {
+      "chat": {
+        "precision": 0.9393939393939394,
+        "recall": 0.5166666666666667,
+        "f1-score": 0.6666666666666666,
+        "support": 60.0
+      },
+      "motion_query": {
+        "precision": 0.6666666666666666,
+        "recall": 0.9666666666666667,
+        "f1-score": 0.7891156462585034,
+        "support": 60.0
+      },
+      "accuracy": 0.7416666666666667,
+      "macro avg": {
+        "precision": 0.803030303030303,
+        "recall": 0.7416666666666667,
+        "f1-score": 0.727891156462585,
+        "support": 120.0
+      },
+      "weighted avg": {
+        "precision": 0.8030303030303031,
+        "recall": 0.7416666666666667,
+        "f1-score": 0.7278911564625851,
+        "support": 120.0
+      }
+    }
+  },
+  "source_model_config": {
+    "run_name": "qwen3_0_6b__logreg",
+    "encoder": "qwen3_0_6b",
+    "head": "logreg",
+    "device": "cuda",
+    "input_dim": 1024,
+    "epochs_requested": 60,
+    "epochs_completed": 60,
+    "best_epoch": 60,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "mlp_hidden_dim": 256,
+    "dropout": 0.2
+  }
+}

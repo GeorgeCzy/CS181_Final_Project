@@ -1,0 +1,76 @@
+{
+  "run_name": "qwen3_0_6b__mlp",
+  "encoder": "qwen3_0_6b",
+  "head": "mlp",
+  "hard_test_file": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\our_part\\data\\hard_test\\hard_test.csv",
+  "metrics": {
+    "accuracy": 0.8416666666666667,
+    "macro_f1": 0.8397863818424566,
+    "false_motion_count": 16,
+    "false_text_count": 3,
+    "false_motion_rate_total": 0.13333333333333333,
+    "false_text_rate_total": 0.025,
+    "false_motion_rate_by_chat": 0.26666666666666666,
+    "false_text_rate_by_motion": 0.05,
+    "chat_accuracy": 0.7333333333333333,
+    "motion_query_accuracy": 0.95,
+    "confusion_matrix": {
+      "labels": [
+        "chat",
+        "motion_query"
+      ],
+      "matrix": [
+        [
+          44,
+          16
+        ],
+        [
+          3,
+          57
+        ]
+      ]
+    },
+    "classification_report": {
+      "chat": {
+        "precision": 0.9361702127659575,
+        "recall": 0.7333333333333333,
+        "f1-score": 0.822429906542056,
+        "support": 60.0
+      },
+      "motion_query": {
+        "precision": 0.7808219178082192,
+        "recall": 0.95,
+        "f1-score": 0.8571428571428571,
+        "support": 60.0
+      },
+      "accuracy": 0.8416666666666667,
+      "macro avg": {
+        "precision": 0.8584960652870883,
+        "recall": 0.8416666666666666,
+        "f1-score": 0.8397863818424566,
+        "support": 120.0
+      },
+      "weighted avg": {
+        "precision": 0.8584960652870883,
+        "recall": 0.8416666666666667,
+        "f1-score": 0.8397863818424566,
+        "support": 120.0
+      }
+    }
+  },
+  "source_model_config": {
+    "run_name": "qwen3_0_6b__mlp",
+    "encoder": "qwen3_0_6b",
+    "head": "mlp",
+    "device": "cuda",
+    "input_dim": 1024,
+    "epochs_requested": 60,
+    "epochs_completed": 23,
+    "best_epoch": 8,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "mlp_hidden_dim": 256,
+    "dropout": 0.2
+  }
+}

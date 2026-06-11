@@ -3,8 +3,8 @@
 Source checked: `our_part/report/overleaf_report_source.tex`
 
 Status after the latest edit: the report source has been updated to match the
-current organized V1/V2 evidence in `our_part/`, except for the hard-test
-section, which was intentionally left unchanged per request.
+current organized V1/V2 evidence and the new tracked hard-test evaluation in
+`our_part/`.
 
 ## Updated To Match Current Evidence
 
@@ -54,7 +54,20 @@ section, which was intentionally left unchanged per request.
    - `our_part/V2_prefix/*/test_metrics_by_prefix_ratio.csv`
    - `our_part/V2_prefix/*/test_threshold_sweep.csv`
 
-5. Runtime and latency wording
+5. Hard-test data and metrics
+
+   The report now uses the new 120-example balanced hard test stored under
+   `our_part/data/hard_test/`. The hard-test table matches
+   `our_part/hard_test/summary.csv`.
+
+   Evidence:
+   - `our_part/data/hard_test/hard_test.csv`
+   - `our_part/data/hard_test/manifest.json`
+   - `our_part/hard_test/summary.csv`
+   - `our_part/hard_test/*/metrics.json`
+   - `our_part/hard_test/*/predictions.csv`
+
+6. Runtime and latency wording
 
    The report no longer claims single-utterance inference latency values.
    It now reports tracked classifier-head runtime after feature extraction,
@@ -64,7 +77,7 @@ section, which was intentionally left unchanged per request.
    - `our_part/V1_full_input/summary.csv`
    - `our_part/V2_prefix/summary.csv`
 
-6. Model implementation details
+7. Model implementation details
 
    The report now matches the current implementation details:
 
@@ -79,9 +92,9 @@ section, which was intentionally left unchanged per request.
    - `experiments/run_experiments.py`
    - `version2_prefix/scripts/run_prefix_experiments.py`
 
-## Intentionally Unchanged
+## Remaining Caveats
 
-The hard-test discussion, hard-test table, FMR/FTR values, and keyword
-baseline entries were intentionally kept as-is. These are still not backed by
-the current organized V1/V2 result files in `our_part/`, so they should be
-checked separately before final submission.
+- The hard test is manually curated and still small relative to the full
+  dataset. It is useful as a diagnostic set, but should not be presented as a
+  complete out-of-distribution benchmark.
+- No single-utterance inference latency benchmark is currently tracked.
