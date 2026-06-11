@@ -1,6 +1,7 @@
 """Run the V1 full-input binary classifier for tfidf + mlp.
 
-Extra command-line arguments are forwarded to the shared runner. Example:
+This folder represents exactly one experiment combination. Extra command-line
+arguments are forwarded to the project training script. Example:
     python program.py --device cuda --skip-existing
 """
 

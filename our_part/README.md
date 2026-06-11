@@ -34,9 +34,8 @@ Each subfolder is one encoder/head combination, named as:
 
 Each combination folder contains:
 
-- `program.py`: launcher that runs only this combination.
-- `shared_program_source.py`: source snapshot of the shared V1 experiment
-  runner.
+- `program.py`: the only runnable script in the folder; it runs only this
+  encoder/head combination.
 - `training_loss.png`: training/validation loss curve.
 - `training_history.csv`: epoch-by-epoch training history.
 - `test_results.json`: metrics and classification report.
