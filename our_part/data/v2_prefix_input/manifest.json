@@ -1,0 +1,135 @@
+{
+  "version": "version2_prefix",
+  "task": "three-class early classification",
+  "input_column": "prefix_utterance",
+  "inspection_column": "masked_utterance",
+  "labels": [
+    "chat",
+    "motion_query",
+    "wait"
+  ],
+  "source_data_dir": "D:\\ChengZY\\mode classifier\\CS181_Final_Project\\data",
+  "ratios": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "chat_decision_ratio": 0.8,
+  "splits": {
+    "train": {
+      "source_rows": 2400,
+      "prefix_rows": 12000,
+      "label_counts": {
+        "chat": 4502,
+        "motion_query": 4505,
+        "wait": 2993
+      },
+      "ratio_label_counts": {
+        "0.20": {
+          "chat": 626,
+          "motion_query": 712,
+          "wait": 1062
+        },
+        "0.40": {
+          "chat": 724,
+          "motion_query": 802,
+          "wait": 874
+        },
+        "0.60": {
+          "chat": 775,
+          "motion_query": 846,
+          "wait": 779
+        },
+        "0.80": {
+          "chat": 1177,
+          "motion_query": 945,
+          "wait": 278
+        },
+        "1.00": {
+          "chat": 1200,
+          "motion_query": 1200,
+          "wait": 0
+        }
+      }
+    },
+    "val": {
+      "source_rows": 300,
+      "prefix_rows": 1500,
+      "label_counts": {
+        "chat": 560,
+        "motion_query": 555,
+        "wait": 385
+      },
+      "ratio_label_counts": {
+        "0.20": {
+          "chat": 73,
+          "motion_query": 83,
+          "wait": 144
+        },
+        "0.40": {
+          "chat": 92,
+          "motion_query": 95,
+          "wait": 113
+        },
+        "0.60": {
+          "chat": 98,
+          "motion_query": 106,
+          "wait": 96
+        },
+        "0.80": {
+          "chat": 147,
+          "motion_query": 121,
+          "wait": 32
+        },
+        "1.00": {
+          "chat": 150,
+          "motion_query": 150,
+          "wait": 0
+        }
+      }
+    },
+    "test": {
+      "source_rows": 300,
+      "prefix_rows": 1500,
+      "label_counts": {
+        "chat": 559,
+        "motion_query": 596,
+        "wait": 345
+      },
+      "ratio_label_counts": {
+        "0.20": {
+          "chat": 79,
+          "motion_query": 98,
+          "wait": 123
+        },
+        "0.40": {
+          "chat": 89,
+          "motion_query": 107,
+          "wait": 104
+        },
+        "0.60": {
+          "chat": 95,
+          "motion_query": 114,
+          "wait": 91
+        },
+        "0.80": {
+          "chat": 146,
+          "motion_query": 127,
+          "wait": 27
+        },
+        "1.00": {
+          "chat": 150,
+          "motion_query": 150,
+          "wait": 0
+        }
+      }
+    }
+  },
+  "labeling_policy": {
+    "complete_input": "Use the original chat/motion_query label at 100% prefix.",
+    "motion_query_prefix": "Use motion_query only after an explicit motion cue appears; otherwise wait.",
+    "chat_prefix": "Use chat after text cues, or at high visible ratio without motion cues; otherwise wait."
+  }
+}

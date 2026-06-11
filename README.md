@@ -7,6 +7,7 @@
 | [Proposal.md](Proposal.md) | Project proposal (motivation, stages, metrics) |
 | [neurips_2026.tex](neurips_2026.tex) | Final report (NeurIPS template) |
 | [neurips_2026.sty](neurips_2026.sty) | Report style file |
+| [our_part/](our_part/) | Clean organized view of our data splits, V1/V2 experiment folders, loss curves, and test results |
 | [mode-classifier-main/](mode-classifier-main/) | **Code + data + experiments** — see [README](mode-classifier-main/README.md) |
 
 ## Quick start

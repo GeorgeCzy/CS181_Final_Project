@@ -1,0 +1,181 @@
+{
+  "summary": {
+    "run_name": "tfidf__mlp",
+    "encoder": "tfidf",
+    "head": "mlp",
+    "input_dim": 5497,
+    "epochs_completed": 60,
+    "best_epoch": 60,
+    "train_accuracy": 1.0,
+    "val_accuracy": 1.0,
+    "test_accuracy": 0.99,
+    "test_macro_f1": 0.9899998888876543,
+    "test_false_motion_count": 2,
+    "test_false_text_count": 1,
+    "elapsed_seconds": 4.617587800137699
+  },
+  "config": {
+    "run_name": "tfidf__mlp",
+    "encoder": "tfidf",
+    "head": "mlp",
+    "device": "cuda",
+    "input_dim": 5497,
+    "epochs_requested": 60,
+    "epochs_completed": 60,
+    "best_epoch": 60,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "mlp_hidden_dim": 256,
+    "dropout": 0.2
+  },
+  "metrics": {
+    "train": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "false_motion_count": 0,
+      "false_text_count": 0,
+      "confusion_matrix": {
+        "labels": [
+          "chat",
+          "motion_query"
+        ],
+        "matrix": [
+          [
+            1200,
+            0
+          ],
+          [
+            0,
+            1200
+          ]
+        ]
+      },
+      "classification_report": {
+        "chat": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1200.0
+        },
+        "motion_query": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1200.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2400.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2400.0
+        }
+      }
+    },
+    "val": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "false_motion_count": 0,
+      "false_text_count": 0,
+      "confusion_matrix": {
+        "labels": [
+          "chat",
+          "motion_query"
+        ],
+        "matrix": [
+          [
+            150,
+            0
+          ],
+          [
+            0,
+            150
+          ]
+        ]
+      },
+      "classification_report": {
+        "chat": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 150.0
+        },
+        "motion_query": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 150.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 300.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 300.0
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.99,
+      "macro_f1": 0.9899998888876543,
+      "false_motion_count": 2,
+      "false_text_count": 1,
+      "confusion_matrix": {
+        "labels": [
+          "chat",
+          "motion_query"
+        ],
+        "matrix": [
+          [
+            148,
+            2
+          ],
+          [
+            1,
+            149
+          ]
+        ]
+      },
+      "classification_report": {
+        "chat": {
+          "precision": 0.9932885906040269,
+          "recall": 0.9866666666666667,
+          "f1-score": 0.9899665551839465,
+          "support": 150.0
+        },
+        "motion_query": {
+          "precision": 0.9867549668874173,
+          "recall": 0.9933333333333333,
+          "f1-score": 0.9900332225913622,
+          "support": 150.0
+        },
+        "accuracy": 0.99,
+        "macro avg": {
+          "precision": 0.9900217787457221,
+          "recall": 0.99,
+          "f1-score": 0.9899998888876543,
+          "support": 300.0
+        },
+        "weighted avg": {
+          "precision": 0.9900217787457221,
+          "recall": 0.99,
+          "f1-score": 0.9899998888876543,
+          "support": 300.0
+        }
+      }
+    }
+  }
+}

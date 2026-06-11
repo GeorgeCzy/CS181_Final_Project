@@ -1,0 +1,224 @@
+"""Build a clean, presentation-friendly view of our project files.
+
+The original runnable code and report snapshots stay in place. This script
+copies the data splits, per-combination launchers, training curves, and test
+reports into `our_part/` so the project contribution is easier to inspect.
+"""
+
+from __future__ import annotations
+
+import csv
+import shutil
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+OUR_PART = ROOT / "our_part"
+
+COMBOS = [
+    ("tfidf", "logreg", "tfidf__logreg"),
+    ("tfidf", "mlp", "tfidf__mlp"),
+    ("minilm", "logreg", "minilm__logreg"),
+    ("minilm", "mlp", "minilm__mlp"),
+    ("clip", "logreg", "clip__logreg"),
+    ("clip", "mlp", "clip__mlp"),
+    ("qwen3_0_6b", "logreg", "qwen3_0_6b__logreg"),
+    ("qwen3_0_6b", "mlp", "qwen3_0_6b__mlp"),
+]
+
+V2_EXTRA_REPORTS = [
+    "test_threshold_sweep.csv",
+    "test_selective_metrics_by_prefix_ratio_t070.csv",
+    "test_first_decisions_t070.csv",
+    "test_metrics_by_prefix_ratio.csv",
+    "test_prefix_metrics.png",
+    "val_threshold_sweep.csv",
+    "val_selective_metrics_by_prefix_ratio_t070.csv",
+    "val_first_decisions_t070.csv",
+]
+
+
+def copy_file(src: Path, dst: Path) -> None:
+    if not src.exists():
+        raise FileNotFoundError(f"Missing source file: {src}")
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, dst)
+
+
+def write_text(dst: Path, text: str) -> None:
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    dst.write_text(text, encoding="utf-8", newline="\n")
+
+
+def count_csv_rows(path: Path) -> int:
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        return sum(1 for _ in csv.DictReader(handle))
+
+
+def program_launcher(version: str, encoder: str, head: str) -> str:
+    if version == "v1":
+        script_path = "experiments/run_experiments.py"
+        description = "V1 full-input binary classifier"
+    elif version == "v2":
+        script_path = "version2_prefix/scripts/run_prefix_experiments.py"
+        description = "V2 prefix early-decision classifier"
+    else:
+        raise ValueError(f"Unknown version: {version}")
+
+    return f'''"""Run the {description} for {encoder} + {head}.
+
+Extra command-line arguments are forwarded to the shared runner. Example:
+    python program.py --device cuda --skip-existing
+"""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+from pathlib import Path
+
+
+def main() -> None:
+    root = Path(__file__).resolve().parents[3]
+    command = [
+        sys.executable,
+        str(root / "{script_path}"),
+        "--encoders",
+        "{encoder}",
+        "--heads",
+        "{head}",
+        *sys.argv[1:],
+    ]
+    subprocess.run(command, cwd=root, check=True)
+
+
+if __name__ == "__main__":
+    main()
+'''
+
+
+def copy_data_splits() -> None:
+    v1_data = OUR_PART / "data" / "v1_full_input"
+    copy_file(ROOT / "data" / "train.csv", v1_data / "train.csv")
+    copy_file(ROOT / "data" / "val.csv", v1_data / "val.csv")
+    copy_file(ROOT / "data" / "test.csv", v1_data / "test.csv")
+    copy_file(ROOT / "data" / "split_manifest.json", v1_data / "manifest.json")
+
+    v2_data = OUR_PART / "data" / "v2_prefix_input"
+    copy_file(ROOT / "version2_prefix" / "data" / "prefix_train.csv", v2_data / "train.csv")
+    copy_file(ROOT / "version2_prefix" / "data" / "prefix_val.csv", v2_data / "val.csv")
+    copy_file(ROOT / "version2_prefix" / "data" / "prefix_test.csv", v2_data / "test.csv")
+    copy_file(ROOT / "version2_prefix" / "data" / "prefix_manifest.json", v2_data / "manifest.json")
+
+
+def copy_v1_combo(encoder: str, head: str, combo: str) -> None:
+    src = ROOT / "experiments" / "results" / "latest" / "runs" / combo
+    dst = OUR_PART / "V1_full_input" / combo
+    write_text(dst / "program.py", program_launcher("v1", encoder, head))
+    copy_file(ROOT / "experiments" / "run_experiments.py", dst / "shared_program_source.py")
+    copy_file(src / "loss_curve.png", dst / "training_loss.png")
+    copy_file(src / "history.csv", dst / "training_history.csv")
+    copy_file(src / "metrics.json", dst / "test_results.json")
+    copy_file(src / "run_config.json", dst / "run_config.json")
+
+
+def copy_v2_combo(encoder: str, head: str, combo: str) -> None:
+    src = ROOT / "version2_prefix" / "results" / "latest" / "runs" / combo
+    dst = OUR_PART / "V2_prefix" / combo
+    write_text(dst / "program.py", program_launcher("v2", encoder, head))
+    copy_file(ROOT / "version2_prefix" / "scripts" / "run_prefix_experiments.py", dst / "shared_program_source.py")
+    copy_file(src / "loss_curve.png", dst / "training_loss.png")
+    copy_file(src / "history.csv", dst / "training_history.csv")
+    copy_file(src / "metrics.json", dst / "test_results.json")
+    copy_file(src / "run_config.json", dst / "run_config.json")
+    for filename in V2_EXTRA_REPORTS:
+        report = src / filename
+        if report.exists():
+            copy_file(report, dst / filename)
+
+
+def copy_summaries() -> None:
+    v1_dst = OUR_PART / "V1_full_input"
+    copy_file(ROOT / "experiments" / "results" / "latest" / "summary.csv", v1_dst / "summary.csv")
+    copy_file(ROOT / "experiments" / "results" / "latest" / "summary.md", v1_dst / "summary.md")
+    copy_file(ROOT / "experiments" / "results" / "latest" / "experiment_plan.json", v1_dst / "experiment_plan.json")
+
+    v2_dst = OUR_PART / "V2_prefix"
+    copy_file(ROOT / "version2_prefix" / "results" / "latest" / "summary.csv", v2_dst / "summary.csv")
+    copy_file(ROOT / "version2_prefix" / "results" / "latest" / "summary.md", v2_dst / "summary.md")
+    copy_file(ROOT / "version2_prefix" / "results" / "latest" / "experiment_plan.json", v2_dst / "experiment_plan.json")
+
+
+def write_readme() -> None:
+    v1_data = OUR_PART / "data" / "v1_full_input"
+    v2_data = OUR_PART / "data" / "v2_prefix_input"
+    readme = f"""# Our Project Part
+
+This directory is a clean view of our contribution. It does not replace the
+original runnable folders; it collects the data splits and experiment outputs
+in a structure that is easier to read for the final report/presentation.
+
+## Data
+
+- `data/v1_full_input/train.csv`, `val.csv`, `test.csv`: full-utterance binary
+  classification data.
+- `data/v1_full_input/manifest.json`: source and split metadata for V1.
+- `data/v2_prefix_input/train.csv`, `val.csv`, `test.csv`: prefix-based data
+  for early-decision classification.
+- `data/v2_prefix_input/manifest.json`: prefix-generation and split metadata
+  for V2.
+
+| Version | Train | Validation | Test |
+|---------|-------|------------|------|
+| V1 full input | {count_csv_rows(v1_data / "train.csv")} | {count_csv_rows(v1_data / "val.csv")} | {count_csv_rows(v1_data / "test.csv")} |
+| V2 prefix input | {count_csv_rows(v2_data / "train.csv")} | {count_csv_rows(v2_data / "val.csv")} | {count_csv_rows(v2_data / "test.csv")} |
+
+## V1_full_input
+
+Each subfolder is one encoder/head combination, named as:
+
+```text
+{{encoder}}__{{head}}
+```
+
+Each combination folder contains:
+
+- `program.py`: launcher that runs only this combination.
+- `shared_program_source.py`: source snapshot of the shared V1 experiment
+  runner.
+- `training_loss.png`: training/validation loss curve.
+- `training_history.csv`: epoch-by-epoch training history.
+- `test_results.json`: metrics and classification report.
+- `run_config.json`: exact run configuration.
+
+## V2_prefix
+
+The V2 folders use the same `{{encoder}}__{{head}}` naming. Each folder contains
+the same core files as V1, plus prefix-specific evaluation reports:
+
+- `test_threshold_sweep.csv`: accuracy/coverage/latency by confidence threshold.
+- `test_selective_metrics_by_prefix_ratio_t070.csv`: selective accuracy and
+  coverage at threshold 0.70 by prefix ratio.
+- `test_first_decisions_t070.csv`: first non-wait decision for each test
+  example at threshold 0.70.
+- `test_metrics_by_prefix_ratio.csv` and `test_prefix_metrics.png`: diagnostic
+  prefix-ratio reports.
+
+Top-level `summary.csv` and `summary.md` files in both `V1_full_input/` and
+`V2_prefix/` compare all eight combinations.
+"""
+    write_text(OUR_PART / "README.md", readme)
+
+
+def main() -> None:
+    copy_data_splits()
+    copy_summaries()
+    for encoder, head, combo in COMBOS:
+        copy_v1_combo(encoder, head, combo)
+        copy_v2_combo(encoder, head, combo)
+    write_readme()
+    print(f"Wrote organized project view to {OUR_PART}")
+
+
+if __name__ == "__main__":
+    main()
