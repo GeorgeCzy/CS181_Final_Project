@@ -1,0 +1,391 @@
+\documentclass{article}
+
+% CS182 project report template based on the NeurIPS style.
+% Keep this file short and use it as a starting point for the final report.
+
+\usepackage[preprint]{neurips_2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\title{Early Intent Classification for Humanoid Robot Interaction:\\
+A Systematic Comparison of Text Encoders and Classifier Heads}
+
+\author{%
+  Yuelong Yu \\
+  ShanghaiTech University \\
+  \texttt{yuyl2023@shanghaitech.edu.cn}
+  \And
+  Ziyu Cheng \\
+  ShanghaiTech University \\
+  \texttt{chzy2023@shanghaitech.edu.cn}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Humanoid robots must decide whether a user utterance requires a verbal reply
+(\texttt{chat}) or a physical action (\texttt{motion\_query}) before the
+user finishes speaking.
+We study this binary intent task on a 10{,}000-utterance dataset and compare
+four text encoders (TF-IDF, CLIP, Qwen3-Embedding-0.6B, MiniLM-L6-v2)
+with two lightweight classifier heads (logistic regression and a small MLP).
+On full sentences, all learned models reach 99.4--99.8\% test accuracy, but
+hard boundary cases reveal a speed--robustness trade-off: TF-IDF+LogReg is
+fastest ($\sim$1.6\,ms) while MiniLM+LogReg is most robust on ambiguous
+inputs (90.0\% hard accuracy).
+For prefix-based early prediction, TF-IDF+LogReg achieves 94.5\% accuracy at
+25\% of the utterance and 98.0\% overall across all prefix lengths, with a
+mean correct decision latency of 33\% of the sentence at confidence
+threshold~0.7.
+We recommend TF-IDF+LogReg for real-time deployment and MiniLM+MLP when
+robustness on partial inputs matters.
+\end{abstract}
+
+\section{Introduction}
+
+In spoken interaction with humanoid robots, not every user query should trigger
+the same response modality.
+Informational questions (\emph{``What is machine learning?''}) call for
+text generation, whereas imperative or demonstrative requests
+(\emph{``Wave your hand''}) should activate motion planning.
+Misclassifying \texttt{chat} as \texttt{motion\_query} causes unnecessary or
+embarrassing robot gestures (\emph{false motion}); the reverse misses motion
+requests (\emph{false text}).
+
+Streaming speech adds latency: waiting for a complete sentence delays motion
+preparation.
+We therefore evaluate both \textbf{full-sentence classification} and
+\textbf{prefix-based early prediction}, where the model sees only the first
+25--100\% of words.
+
+Our contributions are:
+\begin{itemize}
+  \item A balanced 10{,}000-utterance dataset for \texttt{chat} vs.\
+        \texttt{motion\_query}, with a 30-example hard test set of boundary
+        cases.
+  \item A controlled $4 \times 2$ comparison (encoder $\times$ head) reporting
+        accuracy, training time, and end-to-end inference latency.
+  \item Prefix evaluation simulating incremental speech, measuring accuracy at
+        four prefix ratios and early-decision latency under confidence
+        thresholds.
+\end{itemize}
+
+\subsection{Related Work}
+Intent classification for spoken dialogue systems has a long history, from
+keyword spotting and SVM-based slot filling to modern transformer encoders
+fine-tuned on task-specific corpora~\cite{zhang2021intent}.
+In human--robot interaction, prior work often treats motion commands as a
+separate skill invocation layer rather than a first-class routing decision
+made \emph{before} response generation.
+Our setting differs in two ways: (i)~we target a lightweight binary router
+suitable for on-board deployment, and (ii)~we explicitly evaluate
+\emph{partial} utterances to mimic streaming ASR, following the spirit of
+early-exit and incremental decoding methods used to reduce dialogue latency.
+
+\subsection{Problem Setting}
+Figure~\ref{fig:pipeline} summarizes the intended deployment loop.
+An ASR stream feeds word prefixes into the classifier; when confidence exceeds
+a threshold~$\tau$, the robot either prepares a motion pipeline or continues
+standard dialogue generation.
+Low-confidence predictions defer the decision until more speech arrives.
+
+\begin{figure}[h]
+  \centering
+  \fbox{\parbox{0.92\linewidth}{\small
+    \textbf{Streaming pipeline.}\quad
+    User speech $\to$ ASR partial transcript $\to$ intent classifier
+    $\to$ \{\texttt{chat}, \texttt{motion\_query}, \textsc{wait}\}
+    $\to$ dialogue LLM \emph{or} motion planner.}}
+  \caption{High-level routing pipeline for humanoid interaction.}
+  \label{fig:pipeline}
+\end{figure}
+
+\section{Method}
+
+\subsection{Task and Labels}
+Each utterance is labeled \texttt{chat} (verbal response) or
+\texttt{motion\_query} (physical action).
+We use macro-F1, false-motion rate (FMR), and false-text rate (FTR) alongside
+accuracy.
+
+\subsection{Dataset}
+The dataset contains 10{,}000 utterances (5{,}000 per class): 2{,}000
+LLM-generated (DeepSeek) plus 8{,}000 template-expanded samples.
+We split 80/10/10 into train/val/test (8{,}000 / 1{,}000 / 1{,}000) with
+stratification (seed~20260518).
+A separate \emph{hard test} set of 30 manually curated boundary utterances
+(e.g.\ \emph{``Can you explain how to wave properly?''}) evaluates
+robustness.
+
+Data were collected in three stages.
+First, 500 hand-written seed utterances established label conventions and
+boundary patterns.
+Second, DeepSeek-generated batches (2{,}000 + 500 + 1{,}500 rows) expanded
+coverage with LLM diversity.
+Third, template expansion produced 8{,}000 additional rows by paraphrasing
+motion verbs, negations, and capability questions.
+Table~\ref{tab:examples} illustrates typical cases and the ambiguity we
+target in the hard set.
+
+\begin{table}[h]
+  \centering
+  \caption{Representative utterances and labels.}
+  \label{tab:examples}
+  \small
+  \begin{tabular}{p{0.62\linewidth}l}
+    \toprule
+    Utterance & Label \\
+    \midrule
+    What is machine learning? & chat \\
+    Who wrote \emph{Pride and Prejudice}? & chat \\
+    Wave your hand at me. & motion\_query \\
+    Can you do a short dance? & motion\_query \\
+    Can you explain how to wave properly? & chat \\
+    Please do not move, just explain the answer. & chat \\
+    Can you show me what you can do? & motion\_query \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Encoders and Classifier Heads}
+We fix the encoder and vary only the classification head:
+\begin{itemize}
+  \item \textbf{TF-IDF}: bag-of-words with 1--2-gram features (max 50{,}000).
+  \item \textbf{CLIP}: \texttt{openai/clip-vit-base-patch32} text encoder.
+  \item \textbf{Qwen3}: \texttt{Qwen/Qwen3-Embedding-0.6B}.
+  \item \textbf{MiniLM}: \texttt{sentence-transformers/all-MiniLM-L6-v2}.
+\end{itemize}
+Heads: (1)~\textbf{LogReg}---sklearn logistic regression on cached
+embeddings or TF-IDF vectors; (2)~\textbf{MLP}---LayerNorm $\to$ Linear(256)
+$\to$ GELU $\to$ Linear(2), trained for 30 epochs with Adam.
+
+Embedding vectors are pre-computed once on the full 10k corpus and reused for
+both heads of the same encoder.
+
+\subsection{Prefix (Early) Evaluation}
+From each test utterance we extract word-level prefixes at ratios
+25\%, 50\%, 75\%, and 100\%, yielding 4{,}000 evaluation rows.
+Models classify each prefix independently.
+We also measure \emph{early decision}: for confidence threshold~$\tau$,
+the model commits at the earliest prefix whose predicted confidence exceeds
+$\tau$, and we record the prefix ratio at which a \emph{correct} decision is
+first made (decision latency).
+
+\subsection{Baselines}
+A keyword rule baseline matches motion-related verbs and nouns; it requires no
+training and serves as a sanity check.
+
+\subsection{Implementation Details}
+For TF-IDF+LogReg we use \texttt{class\_weight="balanced"} and fit on
+1--2-gram features with \texttt{max\_features=50{,}000}.
+The MLP head uses Adam ($\text{lr}=10^{-3}$, weight decay $10^{-4}$),
+batch size~64, and early stopping with patience~5 on validation macro-F1.
+Embedding caches are built once per encoder on the full 10k corpus
+(normalized L2 for sentence-transformers and Qwen3); both LogReg and MLP heads
+then train on the cached vectors, isolating encoder quality from head capacity.
+All splits use seed~20260518; reported latency excludes one-time model loading
+and averages 200 held-out test utterances after five warmup runs.
+
+\section{Experiments}
+
+All embedding experiments ran on an NVIDIA RTX~4060 Laptop GPU; TF-IDF ran on
+CPU.
+Latency is end-to-end per utterance (encode + classify), averaged over 200
+test samples after 5 warmup runs.
+
+\subsection{Full-Sentence Classification}
+
+Table~\ref{tab:full-acc} shows test accuracy on the 1{,}000-example test split.
+All learned models exceed 99.4\%; differences are small on in-distribution
+data.
+
+\begin{table}[h]
+  \centering
+  \caption{Test accuracy ($4 \times 2$ matrix) on full sentences.}
+  \label{tab:full-acc}
+  \begin{tabular}{lcc}
+    \toprule
+    Encoder & LogReg & MLP \\
+    \midrule
+    TF-IDF  & 0.994 & 0.997 \\
+    CLIP    & 0.998 & 0.998 \\
+    Qwen3   & 0.998 & 0.996 \\
+    MiniLM  & 0.994 & 0.998 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+On the 30-example hard set (Table~\ref{tab:hard}), larger encoders do not
+help: Qwen+MLP drops to 70.0\%, while MiniLM+LogReg reaches 90.0\% with zero
+false-text errors.
+TF-IDF+LogReg balances speed and hard-set performance (86.7\%).
+
+\subsection{Error Analysis}
+Hard-set failures cluster into three patterns.
+\textbf{(1)~Lexical overlap:} chat utterances that mention motion vocabulary
+(\emph{``Can you explain how to wave properly?''}) are misclassified as
+\texttt{motion\_query} by TF-IDF and large encoders alike.
+\textbf{(2)~Negation:} \emph{``Please do not move, just explain the answer''}
+triggers motion in Qwen3+MLP because the encoder attends to \emph{move}
+despite the prohibitive context.
+\textbf{(3)~Capability queries:} \emph{``Can you show me what you can do?''}
+is ambiguous between a verbal capability summary and a physical demonstration;
+TF-IDF misses several of these (high FTR), while the keyword baseline misses
+purely informational questions that happen to contain motion words.
+MiniLM+LogReg is the only learned model that avoids false-text errors on the
+hard set, suggesting that compact semantic embeddings capture negation and
+instruction structure better than bag-of-words or oversized encoders under
+limited fine-tuning data.
+
+\begin{table}[h]
+  \centering
+  \caption{Hard-set accuracy and error rates (30 boundary utterances).}
+  \label{tab:hard}
+  \small
+  \begin{tabular}{lcccc}
+    \toprule
+    Model & Acc & FMR & FTR \\
+    \midrule
+    Keyword baseline & 0.967 & 0.000 & 0.033 \\
+    TF-IDF+LogReg    & 0.867 & 0.033 & 0.100 \\
+    TF-IDF+MLP       & 0.833 & 0.067 & 0.100 \\
+    CLIP+LogReg      & 0.767 & 0.200 & 0.033 \\
+    Qwen3+LogReg     & 0.767 & 0.200 & 0.033 \\
+    Qwen3+MLP        & 0.700 & 0.133 & 0.167 \\
+    MiniLM+LogReg    & \textbf{0.900} & 0.100 & \textbf{0.000} \\
+    MiniLM+MLP       & 0.867 & 0.067 & 0.067 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Training Time and Inference Latency}
+
+Table~\ref{tab:latency} summarizes the speed--accuracy trade-off.
+TF-IDF+LogReg trains in 4.8\,s and infers in 1.6\,ms mean ($\sim$80$\times$
+faster than Qwen3).
+Qwen3 offers the highest embedding quality but 130\,ms latency makes it
+unsuitable for streaming prefix prediction on resource-constrained robots.
+
+\begin{table}[h]
+  \centering
+  \caption{Training time and single-utterance inference latency (ms).}
+  \label{tab:latency}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    Model & Train & Mean & p50 & p95 \\
+    \midrule
+    TF-IDF+LogReg  & 4.8\,s  & 1.6  & 1.6  & 2.3  \\
+    TF-IDF+MLP     & 25.7\,s & 1.7  & 1.5  & 2.8  \\
+    MiniLM+LogReg  & 33.1\,s & 15.3 & 14.2 & 21.2 \\
+    MiniLM+MLP     & 30.4\,s & 15.1 & 14.3 & 19.7 \\
+    CLIP+LogReg    & 37.0\,s & 24.2 & 22.7 & 34.0 \\
+    CLIP+MLP       & 19.4\,s & 23.5 & 21.6 & 30.3 \\
+    Qwen3+LogReg   & 55.1\,s & 132.8& 130.7& 152.6\\
+    Qwen3+MLP      & 19.9\,s & 130.5& 127.8& 151.7\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Prefix-Based Early Prediction}
+
+Table~\ref{tab:prefix} reports accuracy at each prefix ratio on 4{,}000 test
+prefix rows (1{,}000 source utterances $\times$ 4 ratios).
+
+\begin{table}[h]
+  \centering
+  \caption{Prefix accuracy by utterance completion ratio.}
+  \label{tab:prefix}
+  \begin{tabular}{lcccc}
+    \toprule
+    Model & 25\% & 50\% & 75\% & 100\% \\
+    \midrule
+    Keyword baseline & 0.829 & 0.927 & 0.915 & 0.917 \\
+    TF-IDF+LogReg    & 0.945 & 0.987 & 0.995 & 0.994 \\
+    Qwen3+MLP        & 0.943 & 0.938 & 0.990 & 0.996 \\
+    MiniLM+MLP       & 0.777 & 0.969 & 0.993 & 0.998 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+TF-IDF+LogReg maintains 94.5\% accuracy after hearing only one quarter of an
+utterance and reaches 98.0\% averaged over all prefix lengths.
+MiniLM+MLP is fragile at 25\% (77.7\%, FMR 18.8\%) but recovers to 99.8\% at
+full length---embedding models over-commit to motion from short, ambiguous
+prefixes.
+Qwen3+MLP matches TF-IDF at 25\% (94.3\%) but its 130\,ms inference cost
+makes it impractical for streaming deployment despite comparable prefix
+accuracy.
+
+At confidence threshold $\tau = 0.7$ (Table~\ref{tab:early}), TF-IDF+LogReg
+commits correctly after hearing a median of 30\% of words, with FMR~0.0\% and
+FTR~2.2\%.
+The keyword baseline decides equally early but misses 17.1\% of motion
+requests (high FTR).
+Raising~$\tau$ to 0.9 reduces premature motion triggers but increases the
+fraction of \textsc{wait} decisions; TF-IDF+LogReg remains usable up to
+$\tau=0.8$ with $<$2\% uncertain cases on the prefix benchmark.
+
+\subsection{Deployment Recommendations}
+For a resource-constrained humanoid, we suggest a two-tier policy:
+\textbf{Tier~1}---TF-IDF+LogReg on every ASR partial, committing when
+confidence $\ge 0.7$; \textbf{Tier~2}---MiniLM+LogReg re-scoring only when
+Tier~1 returns \textsc{wait} or when the hard-set FTR budget must be minimized.
+This hybrid adds $\sim$15\,ms only on uncertain prefixes while preserving
+sub-2\,ms routing on the majority of clear utterances.
+
+\begin{table}[h]
+  \centering
+  \caption{Early decision at confidence threshold $\tau = 0.7$ (1{,}000 sources).}
+  \label{tab:early}
+  \small
+  \begin{tabular}{lrrrr}
+    \toprule
+    Model & Med.\ latency & Uncertain & FMR & FTR \\
+    \midrule
+    Keyword baseline & 0.30 & 0.0\% & 0.0\% & 17.1\% \\
+    TF-IDF+LogReg    & 0.30 & 0.7\% & 0.0\% & 2.2\% \\
+    Qwen3+MLP        & 0.30 & 0.0\% & 0.1\% & 5.4\% \\
+    MiniLM+MLP       & 0.33 & 0.0\% & 16.5\% & 3.5\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Conclusion}
+
+We systematically compared four text encoders and two classifier heads for
+humanoid intent routing on 10{,}000 utterances.
+Full-sentence accuracy is high across all models, but hard boundary cases and
+prefix evaluation expose meaningful differences.
+\textbf{TF-IDF+LogReg} is the best default for real-time systems: 99.4\% test
+accuracy, 1.6\,ms latency, and strong prefix performance (94.5\% at 25\%
+completion).
+\textbf{MiniLM+LogReg/MLP} is preferable when robustness on ambiguous or
+partial inputs matters, at $\sim$15\,ms latency.
+Large encoders (Qwen3, CLIP) offer marginal full-sentence gains but degrade on
+hard cases and are too slow for streaming use.
+
+Limitations include template-heavy training data (8{,}000 of 10{,}000 rows),
+English-only coverage, and prefix simulation by word truncation rather than
+real ASR output.
+Future work will integrate streaming speech recognition and deploy the chosen
+model on a physical humanoid platform with confidence-gated motion preparation.
+
+\begin{thebibliography}{9}
+\bibitem{zhang2021intent}
+J.~Zhang, Y.~Zhao, and M.~Saleh.
+\newblock Intent detection in natural language understanding.
+\newblock \emph{Foundations and Trends in Information Retrieval}, 2021.
+\end{thebibliography}
+
+\end{document}

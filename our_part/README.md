@@ -52,3 +52,10 @@ the same core files as V1, plus prefix-specific evaluation reports:
 
 Top-level `summary.csv` and `summary.md` files in both `V1_full_input/` and
 `V2_prefix/` compare all eight combinations.
+
+## Report
+
+- `report/overleaf_report_source.tex`: current Overleaf report source snapshot
+  used for consistency checking against the organized data and results above.
+- `report/content_consistency_audit.md`: line-by-line consistency notes between
+  the report source and the current organized experiment evidence.
