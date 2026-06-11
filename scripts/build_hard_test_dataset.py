@@ -141,6 +141,40 @@ MOTION_ROWS = [
 ]
 
 
+IMPORTED_ROWS = [
+    ("hard-0001", "Can you do a short dance?", "motion_query", "capability_motion"),
+    ("hard-0002", "Can you dance?", "motion_query", "capability_motion"),
+    ("hard-0003", "Please do not move just explain the answer.", "chat", "negation"),
+    ("hard-0004", "Please do not move. Just explain the answer.", "chat", "negation"),
+    ("hard-0005", "Can you show me what you can do?", "motion_query", "capability_ambiguous"),
+    ("hard-0006", "Stay where you are.", "motion_query", "implicit_motion"),
+    ("hard-0007", "Stop what you are doing.", "motion_query", "safety_control"),
+    ("hard-0008", "Sign the word thank you in sign language.", "motion_query", "gesture_language"),
+    ("hard-0009", "Can you guide me through this maze?", "motion_query", "implicit_motion"),
+    ("hard-0010", "Who invented the telephone?", "chat", "factual_question"),
+    ("hard-0011", "Who wrote Pride and Prejudice?", "chat", "factual_question"),
+    ("hard-0012", "Explain machine learning without moving.", "chat", "negation"),
+    ("hard-0013", "Do not wave just tell me the answer.", "chat", "negation"),
+    ("hard-0014", "What can you do with your arms?", "chat", "capability_question"),
+    ("hard-0015", "Demonstrate how to tie a knot.", "motion_query", "explicit_motion"),
+    ("hard-0016", "Can you point to the door and explain why it is open?", "motion_query", "mixed_request"),
+    ("hard-0017", "I only want a verbal answer about your battery level.", "chat", "explicit_chat"),
+    ("hard-0018", "Hold still while I check your status lights.", "motion_query", "safety_control"),
+    ("hard-0019", "Follow me to the lab.", "motion_query", "locomotion"),
+    ("hard-0020", "Tell me a joke about robots.", "chat", "small_talk"),
+    ("hard-0021", "Act out being sleepy.", "motion_query", "explicit_motion"),
+    ("hard-0022", "What is the weather today?", "chat", "informational"),
+    ("hard-0023", "Wave at me.", "motion_query", "explicit_motion"),
+    ("hard-0024", "Do not dance just describe how dancing works.", "chat", "negation"),
+    ("hard-0025", "Can you answer with a gesture instead of words?", "motion_query", "gesture_language"),
+    ("hard-0026", "Lower your arm slowly.", "motion_query", "safety_control"),
+    ("hard-0027", "Why is the sky blue?", "chat", "informational"),
+    ("hard-0028", "Turn toward the audience.", "motion_query", "orientation"),
+    ("hard-0029", "Stay still and explain the emergency procedure.", "chat", "negation"),
+    ("hard-0030", "Bring me the red block on the table.", "motion_query", "manipulation"),
+]
+
+
 def write_csv(rows: list[dict[str, str]]) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with OUTPUT_CSV.open("w", encoding="utf-8", newline="") as handle:
@@ -172,21 +206,37 @@ def main() -> None:
                 "hard_category": category,
             }
         )
+    for row_id, utterance, label, category in IMPORTED_ROWS:
+        rows.append(
+            {
+                "id": row_id,
+                "utterance": utterance,
+                "label": label,
+                "hard_category": category,
+            }
+        )
 
     write_csv(rows)
+    labels = {
+        "chat": sum(1 for row in rows if row["label"] == "chat"),
+        "motion_query": sum(1 for row in rows if row["label"] == "motion_query"),
+    }
     manifest = {
         "name": "hard_test",
         "task": "full-utterance binary classification",
         "rows": len(rows),
-        "labels": {
-            "chat": len(CHAT_ROWS),
-            "motion_query": len(MOTION_ROWS),
-        },
+        "labels": labels,
+        "base_rows": len(CHAT_ROWS) + len(MOTION_ROWS),
+        "imported_rows": len(IMPORTED_ROWS),
         "design": [
             "chat rows intentionally include motion verbs, negation, capability questions, hypotheticals, and word-only requests",
             "motion_query rows include indirect actions, demonstrations, negation traps, and context-driven physical requests",
+            "imported rows are kept as provided, with category renamed to hard_category in the combined CSV",
         ],
-        "source": "manually curated in scripts/build_hard_test_dataset.py",
+        "source": [
+            "manually curated in scripts/build_hard_test_dataset.py",
+            "our_part/data/hard_test/provided_hard_test.csv",
+        ],
     }
     OUTPUT_MANIFEST.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(f"Wrote {len(rows)} rows to {OUTPUT_CSV}")

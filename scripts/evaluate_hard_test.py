@@ -67,6 +67,12 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=ROOT / "our_part" / "hard_test",
     )
+    parser.add_argument(
+        "--combo-report-dir",
+        type=Path,
+        default=ROOT / "our_part" / "V1_full_input",
+        help="Optional organized V1 folder where hard-test outputs are copied per combo.",
+    )
     parser.add_argument("--device", default="auto")
     parser.add_argument("--batch-size", type=int, default=64)
     parser.add_argument("--force-recompute-embeddings", action="store_true")
@@ -285,11 +291,23 @@ def load_model(
     return model, config
 
 
-def write_summary_markdown(path: Path, rows: list[dict[str, object]]) -> None:
+def write_summary_markdown(
+    path: Path,
+    rows: list[dict[str, object]],
+    *,
+    label_counts: dict[str, int],
+) -> None:
     lines = [
         "# Hard Test Summary",
         "",
-        "The hard test contains 120 manually curated examples: 60 chat and 60 motion_query.",
+        (
+            "The hard test contains {total} examples: {chat} chat and "
+            "{motion} motion_query."
+        ).format(
+            total=sum(label_counts.values()),
+            chat=label_counts.get("chat", 0),
+            motion=label_counts.get("motion_query", 0),
+        ),
         "FMR/FTR below are reported as rates over all hard-test examples, matching the report table.",
         "",
         "| run | accuracy | macro F1 | FMR | FTR | false motion | false text |",
@@ -324,11 +342,28 @@ def plot_summary(path: Path, rows: list[dict[str, object]]) -> None:
     plt.close(fig)
 
 
+def copy_to_combo_report_folder(run_output: Path, combo_report_dir: Path, combo: str) -> None:
+    target = combo_report_dir / combo
+    if not target.exists():
+        return
+    mapping = {
+        "metrics.json": "hard_test_metrics.json",
+        "predictions.csv": "hard_test_predictions.csv",
+        "category_metrics.csv": "hard_test_category_metrics.csv",
+        "source_run_config.json": "hard_test_source_run_config.json",
+    }
+    for source_name, target_name in mapping.items():
+        source = run_output / source_name
+        if source.exists():
+            shutil.copy2(source, target / target_name)
+
+
 def main() -> None:
     args = parse_args()
     device = resolve_device(args.device)
     examples = load_hard_examples(args.hard_test_file)
     labels = [example.label for example in examples]
+    label_counts = {label: labels.count(label) for label in LABELS}
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     summary_rows: list[dict[str, object]] = []
@@ -413,6 +448,7 @@ def main() -> None:
             ["hard_category", "count", "accuracy", "false_motion_count", "false_text_count"],
         )
         shutil.copy2(args.artifact_dir / "runs" / combo / "run_config.json", run_output / "source_run_config.json")
+        copy_to_combo_report_folder(run_output, args.combo_report_dir, combo)
 
         row = {
             "run_name": combo,
@@ -461,7 +497,7 @@ def main() -> None:
             "motion_query_accuracy",
         ],
     )
-    write_summary_markdown(args.output_dir / "summary.md", summary_rows)
+    write_summary_markdown(args.output_dir / "summary.md", summary_rows, label_counts=label_counts)
     plot_summary(args.output_dir / "hard_accuracy.png", summary_rows)
     write_json(
         args.output_dir / "evaluation_manifest.json",
@@ -471,7 +507,7 @@ def main() -> None:
             "output_dir": str(args.output_dir),
             "device": str(device),
             "num_examples": len(examples),
-            "labels": {label: labels.count(label) for label in LABELS},
+            "labels": label_counts,
             "models_evaluated": [combo for _, _, combo in COMBOS],
         },
     )

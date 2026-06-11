@@ -1,14 +1,20 @@
 {
   "name": "hard_test",
   "task": "full-utterance binary classification",
-  "rows": 120,
+  "rows": 150,
   "labels": {
-    "chat": 60,
-    "motion_query": 60
+    "chat": 73,
+    "motion_query": 77
   },
+  "base_rows": 120,
+  "imported_rows": 30,
   "design": [
     "chat rows intentionally include motion verbs, negation, capability questions, hypotheticals, and word-only requests",
-    "motion_query rows include indirect actions, demonstrations, negation traps, and context-driven physical requests"
+    "motion_query rows include indirect actions, demonstrations, negation traps, and context-driven physical requests",
+    "imported rows are kept as provided, with category renamed to hard_category in the combined CSV"
   ],
-  "source": "manually curated in scripts/build_hard_test_dataset.py"
+  "source": [
+    "manually curated in scripts/build_hard_test_dataset.py",
+    "our_part/data/hard_test/provided_hard_test.csv"
+  ]
 }

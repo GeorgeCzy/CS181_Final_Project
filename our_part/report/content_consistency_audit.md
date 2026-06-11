@@ -56,12 +56,13 @@ current organized V1/V2 evidence and the new tracked hard-test evaluation in
 
 5. Hard-test data and metrics
 
-   The report now uses the new 120-example balanced hard test stored under
+   The report now uses the 150-example combined hard test stored under
    `our_part/data/hard_test/`. The hard-test table matches
    `our_part/hard_test/summary.csv`.
 
    Evidence:
    - `our_part/data/hard_test/hard_test.csv`
+   - `our_part/data/hard_test/provided_hard_test.csv`
    - `our_part/data/hard_test/manifest.json`
    - `our_part/hard_test/summary.csv`
    - `our_part/hard_test/*/metrics.json`

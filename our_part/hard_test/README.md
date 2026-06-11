@@ -5,10 +5,12 @@ This folder contains the V1 full-utterance hard-test evaluation.
 ## Dataset
 
 The dataset is stored at `../data/hard_test/hard_test.csv`.
-It contains 120 manually curated examples:
+It contains 150 examples:
 
-- 60 `chat`
-- 60 `motion_query`
+- 120 manually curated base examples
+- 30 externally provided extension examples in `../data/hard_test/provided_hard_test.csv`
+- 73 `chat`
+- 77 `motion_query`
 
 The examples are designed to stress lexical shortcuts:
 
@@ -30,5 +32,5 @@ The examples are designed to stress lexical shortcuts:
 - `{encoder}__{head}/category_metrics.csv`: accuracy by hard-test category.
 - `{encoder}__{head}/source_run_config.json`: original V1 run configuration.
 
-FMR and FTR in the summary are rates over all 120 hard-test examples, matching
+FMR and FTR in the summary are rates over all 150 hard-test examples, matching
 the report table.

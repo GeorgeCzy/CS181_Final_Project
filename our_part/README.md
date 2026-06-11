@@ -13,7 +13,9 @@ in a structure that is easier to read for the final report/presentation.
   for early-decision classification.
 - `data/v2_prefix_input/manifest.json`: prefix-generation and split metadata
   for V2.
-- `data/hard_test/hard_test.csv`: 120-example balanced hard test for
+- `data/hard_test/provided_hard_test.csv`: the 30-example hard-test extension
+  provided externally.
+- `data/hard_test/hard_test.csv`: 150-example combined hard test for
   full-utterance binary classification.
 - `data/hard_test/manifest.json`: hard-test design metadata.
 
@@ -38,6 +40,8 @@ Each combination folder contains:
 - `training_loss.png`: training/validation loss curve.
 - `training_history.csv`: epoch-by-epoch training history.
 - `test_results.json`: metrics and classification report.
+- `hard_test_metrics.json`, `hard_test_predictions.csv`,
+  `hard_test_category_metrics.csv`: results on the combined hard test.
 - `run_config.json`: exact run configuration.
 
 ## V2_prefix
