@@ -59,6 +59,76 @@ the same core files as V1, plus prefix-specific evaluation reports:
 Top-level `summary.csv` and `summary.md` files in both `V1_full_input/` and
 `V2_prefix/` compare all eight combinations.
 
+## Setup and Running Instructions
+
+Run commands from the repository root:
+
+```powershell
+cd "D:\ChengZY\mode classifier\CS181_Final_Project"
+```
+
+Install dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+On the local Windows machine used for these experiments, the working Python
+interpreter was:
+
+```powershell
+& "D:\anaconda3\python.exe" -m pip install -r requirements.txt
+```
+
+Run one organized V1 model folder:
+
+```powershell
+& "D:\anaconda3\python.exe" our_part\V1_full_input\tfidf__logreg\program.py --device cuda --skip-existing
+```
+
+Run one organized V2 model folder:
+
+```powershell
+& "D:\anaconda3\python.exe" our_part\V2_prefix\tfidf__logreg\program.py --device cuda --skip-existing
+```
+
+Each `program.py` runs only the encoder/head combination named by its folder.
+Use `--device cpu` if CUDA is unavailable. Use `--skip-existing` to reuse
+already trained artifacts.
+
+Re-run all V1 full-input experiments:
+
+```powershell
+& "D:\anaconda3\python.exe" experiments\run_experiments.py --device cuda
+```
+
+Re-run all V2 prefix experiments:
+
+```powershell
+& "D:\anaconda3\python.exe" version2_prefix\scripts\run_prefix_experiments.py --device cuda
+```
+
+Rebuild the organized `our_part/` view after re-running experiments:
+
+```powershell
+& "D:\anaconda3\python.exe" scripts\organize_our_part.py
+```
+
+Rebuild and evaluate the hard test:
+
+```powershell
+& "D:\anaconda3\python.exe" scripts\build_hard_test_dataset.py
+& "D:\anaconda3\python.exe" scripts\evaluate_hard_test.py --device cuda
+```
+
+Main result files:
+
+- `V1_full_input/summary.csv`: V1 full-utterance comparison.
+- `V2_prefix/summary.csv`: V2 early-decision comparison.
+- `hard_test/summary.csv`: hard-test comparison.
+- `report/overleaf_report_source.tex`: report source aligned with these
+  tracked results.
+
 ## Hard Test
 
 - `hard_test/summary.csv` and `summary.md`: hard-test results for all eight V1
