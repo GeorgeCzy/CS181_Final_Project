@@ -1,8 +1,12 @@
 # Our Project Part
 
-This directory is a clean view of our contribution. It does not replace the
-original runnable folders; it collects the data splits and experiment outputs
-in a structure that is easier to read for the final report/presentation.
+This folder is the submitted package for our part of the project. It is
+organized so that a reader can inspect the data, experiment outputs, and report
+source without needing to browse the rest of the repository.
+
+If only this `our_part/` folder is submitted, no setup is required for reading
+the results. The CSV, JSON, PNG, and TeX files here are the tracked outputs used
+in the report.
 
 ## Data
 
@@ -34,8 +38,9 @@ Each subfolder is one encoder/head combination, named as:
 
 Each combination folder contains:
 
-- `program.py`: the only runnable script in the folder; it runs only this
-  encoder/head combination.
+- `program.py`: one-combination launcher used when the complete repository is
+  available. It records how to rerun the encoder/head combination named by the
+  folder.
 - `training_loss.png`: training/validation loss curve.
 - `training_history.csv`: epoch-by-epoch training history.
 - `test_results.json`: metrics and classification report.
@@ -59,12 +64,46 @@ the same core files as V1, plus prefix-specific evaluation reports:
 Top-level `summary.csv` and `summary.md` files in both `V1_full_input/` and
 `V2_prefix/` compare all eight combinations.
 
-## Setup and Running Instructions
+## How To Read This Submission
 
-Run commands from the repository root:
+Start with these files:
+
+1. `report/overleaf_report_source.tex`: report source aligned with the tracked
+   results in this folder.
+2. `V1_full_input/summary.csv`: full-utterance V1 comparison across all eight
+   encoder/head combinations.
+3. `V2_prefix/summary.csv`: V2 early-decision comparison at threshold 0.70.
+4. `hard_test/summary.csv`: V1 hard-test comparison on 150 boundary examples.
+
+For any individual model combination, open its folder:
+
+```text
+V1_full_input/{encoder}__{head}/
+V2_prefix/{encoder}__{head}/
+```
+
+The most useful files inside each model folder are:
+
+- `training_loss.png`: loss curve for convergence checking.
+- `training_history.csv`: epoch-level train/validation loss and accuracy.
+- `test_results.json`: final test metrics.
+- `run_config.json`: encoder, head, device, and training configuration.
+
+V1 folders also include `hard_test_metrics.json` and
+`hard_test_predictions.csv`, which show how the same full-input model behaves
+on the hard test.
+
+## Optional Reproduction Instructions
+
+The submitted `our_part/` folder is self-contained for inspection, but the
+`program.py` launchers and full retraining commands require the complete
+repository because they call scripts in `experiments/`, `version2_prefix/`, and
+`scripts/`.
+
+If the complete repository is available, run commands from the repository root:
 
 ```powershell
-cd "D:\ChengZY\mode classifier\CS181_Final_Project"
+cd <full-repo-root>
 ```
 
 Install dependencies:
@@ -73,23 +112,16 @@ Install dependencies:
 python -m pip install -r requirements.txt
 ```
 
-On the local Windows machine used for these experiments, the working Python
-interpreter was:
-
-```powershell
-& "D:\anaconda3\python.exe" -m pip install -r requirements.txt
-```
-
 Run one organized V1 model folder:
 
 ```powershell
-& "D:\anaconda3\python.exe" our_part\V1_full_input\tfidf__logreg\program.py --device cuda --skip-existing
+python our_part/V1_full_input/tfidf__logreg/program.py --device cuda --skip-existing
 ```
 
 Run one organized V2 model folder:
 
 ```powershell
-& "D:\anaconda3\python.exe" our_part\V2_prefix\tfidf__logreg\program.py --device cuda --skip-existing
+python our_part/V2_prefix/tfidf__logreg/program.py --device cuda --skip-existing
 ```
 
 Each `program.py` runs only the encoder/head combination named by its folder.
@@ -99,35 +131,29 @@ already trained artifacts.
 Re-run all V1 full-input experiments:
 
 ```powershell
-& "D:\anaconda3\python.exe" experiments\run_experiments.py --device cuda
+python experiments/run_experiments.py --device cuda
 ```
 
 Re-run all V2 prefix experiments:
 
 ```powershell
-& "D:\anaconda3\python.exe" version2_prefix\scripts\run_prefix_experiments.py --device cuda
+python version2_prefix/scripts/run_prefix_experiments.py --device cuda
 ```
 
 Rebuild the organized `our_part/` view after re-running experiments:
 
 ```powershell
-& "D:\anaconda3\python.exe" scripts\organize_our_part.py
+python scripts/organize_our_part.py
 ```
 
 Rebuild and evaluate the hard test:
 
 ```powershell
-& "D:\anaconda3\python.exe" scripts\build_hard_test_dataset.py
-& "D:\anaconda3\python.exe" scripts\evaluate_hard_test.py --device cuda
+python scripts/build_hard_test_dataset.py
+python scripts/evaluate_hard_test.py --device cuda
 ```
 
-Main result files:
-
-- `V1_full_input/summary.csv`: V1 full-utterance comparison.
-- `V2_prefix/summary.csv`: V2 early-decision comparison.
-- `hard_test/summary.csv`: hard-test comparison.
-- `report/overleaf_report_source.tex`: report source aligned with these
-  tracked results.
+Use `--device cpu` instead of `--device cuda` if GPU/CUDA is unavailable.
 
 ## Hard Test
 
