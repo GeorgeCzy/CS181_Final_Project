@@ -70,10 +70,15 @@ def program_launcher(version: str, encoder: str, head: str) -> str:
     else:
         raise ValueError(f"Unknown version: {version}")
 
-    return f'''"""Run the {description} for {encoder} + {head}.
+    return f'''"""Source launcher for the {description}: {encoder} + {head}.
 
-This folder represents exactly one experiment combination. Extra command-line
-arguments are forwarded to the project training script. Example:
+This file records the original combination-specific entry point used to produce
+the tracked outputs in this folder. Running it requires the original full
+repository layout with the project training scripts available outside the
+submitted sourcecode folder.
+
+When the full repository is available, extra command-line arguments are
+forwarded to the project training script. Example:
     python program.py --device cuda --skip-existing
 """
 
@@ -161,13 +166,12 @@ def write_readme() -> None:
     hard_data = OUR_PART / "data" / "hard_test"
     readme = rf"""# Our Project Part
 
-This folder is the submitted package for our part of the project. It is
-organized so that a reader can inspect the data, experiment outputs, and report
-source without needing to browse the rest of the repository.
+This folder is the submitted package for our part of the project. In the final
+submission, this folder may be renamed to `sourcecode/`; all paths below are
+relative to that submitted folder.
 
-If only this `our_part/` folder is submitted, no setup is required for reading
-the results. The CSV, JSON, PNG, and TeX files here are the tracked outputs used
-in the report.
+No setup is required to inspect the submitted results. The CSV, JSON, PNG, and
+TeX files here are the tracked outputs used in the report.
 
 ## Data
 
@@ -199,9 +203,10 @@ Each subfolder is one encoder/head combination, named as:
 
 Each combination folder contains:
 
-- `program.py`: one-combination launcher used when the complete repository is
-  available. It records how to rerun the encoder/head combination named by the
-  folder.
+- `program.py`: source/provenance file for the corresponding encoder/head
+  combination. It records the original combination-specific training entry
+  used to produce the tracked outputs in this folder; running it is not
+  required to inspect the submitted results.
 - `training_loss.png`: training/validation loss curve.
 - `training_history.csv`: epoch-by-epoch training history.
 - `test_results.json`: metrics and classification report.
@@ -254,67 +259,16 @@ V1 folders also include `hard_test_metrics.json` and
 `hard_test_predictions.csv`, which show how the same full-input model behaves
 on the hard test.
 
-## Optional Reproduction Instructions
+## Setup and Running Instructions
 
-The submitted `our_part/` folder is self-contained for inspection, but the
-`program.py` launchers and full retraining commands require the complete
-repository because they call scripts in `experiments/`, `version2_prefix/`, and
-`scripts/`.
+For the submitted `sourcecode/` folder itself, there is no setup step. Reviewers
+can inspect all data, results, plots, and report source directly from the files
+listed above.
 
-If the complete repository is available, run commands from the repository root:
-
-```powershell
-cd <full-repo-root>
-```
-
-Install dependencies:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
-Run one organized V1 model folder:
-
-```powershell
-python our_part/V1_full_input/tfidf__logreg/program.py --device cuda --skip-existing
-```
-
-Run one organized V2 model folder:
-
-```powershell
-python our_part/V2_prefix/tfidf__logreg/program.py --device cuda --skip-existing
-```
-
-Each `program.py` runs only the encoder/head combination named by its folder.
-Use `--device cpu` if CUDA is unavailable. Use `--skip-existing` to reuse
-already trained artifacts.
-
-Re-run all V1 full-input experiments:
-
-```powershell
-python experiments/run_experiments.py --device cuda
-```
-
-Re-run all V2 prefix experiments:
-
-```powershell
-python version2_prefix/scripts/run_prefix_experiments.py --device cuda
-```
-
-Rebuild the organized `our_part/` view after re-running experiments:
-
-```powershell
-python scripts/organize_our_part.py
-```
-
-Rebuild and evaluate the hard test:
-
-```powershell
-python scripts/build_hard_test_dataset.py
-python scripts/evaluate_hard_test.py --device cuda
-```
-
-Use `--device cpu` instead of `--device cuda` if GPU/CUDA is unavailable.
+The tracked outputs have already been generated. The `program.py` files in the
+model folders are included to show the source entry point for each
+encoder/head combination, but this submitted folder is intended primarily as a
+readable result package rather than a standalone retraining environment.
 
 ## Hard Test
 

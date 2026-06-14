@@ -1,7 +1,12 @@
-"""Run the V1 full-input binary classifier for tfidf + mlp.
+"""Source launcher for the V1 full-input binary classifier: tfidf + mlp.
 
-This folder represents exactly one experiment combination. Extra command-line
-arguments are forwarded to the project training script. Example:
+This file records the original combination-specific entry point used to produce
+the tracked outputs in this folder. Running it requires the original full
+repository layout with the project training scripts available outside the
+submitted sourcecode folder.
+
+When the full repository is available, extra command-line arguments are
+forwarded to the project training script. Example:
     python program.py --device cuda --skip-existing
 """
 
