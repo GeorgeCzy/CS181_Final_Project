@@ -84,14 +84,14 @@ Our contributions are:
 \subsection{Related Work}
 Intent classification for spoken dialogue systems has a long history, from
 keyword spotting and SVM-based slot filling to modern transformer encoders
-fine-tuned on task-specific corpora~\cite{zhang2021intent}.
+fine-tuned on task-specific corpora~\cite{louvan2020survey,vaswani2017attention}.
 In human--robot interaction, prior work often treats motion commands as a
 separate skill invocation layer rather than a first-class routing decision
 made \emph{before} response generation.
 Our setting differs in two ways: (i)~we target a lightweight binary router
 suitable for on-board deployment, and (ii)~we explicitly evaluate
-\emph{partial} utterances to mimic streaming ASR, following the spirit of
-early-exit and incremental decoding methods used to reduce dialogue latency.
+\emph{partial} utterances to mimic streaming ASR, with confidence-based
+abstention related to selective classification methods~\cite{geifman2017selective}.
 
 \subsection{Problem Setting}
 Figure~\ref{fig:pipeline} summarizes the intended deployment loop.
@@ -163,10 +163,13 @@ by the hard test.
 We fix the encoder and vary only the classification head:
 \begin{itemize}
   \item \textbf{TF-IDF}: bag-of-words with 1--2-gram features (max 10{,}000
-        features for V1 and 15{,}000 for V2).
-  \item \textbf{CLIP}: \texttt{sentence-transformers/clip-ViT-B-32} text encoder.
-  \item \textbf{Qwen3}: \texttt{Qwen/Qwen3-Embedding-0.6B}.
-  \item \textbf{MiniLM}: \texttt{sentence-transformers/all-MiniLM-L6-v2}.
+        features for V1 and 15{,}000 for V2)~\cite{salton1988term}.
+  \item \textbf{CLIP}: \texttt{sentence-transformers/clip-ViT-B-32} text
+        encoder~\cite{radford2021clip}.
+  \item \textbf{Qwen3}: \texttt{Qwen/Qwen3-Embedding-0.6B}~\cite{zhang2025qwen3embedding}.
+  \item \textbf{MiniLM}: \texttt{sentence-transformers/all-MiniLM-L6-v2},
+        used through the sentence-transformers embedding interface and based
+        on compact Transformer sentence representations~\cite{reimers2019sentencebert,wang2020minilm}.
 \end{itemize}
 Heads: (1)~\textbf{LogReg}---a single PyTorch linear layer trained as a
 logistic-regression-style classifier on cached embeddings or TF-IDF vectors;
@@ -388,10 +391,55 @@ Future work will integrate streaming speech recognition and deploy the chosen
 model on a physical humanoid platform with confidence-gated motion preparation.
 
 \begin{thebibliography}{9}
-\bibitem{zhang2021intent}
-J.~Zhang, Y.~Zhao, and M.~Saleh.
-\newblock Intent detection in natural language understanding.
-\newblock \emph{Foundations and Trends in Information Retrieval}, 2021.
+\bibitem{louvan2020survey}
+S.~Louvan and B.~Magnini.
+\newblock Recent neural methods on slot filling and intent classification for
+task-oriented dialogue systems: A survey.
+\newblock \emph{arXiv preprint arXiv:2011.00564}, 2020.
+
+\bibitem{salton1988term}
+G.~Salton and C.~Buckley.
+\newblock Term-weighting approaches in automatic text retrieval.
+\newblock \emph{Information Processing \& Management}, 24(5):513--523, 1988.
+
+\bibitem{vaswani2017attention}
+A.~Vaswani, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N. Gomez,
+L.~Kaiser, and I.~Polosukhin.
+\newblock Attention is all you need.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+volume~30, 2017.
+
+\bibitem{radford2021clip}
+A.~Radford, J.~W. Kim, C.~Hallacy, A.~Ramesh, G.~Goh, S.~Agarwal,
+G.~Sastry, A.~Askell, P.~Mishkin, J.~Clark, G.~Krueger, and I.~Sutskever.
+\newblock Learning transferable visual models from natural language
+supervision.
+\newblock In \emph{Proceedings of the 38th International Conference on
+Machine Learning}, PMLR 139:8748--8763, 2021.
+
+\bibitem{wang2020minilm}
+W.~Wang, F.~Wei, L.~Dong, H.~Bao, N.~Yang, and M.~Zhou.
+\newblock MiniLM: Deep self-attention distillation for task-agnostic
+compression of pre-trained transformers.
+\newblock \emph{arXiv preprint arXiv:2002.10957}, 2020.
+
+\bibitem{reimers2019sentencebert}
+N.~Reimers and I.~Gurevych.
+\newblock Sentence-BERT: Sentence embeddings using Siamese BERT-networks.
+\newblock In \emph{Proceedings of EMNLP-IJCNLP}, pages 3982--3992, 2019.
+
+\bibitem{zhang2025qwen3embedding}
+Y.~Zhang, M.~Li, D.~Long, X.~Zhang, H.~Lin, B.~Yang, P.~Xie, A.~Yang,
+D.~Liu, J.~Lin, F.~Huang, and J.~Zhou.
+\newblock Qwen3 Embedding: Advancing text embedding and reranking through
+foundation models.
+\newblock \emph{arXiv preprint arXiv:2506.05176}, 2025.
+
+\bibitem{geifman2017selective}
+Y.~Geifman and R.~El-Yaniv.
+\newblock Selective classification for deep neural networks.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+volume~30, 2017.
 \end{thebibliography}
 
 \end{document}
