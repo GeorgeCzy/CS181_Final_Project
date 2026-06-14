@@ -1,12 +1,11 @@
-"""Source launcher for the V1 full-input binary classifier: clip + mlp.
+"""Run the V1 full-input binary classifier: clip + mlp.
 
-This file records the original combination-specific entry point used to produce
-the tracked outputs in this folder. Running it requires the original full
-repository layout with the project training scripts available outside the
-submitted sourcecode folder.
+This file is the one-combination entry point for the submitted sourcecode
+folder. It writes reproduced outputs under sourcecode/reproduced/ and does not
+overwrite the tracked result files in this model folder.
 
-When the full repository is available, extra command-line arguments are
-forwarded to the project training script. Example:
+Extra command-line arguments are forwarded to the project training script.
+Example:
     python program.py --device cuda --skip-existing
 """
 
@@ -18,10 +17,10 @@ from pathlib import Path
 
 
 def main() -> None:
-    root = Path(__file__).resolve().parents[3]
+    root = Path(__file__).resolve().parents[2]
     command = [
         sys.executable,
-        str(root / "experiments/run_experiments.py"),
+        str(root / "scripts/run_v1_experiments.py"),
         "--encoders",
         "clip",
         "--heads",

@@ -2,10 +2,11 @@
 
 This folder is the submitted package for our part of the project. In the final
 submission, this folder may be renamed to `sourcecode/`; all paths below are
-relative to that submitted folder.
+relative to that submitted folder. It contains the data, reproduction scripts,
+tracked outputs, and report source for our experiments.
 
-No setup is required to inspect the submitted results. The CSV, JSON, PNG, and
-TeX files here are the tracked outputs used in the report.
+The tracked CSV, JSON, PNG, and TeX files can be inspected directly. To rerun
+the experiments, follow the setup and reproduction commands below.
 
 ## Data
 
@@ -38,9 +39,8 @@ Each subfolder is one encoder/head combination, named as:
 Each combination folder contains:
 
 - `program.py`: source/provenance file for the corresponding encoder/head
-  combination. It records the original combination-specific training entry
-  used to produce the tracked outputs in this folder; running it is not
-  required to inspect the submitted results.
+  combination. It can be run from this submitted folder to reproduce only that
+  encoder/head combination; reproduced outputs are written under `reproduced/`.
 - `training_loss.png`: training/validation loss curve.
 - `training_history.csv`: epoch-by-epoch training history.
 - `test_results.json`: metrics and classification report.
@@ -95,14 +95,106 @@ on the hard test.
 
 ## Setup and Running Instructions
 
-For the submitted `sourcecode/` folder itself, there is no setup step. Reviewers
-can inspect all data, results, plots, and report source directly from the files
-listed above.
+Run all commands from the submitted folder root:
 
-The tracked outputs have already been generated. The `program.py` files in the
-model folders are included to show the source entry point for each
-encoder/head combination, but this submitted folder is intended primarily as a
-readable result package rather than a standalone retraining environment.
+```bash
+cd sourcecode
+```
+
+Recommended environment: Python 3.10 or 3.11.
+
+On Windows PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+On macOS/Linux:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+The first run of MiniLM, CLIP, or Qwen3 may download pretrained model weights
+through `sentence-transformers`/`transformers`.
+
+To verify whether PyTorch can see the GPU:
+
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
+```
+
+Use `--device cuda` when this prints `True`; otherwise use `--device cpu`. If a
+CUDA-capable machine prints `False`, reinstall PyTorch with the CUDA wheel that
+matches that machine, then rerun `python -m pip install -r requirements.txt`.
+
+### Quick Smoke Tests
+
+These commands run tiny TF-IDF jobs to check that the environment is working:
+
+```bash
+python scripts/run_v1_experiments.py --encoders tfidf --heads logreg --device cpu --limit-train 128 --limit-val 64 --limit-test 64 --min-train-rows 1 --epochs 3 --output-dir reproduced/smoke/v1_artifacts --report-dir reproduced/smoke/V1_full_input
+python scripts/run_v2_prefix_experiments.py --encoders tfidf --heads logreg --device cpu --limit-train 256 --limit-val 128 --limit-test 128 --min-train-rows 1 --epochs 3 --output-dir reproduced/smoke/v2_artifacts --report-dir reproduced/smoke/V2_prefix
+```
+
+### Reproduce One Model Combination
+
+Each model folder has a `program.py` entry point for that exact
+encoder/head combination:
+
+```bash
+python V1_full_input/tfidf__logreg/program.py --device cuda
+python V2_prefix/tfidf__logreg/program.py --device cuda
+```
+
+Change the folder name to rerun a different combination, for example
+`V1_full_input/qwen3_0_6b__mlp/program.py`.
+
+### Reproduce All V1 and V2 Experiments
+
+```bash
+python scripts/run_v1_experiments.py --device cuda
+python scripts/run_v2_prefix_experiments.py --device cuda
+```
+
+By default, reproduced artifacts and report snapshots are written under:
+
+```text
+reproduced/artifacts/v1/
+reproduced/artifacts/v2/
+reproduced/V1_full_input/
+reproduced/V2_prefix/
+```
+
+These reproduced outputs are separate from the tracked result files included in
+this submission.
+
+### Reproduce the Hard-Test Evaluation
+
+After reproducing the V1 models, run:
+
+```bash
+python scripts/evaluate_hard_test.py --device cuda
+```
+
+This writes hard-test reproduction outputs to:
+
+```text
+reproduced/hard_test/
+```
+
+The hard-test CSV is already included at `data/hard_test/hard_test.csv`. To
+regenerate it from the included script:
+
+```bash
+python scripts/build_hard_test_dataset.py
+```
 
 ## Hard Test
 

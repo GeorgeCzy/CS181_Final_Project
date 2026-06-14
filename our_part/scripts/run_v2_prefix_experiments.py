@@ -5,8 +5,8 @@ Labels:
 - motion_query
 - wait
 
-This implementation is isolated from both `experiments/` and
-`mode-classifier-main/`.
+This is the self-contained V2 reproduction script for the submitted
+sourcecode folder.
 """
 
 from __future__ import annotations
@@ -32,10 +32,10 @@ from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 
 
-ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_DATA_DIR = ROOT / "version2_prefix" / "data"
-DEFAULT_OUTPUT_DIR = ROOT / "artifacts" / "version2_prefix"
-DEFAULT_REPORT_DIR = ROOT / "version2_prefix" / "results" / "latest"
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_DATA_DIR = ROOT / "data" / "v2_prefix_input"
+DEFAULT_OUTPUT_DIR = ROOT / "reproduced" / "artifacts" / "v2"
+DEFAULT_REPORT_DIR = ROOT / "reproduced" / "V2_prefix"
 
 LABELS = ["chat", "motion_query", "wait"]
 LABEL_TO_INDEX = {label: index for index, label in enumerate(LABELS)}
@@ -77,9 +77,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report-dir", type=Path, default=DEFAULT_REPORT_DIR)
     parser.add_argument("--text-column", default="prefix_utterance")
-    parser.add_argument("--train-file", default="prefix_train.csv")
-    parser.add_argument("--val-file", default="prefix_val.csv")
-    parser.add_argument("--test-file", default="prefix_test.csv")
+    parser.add_argument("--train-file", default="train.csv")
+    parser.add_argument("--val-file", default="val.csv")
+    parser.add_argument("--test-file", default="test.csv")
     parser.add_argument("--encoders", nargs="+", default=["all"])
     parser.add_argument("--heads", nargs="+", default=["all"])
     parser.add_argument("--device", default="auto")
@@ -1325,9 +1325,9 @@ def main() -> None:
             "summary_threshold": args.summary_threshold,
             "evaluation_note": "`wait` is treated as abstention for selective-decision metrics.",
             "artifact_layout": {
-                "embedding_cache": "artifacts/version2_prefix/embeddings/{encoder}/",
-                "run_output": "artifacts/version2_prefix/runs/{encoder}__{head}/",
-                "report_snapshot": "version2_prefix/results/latest/",
+                "embedding_cache": "reproduced/artifacts/v2/embeddings/{encoder}/",
+                "run_output": "reproduced/artifacts/v2/runs/{encoder}__{head}/",
+                "report_snapshot": "reproduced/V2_prefix/",
             },
         },
     )
